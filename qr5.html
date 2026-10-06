@@ -1,106 +1,1271 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#B3122E">
-<title>자료 준비 중 | 경기대학교 중어중문전공</title>
+<meta name="theme-color" content="#001850">
+<title>e-Cargoway Logistics | 중국과 세계를 잇는 종합물류</title>
+<meta name="description" content="이카고웨이 로지스틱스 소개 애니메이션. 1998년 칭다오에서 첫 지점을 열고 중국 9개 도시와 서울, 베트남, 미국을 잇는 종합물류 기업입니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&amp;family=Big+Shoulders+Stencil+Display:wght@700;800&amp;family=Noto+Serif+SC:wght@600;900&amp;display=swap">
 <style>
-  :root {
-    --crimson: #B3122E;
-    --crimson-deep: #7E0A1F;
-    --gold: #F2C14E;
-    --navy: #14234B;
-    --paper: #FFF8EC;
-  }
-  * { box-sizing: border-box; }
-  html, body { height: 100%; margin: 0; }
-  body {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.75rem;
-    padding: calc(2rem + env(safe-area-inset-top, 0px)) 1.5rem calc(2rem + env(safe-area-inset-bottom, 0px));
-    background:
-      radial-gradient(circle at 50% 38%, rgba(242,193,78,.18) 0 22%, transparent 60%),
-      radial-gradient(rgba(126,10,31,.55) 1.2px, transparent 1.4px) 0 0 / 9px 9px,
-      var(--crimson);
-    color: var(--paper);
-    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-    text-align: center;
-  }
-  .dept {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: .02em;
-    color: var(--gold);
-  }
-  .bubble {
-    position: relative;
-    max-width: 22rem;
-    margin: 0;
-    padding: 1.6rem 1.8rem;
-    background: #fff;
-    color: var(--navy);
-    border: 4px solid var(--navy);
-    border-radius: 2.2rem;
-    box-shadow: 7px 7px 0 var(--navy);
-    font-family: "Black Han Sans", -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-    font-weight: 400;
-    font-size: clamp(1.9rem, 8.5vw, 2.6rem);
-    line-height: 1.25;
-    word-break: keep-all;
-    text-wrap: balance;
-    animation: pop .45s cubic-bezier(.2, 1.4, .4, 1) both;
-  }
-  .bubble::after {
-    content: "";
-    position: absolute;
-    left: 22%;
-    bottom: -26px;
-    width: 34px;
-    height: 34px;
-    background: #fff;
-    border-right: 4px solid var(--navy);
-    border-bottom: 4px solid var(--navy);
-    transform: skewY(28deg) rotate(38deg);
-  }
-  .guide {
-    margin: .6rem 0 0;
-    max-width: 20rem;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    word-break: keep-all;
-    text-wrap: balance;
-  }
-  .code {
-    margin: 0;
-    padding: .25rem .8rem;
-    border: 1.5px solid rgba(242,193,78,.7);
-    border-radius: 999px;
-    font-size: .85rem;
-    font-weight: 700;
-    color: var(--gold);
-  }
-  @keyframes pop {
-    from { transform: scale(.85); opacity: 0; }
-    to   { transform: scale(1);   opacity: 1; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .bubble { animation: none; }
-  }
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --navy:#001850;--navy2:#0a2b6e;--deep:#000f36;--sky:#0098d8;--sky2:#62c6ef;
+  --paper:#f2f5f8;--ink:#0b1b3a;--mink:#56637b;--rule:#c8d1dd;--seal:#d8232a;--fg:#eaf2fb;
+  --f-kr:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+  --f-code:"Big Shoulders Stencil Display","Big Shoulders Stencil","Arial Narrow","Roboto Condensed",sans-serif;
+  --f-zh:"Noto Serif SC","Noto Serif CJK SC","Songti SC","STSong","SimSun",serif;
+  --f-zhs:"PingFang SC","Microsoft YaHei","Noto Sans SC","Noto Sans CJK SC",sans-serif;
+  --e-out:cubic-bezier(.16,1,.3,1);
+  --e-snap:cubic-bezier(.77,0,.18,1);
+  --e-spring:cubic-bezier(.34,1.56,.64,1);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{height:100%;background:var(--navy);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;min-height:100%;background:var(--navy);color:var(--fg);font-family:var(--f-kr);font-size:16px;line-height:1.55;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+a{color:inherit;-webkit-tap-highlight-color:transparent}
+svg{display:block}
+:focus-visible{outline:3px solid var(--sky2);outline-offset:3px}
+
+/* ───── 무대 ───── */
+.stage{position:relative;overflow:hidden;isolation:isolate;height:calc(100vh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));height:calc(100svh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));min-height:540px;background:var(--navy);color:var(--fg);touch-action:pan-y;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.boot{position:absolute;left:50%;top:50%;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--sky);animation:boot .7s ease-in-out infinite alternate}
+.stage.ready .boot{display:none}
+@keyframes boot{to{transform:scale(1.9);opacity:.35}}
+.scenes{position:absolute;inset:0}
+.prog{position:absolute;z-index:30;top:12px;left:16px;right:16px;display:flex;gap:4px;pointer-events:none}
+.seg{position:relative;flex:1;height:3px;border-radius:2px;overflow:hidden}
+.seg::before{content:"";position:absolute;inset:0;background:currentColor;opacity:.28}
+.seg i{position:absolute;inset:0;background:currentColor;transform:scaleX(0);transform-origin:left center}
+.top{position:absolute;z-index:30;top:26px;left:16px;right:16px;display:flex;align-items:center;justify-content:space-between;gap:12px;pointer-events:none}
+.brand{line-height:1.3}
+.brand b{display:block;font-family:var(--f-code);font-size:19px;font-weight:800;letter-spacing:.02em}
+.brand span{display:block;font-size:11.5px;opacity:.82}
+.tools{display:flex;align-items:center;gap:8px;flex:none}
+.ibtn{pointer-events:auto;flex:none;width:42px;height:42px;padding:0;border-radius:50%;border:1.5px solid currentColor;background:transparent;display:grid;place-items:center}
+.ibtn svg{width:17px;height:17px}
+.ibtn[hidden]{display:none}
+.ibtn.snd .lbl{display:none}
+.ibtn.snd.cta{width:auto;padding:0 15px 0 12px;gap:6px;border-radius:999px;display:inline-flex;align-items:center;background:var(--sky);border-color:var(--sky);color:#fff;font-size:13px;font-weight:700;white-space:nowrap}
+.ibtn.snd.cta .lbl{display:inline}
+@media (max-width:359px){.ibtn.snd.cta{width:42px;padding:0;justify-content:center}.ibtn.snd.cta .lbl{display:none}}
+.foot{position:absolute;z-index:30;left:16px;right:16px;bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:12px;pointer-events:none;font-size:12px}
+.hint{opacity:.82;transition:opacity .6s}
+.hint.off{opacity:0}
+.cue{pointer-events:auto;flex:none;display:inline-flex;align-items:center;gap:6px;padding:7px 12px 7px 15px;border:1.5px solid currentColor;border-radius:999px;font-weight:700;text-decoration:none;white-space:nowrap}
+.cue svg{width:14px;height:14px}
+.holdflag{position:absolute;z-index:31;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(0,10,30,.5);color:#fff;display:grid;place-items:center;opacity:0;transform:scale(.7);transition:opacity .15s,transform .2s var(--e-spring);pointer-events:none}
+.holdflag svg{width:26px;height:26px}
+.stage.held .holdflag{opacity:1;transform:none}
+
+/* ───── 장면: 골판 컨테이너 벽 ───── */
+.scene{position:absolute;inset:0;overflow:hidden;visibility:hidden;background:var(--sbg,var(--navy));color:var(--fg)}
+.scene::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 3px,rgba(255,255,255,0) 3px 14px,rgba(0,0,0,.13) 14px 17px,rgba(0,0,0,0) 17px 28px)}
+.scene.on,.scene.was{visibility:visible}
+.scene.was{z-index:1}
+.scene.on{z-index:2}
+.scene.on.in{animation:beltIn .6s cubic-bezier(.65,0,.35,1) both}
+.scene.on.back{animation:beltBack .6s cubic-bezier(.65,0,.35,1) both}
+@keyframes beltIn{0%{transform:translateX(100%)}80%{transform:translateX(-1.4%)}100%{transform:none}}
+@keyframes beltBack{0%{transform:translateX(-100%)}80%{transform:translateX(1.4%)}100%{transform:none}}
+.mark{position:absolute;right:3vw;bottom:9vh;font-family:var(--f-code);font-weight:800;font-size:min(15vw,19vh);line-height:.9;letter-spacing:.02em;color:rgba(255,255,255,.07);white-space:nowrap;pointer-events:none}
+.bigzh{position:absolute;top:50%;right:-.04em;transform:translateY(-50%);font-family:var(--f-zh);font-weight:900;font-size:min(46vw,36vh);line-height:1;writing-mode:vertical-rl;color:transparent;-webkit-text-stroke:1.5px rgba(234,242,251,.16);pointer-events:none}
+.fit{position:absolute;top:84px;bottom:66px;left:20px;right:20px;display:flex;flex-direction:column;justify-content:center;gap:calc(18px*var(--k));--k:1;overflow:hidden}
+.col{display:flex;flex-direction:column;gap:calc(14px*var(--k));min-width:0}
+@media (min-width:900px){
+  .prog{top:16px;left:32px;right:32px}
+  .top{top:32px;left:32px;right:32px}
+  .foot{left:32px;right:32px;bottom:24px;font-size:13px}
+  .fit{top:108px;bottom:88px;left:7vw;right:7vw}
+  .fit.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);column-gap:5vw;align-items:center;align-content:center}
+  .bigzh{font-size:min(30vw,40vh)}
+}
+
+/* 등장 모션 */
+.a{opacity:0}
+.scene.was .a{opacity:1;transform:none;animation:none;clip-path:none}
+.scene.on .a{animation-duration:var(--du,.6s);animation-timing-function:var(--e-out);animation-fill-mode:both;animation-delay:var(--d,0s)}
+.scene.on .up{animation-name:up}
+.scene.on .sl{animation-name:sl}
+.scene.on .fd{animation-name:fd}
+.scene.on .rise{animation-name:rise;--du:1s}
+.scene.on .pop{animation-name:pop;animation-timing-function:var(--e-spring);--du:.5s}
+.scene.on .drop{animation-name:drop;--du:.5s}
+.scene.on .slap{animation-name:slap;--du:.45s;animation-timing-function:cubic-bezier(.3,1.4,.5,1)}
+.scene.on .prt{animation-name:prt;animation-timing-function:steps(12,end)}
+.scene.on .stampin{animation-name:stampin;--du:.32s;animation-timing-function:cubic-bezier(.55,0,.6,1.35)}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes sl{from{opacity:0;transform:translateX(-48px)}to{opacity:1;transform:none}}
+@keyframes fd{from{opacity:0}to{opacity:1}}
+@keyframes rise{from{opacity:0;transform:translateY(14%)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.3)}to{opacity:1;transform:none}}
+@keyframes drop{from{opacity:0;transform:translateY(-40%)}to{opacity:1;transform:none}}
+@keyframes slap{0%{opacity:0;transform:translateY(-36px) scale(1.2) rotate(-7deg)}55%{opacity:1;transform:scale(.97) rotate(calc(var(--rot,0deg) + .8deg))}100%{opacity:1;transform:rotate(var(--rot,0deg))}}
+@keyframes prt{from{opacity:1;clip-path:inset(0 0 100% 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}
+@keyframes stampin{0%{opacity:0;transform:scale(2.5) rotate(-24deg)}70%{opacity:1;transform:scale(.93) rotate(calc(var(--rot,-8deg) - 1deg))}100%{opacity:1;transform:rotate(var(--rot,-8deg))}}
+
+/* 공통 글자 */
+.h{margin:0;font-weight:700;letter-spacing:-.035em;line-height:1.14;font-size:calc(clamp(30px,8.4vw,48px)*var(--k))}
+.h>span{display:block}
+.lede{margin:0;max-width:30em;font-size:calc(15px*var(--k));line-height:1.7;color:rgba(234,242,251,.84)}
+.code{font-family:var(--f-code);font-weight:800;letter-spacing:.02em}
+.zh{font-family:var(--f-zh)}
+@media (min-width:900px){
+  .h{font-size:calc(min(4.4vw,7.6vh,78px)*var(--k))}
+  .lede{font-size:calc(min(1.3vw,2.3vh,19px)*var(--k))}
+}
+
+/* 0 인트로: 송장 라벨 */
+.label{position:relative;width:min(100%,calc(390px*var(--k)));background:var(--paper);color:var(--ink);border-radius:10px;padding:calc(14px*var(--k)) calc(16px*var(--k)) calc(12px*var(--k));box-shadow:0 18px 40px rgba(0,0,0,.38);--rot:-2deg;transform:rotate(var(--rot))}
+.lb-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding-bottom:calc(8px*var(--k));border-bottom:2px solid var(--ink)}
+.lb-top b{font-family:var(--f-code);font-weight:800;font-size:calc(25px*var(--k));letter-spacing:.02em;line-height:1}
+.lb-top span{font-size:calc(11.5px*var(--k));font-weight:600;color:var(--mink)}
+.lb-f{display:grid;grid-template-columns:1fr auto;gap:calc(8px*var(--k)) 14px;margin:calc(10px*var(--k)) 0}
+.lb-f div{min-width:0}
+.lb-f .w{grid-column:1 / -1}
+.lb-f dt{font-size:calc(10.5px*var(--k));font-weight:600;color:var(--mink)}
+.lb-f dd{margin:0;font-weight:700;font-size:calc(17px*var(--k));line-height:1.35}
+.lb-f dd.code{font-size:calc(24px*var(--k));line-height:1.05}
+.bc{position:relative;height:calc(50px*var(--k));overflow:hidden}
+.bc svg{width:100%;height:100%;fill:var(--ink)}
+.laser{position:absolute;left:-4%;right:-4%;top:0;height:2px;background:var(--seal);box-shadow:0 0 10px 3px rgba(216,35,42,.65);opacity:0}
+.scene.on .laser{animation:laser .5s 1.35s ease-in-out both}
+@keyframes laser{0%{opacity:0;top:0}15%{opacity:1}85%{opacity:1}100%{opacity:0;top:100%}}
+.lb-no{display:flex;justify-content:space-between;margin-top:calc(6px*var(--k));font-family:var(--f-code);font-weight:700;font-size:calc(15px*var(--k));letter-spacing:.08em}
+
+/* 1 지점망 지도 */
+.map{position:relative;width:100%;height:calc(min(50vh,560px)*var(--k))}
+.map svg{width:100%;height:100%;overflow:visible}
+@media (min-width:900px){.map{height:calc(min(68vh,660px)*var(--k))}}
+.grat{fill:none;stroke:rgba(234,242,251,.09);stroke-width:.35;stroke-dasharray:1.6 1.6}
+.sea{font-family:var(--f-zh);font-size:6px;font-weight:600;fill:rgba(234,242,251,.16);letter-spacing:.35em}
+.rt{fill:none;stroke:var(--sky2);stroke-width:1.1;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+.scene.on .rt{animation:draw .45s var(--e-out) both;animation-delay:var(--d)}
+.scene.was .rt{stroke-dashoffset:0}
+@keyframes draw{to{stroke-dashoffset:0}}
+.nd{transform-box:fill-box;transform-origin:center;opacity:0}
+.scene.on .nd{animation:pop .5s var(--e-spring) both;animation-delay:var(--d)}
+.scene.was .nd{opacity:1}
+.nd circle{fill:#fff}
+.nd.kr circle{fill:var(--sky2)}
+.nd .ring{fill:none;stroke:var(--sky2);stroke-width:.7}
+.nd text{paint-order:stroke;stroke:var(--navy);stroke-width:2.6px;stroke-linejoin:round}
+.nd .cz{font-family:var(--f-zh);font-weight:900;font-size:7.6px;fill:#fff}
+.nd .ck{font-family:var(--f-kr);font-weight:600;font-size:5.4px;fill:rgba(234,242,251,.78)}
+.nd.origin .cz{font-size:12px;fill:var(--sky2)}
+.nd.origin .cy{font-family:var(--f-code);font-weight:800;font-size:9px;fill:#fff;letter-spacing:.04em}
+.scene.on .nd.origin .ring{animation:ripple 1.6s .35s ease-out 3 both}
+@keyframes ripple{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(3.4)}}
+.nd .ring{transform-box:fill-box;transform-origin:center}
+
+/* 2–6 사업 영역 */
+.svc-h{display:flex;flex-direction:column}
+.hz{font-family:var(--f-zh);font-weight:900;line-height:1;font-size:calc(min(29vw,17vh,220px)*var(--k));letter-spacing:-.01em;color:#fff;margin-left:-.04em}
+.py{margin-top:calc(8px*var(--k));font-family:var(--f-zh);font-weight:600;font-size:calc(18px*var(--k));opacity:.92}
+.nm{margin:calc(2px*var(--k)) 0 0;font-weight:700;font-size:calc(clamp(26px,7vw,40px)*var(--k));letter-spacing:-.03em;line-height:1.2}
+.fact{margin:0;display:flex;align-items:baseline;gap:10px;font-weight:600;font-size:calc(15.5px*var(--k));line-height:1.5}
+.fact .code{font-size:calc(26px*var(--k));line-height:1}
+.vis{position:relative;width:100%;height:calc(min(24vh,230px)*var(--k))}
+@media (min-width:900px){.vis{height:calc(min(30vh,300px)*var(--k))}.hz{font-size:calc(min(15vw,26vh,250px)*var(--k))}}
+.ticket{position:relative;align-self:flex-start;width:min(100%,calc(340px*var(--k)));background:var(--paper);color:var(--ink);padding:calc(11px*var(--k)) calc(15px*var(--k)) calc(14px*var(--k));border-radius:4px 4px 0 0;box-shadow:0 10px 26px rgba(0,0,0,.3)}
+.ticket::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:7px;background:radial-gradient(circle at 5px 0,var(--paper) 4.6px,transparent 5px) 0 0/10px 7px repeat-x}
+.tk-h{display:flex;justify-content:space-between;gap:10px;font-size:calc(11px*var(--k));font-weight:600;color:var(--mink)}
+.tk-h .zh{font-weight:600}
+.tk-zh{margin-top:calc(4px*var(--k));font-family:var(--f-zh);font-weight:900;font-size:calc(27px*var(--k));line-height:1.25}
+.tk-py{font-family:var(--f-zh);font-size:calc(14px*var(--k));color:#1d4f93}
+.tk-ko{margin-top:calc(2px*var(--k));font-size:calc(14px*var(--k));font-weight:600}
+
+/* 항공 */
+.runway{position:absolute;left:0;right:0;bottom:6%;height:3px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.85) 0 26px,transparent 26px 46px)}
+.pl{position:absolute;left:2%;bottom:9%;width:calc(150px*var(--k));fill:#fff;opacity:0}
+.scene.on .pl{animation:takeoff 2.6s .3s cubic-bezier(.55,0,.7,1) both}
+@keyframes takeoff{0%{opacity:0;transform:translate(-40%,0)}8%{opacity:1}42%{transform:translate(55%,0) rotate(0)}58%{transform:translate(95%,-14%) rotate(-9deg)}100%{opacity:1;transform:translate(340%,-190%) rotate(-17deg)}}
+/* 해상 */
+.waves{position:absolute;left:-10%;right:-10%;bottom:0;height:34%;overflow:hidden}
+.waves svg{position:absolute;left:0;width:200%;height:100%;fill:none;stroke:rgba(255,255,255,.55);stroke-width:2.2}
+.waves svg+svg{opacity:.5;transform:translateY(22%)}
+.scene.on .waves svg{animation:wave 3.2s linear infinite}
+.scene.on .waves svg+svg{animation-duration:4.4s;animation-direction:reverse}
+@keyframes wave{to{translate:-50% 0}}
+.ship{position:absolute;left:0;bottom:16%;width:calc(230px*var(--k))}
+.scene.on .ship{animation:sail 3.9s .1s linear both}
+.ship svg{width:100%}
+.scene.on .ship svg{animation:bob 1.3s ease-in-out infinite alternate}
+@keyframes sail{from{transform:translateX(-80%)}to{transform:translateX(150%)}}
+@keyframes bob{from{transform:translateY(0) rotate(-.6deg)}to{transform:translateY(5px) rotate(.8deg)}}
+/* 육상 */
+.road{position:absolute;left:-5%;right:-5%;bottom:8%;height:3px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.8) 0 30px,transparent 30px 54px)}
+.scene.on .road{animation:roadrun .45s .1s linear 3 both}
+@keyframes roadrun{to{background-position:-54px 0}}
+.truck{position:absolute;left:4%;bottom:11%;width:calc(250px*var(--k))}
+.scene.on .truck{animation:drive 1.35s .1s cubic-bezier(.2,.7,.25,1) both}
+@keyframes drive{from{transform:translateX(-180%)}to{transform:none}}
+.truck .wl{transform-box:fill-box;transform-origin:center}
+.scene.on .truck .wl{animation:spin .45s .1s linear 3}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* 통관 */
+.cdoc{position:absolute;left:4%;top:4%;width:min(84%,calc(300px*var(--k)));height:88%;background:var(--paper);color:var(--ink);border-radius:4px;padding:calc(12px*var(--k)) calc(14px*var(--k));box-shadow:0 12px 30px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:calc(7px*var(--k))}
+.cdoc b{font-family:var(--f-zh);font-weight:900;font-size:calc(19px*var(--k));line-height:1.1}
+.cdoc span{font-size:calc(11px*var(--k));color:var(--mink);font-weight:600;margin-top:-4px}
+.cdoc i{display:block;height:calc(7px*var(--k));border-radius:2px;background:#d7dee8}
+.cdoc i:nth-of-type(2){width:72%}.cdoc i:nth-of-type(3){width:86%}.cdoc i:nth-of-type(4){width:58%}
+.scene.on .cdoc.hitme{animation:docin .5s .15s var(--e-out) both,shake .26s .92s ease-out}
+@keyframes docin{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes shake{30%{transform:translate(2px,3px)}60%{transform:translate(-2px,-1px)}}
+.stamp{position:absolute;right:8%;bottom:10%;width:calc(118px*var(--k));aspect-ratio:1;border:calc(5px*var(--k)) solid var(--seal);border-radius:50%;color:var(--seal);display:flex;flex-direction:column;align-items:center;justify-content:center;--rot:-12deg;mix-blend-mode:multiply}
+.stamp b{font-family:var(--f-zh);font-weight:900;font-size:calc(36px*var(--k));line-height:1;color:var(--seal)}
+.stamp small{font-family:var(--f-code);font-weight:800;font-size:calc(13px*var(--k));letter-spacing:.14em}
+/* 창고 */
+.whs{position:absolute;left:4%;bottom:6%;width:min(86%,calc(330px*var(--k)));height:92%}
+.whs svg{position:absolute;inset:0;width:100%;height:100%}
+.door{position:absolute;left:22%;right:22%;bottom:0;height:58%;overflow:hidden;background:#3b1f12}
+.boxes{position:absolute;left:8%;right:8%;bottom:0;height:100%}
+.bx{position:absolute;bottom:0;width:38%;height:34%;background:#d9a066;border:2px solid #8a5a2b;opacity:0}
+.bx::after{content:"";position:absolute;left:44%;width:12%;top:0;bottom:0;background:#b9814a}
+.bx.b1{left:4%}.bx.b2{left:52%}.bx.b3{left:28%;bottom:34%}
+.scene.on .bx{animation:boxdrop .35s cubic-bezier(.5,0,.75,0) both,boxland .18s ease-out both;animation-delay:var(--d),calc(var(--d) + .33s)}
+@keyframes boxdrop{from{opacity:0;transform:translateY(-200%)}to{opacity:1;transform:none}}
+@keyframes boxland{0%{transform:scaleY(.86)}100%{transform:none}}
+.shutter{position:absolute;inset:0;background:repeating-linear-gradient(180deg,#c9d2dc 0 9px,#9aa6b4 9px 11px)}
+.scene.on .shutter{animation:rollup .8s .25s cubic-bezier(.5,0,.4,1) both}
+@keyframes rollup{to{transform:translateY(-102%)}}
+
+/* 7 대화 */
+.chat{width:min(100%,calc(420px*var(--k)));background:var(--deep);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:calc(14px*var(--k));display:flex;flex-direction:column;gap:calc(10px*var(--k));box-shadow:0 18px 44px rgba(0,0,0,.35)}
+.chat-h{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:0 4px calc(6px*var(--k));border-bottom:1px solid rgba(255,255,255,.1);font-size:calc(12px*var(--k));font-weight:600;color:rgba(234,242,251,.72)}
+.chat-h b{font-family:var(--f-zh);font-size:calc(14px*var(--k));color:#fff}
+.msg{max-width:88%;padding:calc(9px*var(--k)) calc(13px*var(--k)) calc(10px*var(--k));border-radius:16px;line-height:1.45}
+.msg.in{align-self:flex-start;background:var(--paper);color:var(--ink);border-bottom-left-radius:5px}
+.msg.out{align-self:flex-end;background:var(--sky);color:#fff;border-bottom-right-radius:5px}
+.msg .who{display:block;font-size:calc(10.5px*var(--k));font-weight:700;opacity:.62}
+.msg .mz{display:block;font-family:var(--f-zhs);font-weight:600;font-size:calc(17px*var(--k))}
+.msg .mk{display:block;margin-top:2px;font-size:calc(12.5px*var(--k));opacity:.78}
+
+/* 8 레이더 */
+.radar{position:relative;width:calc(min(80vw,40vh,450px)*var(--k));aspect-ratio:1;margin:0 auto;border-radius:50%;background:radial-gradient(circle,rgba(0,152,216,.2),rgba(0,24,80,0) 72%),var(--deep);box-shadow:inset 0 0 0 1.5px rgba(98,198,239,.55),0 0 60px rgba(0,152,216,.18)}
+.radar .rings{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:rgba(98,198,239,.3);stroke-width:.6}
+.sweep{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,rgba(98,198,239,0) 0deg,rgba(98,198,239,0) 285deg,rgba(98,198,239,.55) 359deg,rgba(98,198,239,0) 360deg);opacity:0}
+.scene.on .sweep{animation:sweep 2s .3s linear 4 both}
+@keyframes sweep{from{opacity:1;transform:rotate(var(--s0))}to{opacity:1;transform:rotate(calc(var(--s0) + 360deg))}}
+.blip{position:absolute;left:var(--x);top:var(--y);width:0;height:0;opacity:0}
+.scene.on .blip{animation:fd .2s both;animation-delay:var(--d)}
+.scene.was .blip{opacity:1}
+.blip i{position:absolute;left:-6px;top:-6px;width:12px;height:12px;border-radius:50%;background:#8fe6ff;box-shadow:0 0 14px 4px rgba(143,230,255,.6)}
+.blip span{position:absolute;left:12px;top:-13px;padding:4px 9px;border-radius:7px;background:rgba(0,15,54,.85);border:1px solid rgba(98,198,239,.45);white-space:nowrap;font-weight:700;font-size:calc(13px*var(--k));line-height:1.3;color:#fff}
+.tal{list-style:none;margin:0;padding:0;display:grid;gap:calc(9px*var(--k))}
+.tal li{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:12px;align-items:baseline}
+.tal i{width:10px;height:10px;border-radius:50%;background:rgba(234,242,251,.25);align-self:center}
+.scene.on .tal i{animation:lit .3s both;animation-delay:var(--d)}
+.scene.was .tal i{background:#8fe6ff;box-shadow:0 0 10px 3px rgba(143,230,255,.55)}
+@keyframes lit{to{background:#8fe6ff;box-shadow:0 0 10px 3px rgba(143,230,255,.55)}}
+.tal b{font-weight:700;font-size:calc(17px*var(--k))}
+.tal span{grid-column:2;font-size:calc(14px*var(--k));color:rgba(234,242,251,.78)}
+.blip.l span{left:auto;right:12px;text-align:right}
+.ret{position:absolute;left:34%;top:34%;width:32%;height:32%;opacity:0;--c:var(--seal);background:
+  linear-gradient(var(--c),var(--c)) top left/24% 3px no-repeat,linear-gradient(var(--c),var(--c)) top left/3px 24% no-repeat,
+  linear-gradient(var(--c),var(--c)) top right/24% 3px no-repeat,linear-gradient(var(--c),var(--c)) top right/3px 24% no-repeat,
+  linear-gradient(var(--c),var(--c)) bottom left/24% 3px no-repeat,linear-gradient(var(--c),var(--c)) bottom left/3px 24% no-repeat,
+  linear-gradient(var(--c),var(--c)) bottom right/24% 3px no-repeat,linear-gradient(var(--c),var(--c)) bottom right/3px 24% no-repeat}
+.scene.on .ret{animation:lockon 1.1s 4.9s cubic-bezier(.6,0,.35,1) both}
+.scene.was .ret{opacity:1}
+@keyframes lockon{0%{opacity:0;transform:scale(2.4) rotate(30deg)}12%{opacity:1}100%{opacity:1;transform:none}}
+.you{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:4px;white-space:nowrap}
+.you b{font-weight:700;font-size:calc(21px*var(--k));letter-spacing:-.02em;color:#fff}
+.you em{font-style:normal;font-family:var(--f-zh);font-weight:900;font-size:calc(12px*var(--k));padding:2px 8px;border-radius:999px;background:var(--seal);color:#fff}
+.scene.on .you{animation:youpop .45s 6s var(--e-spring) both}
+.scene.was .you{opacity:1}
+.you{opacity:0}
+@keyframes youpop{from{opacity:0;transform:translate(-50%,-50%) scale(.4)}to{opacity:1;transform:translate(-50%,-50%)}}
+
+/* 9 채용 절차 */
+.trk{position:relative;list-style:none;margin:0;padding:0;display:grid;gap:calc(13px*var(--k))}
+.trk::before,.trk .fill{content:"";position:absolute;left:12px;top:14px;bottom:14px;width:2px;background:rgba(234,242,251,.22)}
+.trk .fill{background:var(--sky2);transform-origin:top;transform:scaleY(0)}
+.scene.on .trk .fill{animation:fillY 2s .6s linear both}
+.scene.was .trk .fill{transform:none}
+@keyframes fillY{to{transform:none}}
+.st{position:relative;display:flex;align-items:center;gap:14px}
+.st i{position:relative;flex:none;width:26px;height:26px;border-radius:50%;border:2px solid rgba(234,242,251,.45);background:var(--navy);display:grid;place-items:center}
+.st i svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:0}
+.scene.on .st i{animation:ston .35s var(--e-spring) both;animation-delay:var(--d)}
+.scene.on .st i svg{animation:fd .2s both;animation-delay:var(--d)}
+.scene.was .st i{background:var(--sky);border-color:var(--sky)}
+.scene.was .st i svg{opacity:1}
+@keyframes ston{0%{transform:scale(.6)}100%{transform:none;background:var(--sky);border-color:var(--sky)}}
+.st b{font-weight:700;font-size:calc(19px*var(--k));letter-spacing:-.02em}
+.st small{font-family:var(--f-code);font-weight:700;font-size:calc(14px*var(--k));letter-spacing:.06em;opacity:.6;margin-left:auto}
+.perks{display:flex;flex-wrap:wrap;gap:calc(8px*var(--k))}
+.perk{padding:calc(6px*var(--k)) calc(12px*var(--k));border-radius:999px;background:rgba(234,242,251,.1);border:1px solid rgba(234,242,251,.22);font-weight:600;font-size:calc(13.5px*var(--k))}
+.perks-h{margin:0;font-size:calc(13px*var(--k));font-weight:600;color:rgba(234,242,251,.7)}
+
+/* 10 마무리: 선하증권(B/L) */
+.bl{position:relative;width:min(100%,calc(560px*var(--k)));background:var(--paper);color:var(--ink);border-radius:6px;padding:calc(15px*var(--k)) calc(17px*var(--k)) calc(17px*var(--k));box-shadow:0 22px 50px rgba(0,0,0,.42)}
+.bl-h{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;padding-bottom:calc(8px*var(--k));border-bottom:2px solid var(--ink)}
+.bl-h b{font-family:var(--f-code);font-weight:800;font-size:calc(25px*var(--k));letter-spacing:.03em;line-height:1}
+.bl-h span{font-family:var(--f-zh);font-weight:900;font-size:calc(19px*var(--k))}
+.bl-h em{margin-left:auto;font-style:normal;font-family:var(--f-code);font-weight:700;font-size:calc(15px*var(--k));letter-spacing:.06em;color:var(--mink)}
+.bl-f{display:grid;grid-template-columns:1fr 1fr;margin:calc(10px*var(--k)) 0 0;border-left:1px solid var(--rule);border-top:1px solid var(--rule)}
+.bl-f>div{padding:calc(7px*var(--k)) calc(10px*var(--k)) calc(8px*var(--k));border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);min-width:0}
+.bl-f .w{grid-column:1 / -1}
+.bl-f dt{font-size:calc(10.5px*var(--k));font-weight:600;color:var(--mink)}
+.bl-f dt .zh{font-weight:600;margin-right:4px}
+.bl-f dd{margin:2px 0 0;font-weight:700;font-size:calc(15.5px*var(--k));line-height:1.4}
+.bl-sig{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;min-height:calc(66px*var(--k));padding:calc(8px*var(--k)) 2px 0}
+.bl-sig dt{font-size:calc(10.5px*var(--k));font-weight:600;color:var(--mink)}
+.bl-sig dt .zh{font-weight:600;margin-right:4px}
+.bl-sig dd{margin:2px 0 0;font-family:var(--f-code);font-weight:800;font-size:calc(19px*var(--k));letter-spacing:.03em}
+.seal{position:absolute;right:calc(18px*var(--k));bottom:calc(10px*var(--k));width:calc(104px*var(--k));aspect-ratio:1;border:calc(5px*var(--k)) solid var(--seal);border-radius:9px;color:var(--seal);display:grid;grid-template-columns:1fr;align-content:center;justify-items:center;font-family:var(--f-zh);font-weight:900;font-size:calc(33px*var(--k));line-height:1.05;letter-spacing:.06em;--rot:-8deg;mix-blend-mode:multiply}
+.obtns{display:flex;flex-wrap:wrap;gap:10px}
+.obtn{display:inline-flex;align-items:center;gap:8px;min-height:calc(48px*var(--k));padding:0 calc(20px*var(--k));border:2px solid rgba(234,242,251,.85);border-radius:999px;background:transparent;color:var(--fg);font-weight:700;font-size:calc(15px*var(--k));text-decoration:none}
+.obtn svg{width:18px;height:18px}
+.obtn.pri{background:var(--sky);border-color:var(--sky);color:#fff}
+
+@media (prefers-reduced-motion:reduce){
+  .scene.on.in,.scene.on.back,.boot,.scene.on .sweep,.scene.on .waves svg,.scene.on .ship,.scene.on .ship svg,.scene.on .road,.scene.on .truck .wl{animation:none}
+  .scene.on .a,.scene.on .nd,.scene.on .rt,.scene.on .blip,.scene.on .ret,.scene.on .you,.scene.on .bx,.scene.on .shutter,.scene.on .st i,.scene.on .st i svg,.scene.on .trk .fill,.scene.on .cdoc.hitme,.scene.on .pl,.scene.on .laser{animation-duration:1ms!important;animation-delay:0s!important;animation-iteration-count:1!important}
+  .scene.on .pl,.scene.on .laser{opacity:0}
+}
 </style>
 </head>
 <body>
-  <p class="dept">경기대학교 중어중문전공</p>
-  <h1 class="bubble">자료를 준비하고 있습니다</h1>
-  <p class="guide">궁금한 점은 중어중문전공 부스에서 바로 물어보세요.</p>
-  <p class="code">QR 5</p>
+<main>
+<section class="stage" id="stage" aria-roledescription="carousel" aria-label="이카고웨이 로지스틱스 소개 자동 재생">
+  <div class="boot" aria-hidden="true"></div>
+  <div class="scenes" id="scenes"></div>
+  <div class="prog" id="prog" aria-hidden="true"></div>
+  <div class="top">
+    <div class="brand"><b>e-Cargoway Logistics</b><span>중국과 세계를 잇는 종합물류</span></div>
+    <div class="tools">
+      <button type="button" class="ibtn snd cta" id="btnSnd" hidden></button>
+      <button type="button" class="ibtn" id="btnPause" aria-label="일시정지"></button>
+    </div>
+  </div>
+  <div class="holdflag" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4.5" width="4" height="15" rx="1"/><rect x="14" y="4.5" width="4" height="15" rx="1"/></svg></div>
+  <div class="foot">
+    <span class="hint" id="hint"></span>
+    <a class="cue" id="cue" href="http://www.ecargoway.com/sp.php?p=42" target="_blank" rel="noopener">채용정보</a>
+  </div>
+</section>
+</main>
+<noscript><p style="padding:20px">자바스크립트를 켜면 소개 애니메이션이 재생됩니다.</p></noscript>
+
+<script>
+document.documentElement.classList.add('js');
+(() => {
+'use strict';
+
+/* ▼ 내용 — 이카고웨이 홈페이지(회사소개·기업연혁·지사안내·채용정보) 기준. 문구는 이 부분만 고치면 됩니다. */
+const RECRUIT = 'http://www.ecargoway.com/sp.php?p=42';
+/* 전체 재생 속도 배율 — 장면 길이·장면 안 움직임·효과음 시점·배경음악 빠르기에 함께 적용됩니다(1이면 원래 속도). */
+const SPEED = 1.5;
+/* 지점: 경도·위도로 지도 위치를 잡습니다. 첫 줄(칭다오)이 출발점이고, 나머지는 선이 그려지는 순서입니다. */
+const CITIES = [
+  {zh: '青岛', ko: '칭다오', lon: 120.38, lat: 36.07, lab: 'bl'},
+  {zh: '天津', ko: '톈진', lon: 117.20, lat: 39.08, lab: 'l'},
+  {zh: '威海', ko: '웨이하이', lon: 122.12, lat: 37.51, lab: 'r'},
+  {zh: '深圳', ko: '선전', lon: 113.95, lat: 22.70, lab: 'b'},
+  {zh: '上海', ko: '상하이', lon: 121.47, lat: 31.23, lab: 'r'},
+  {zh: '香港', ko: '홍콩', lon: 114.45, lat: 22.10, lab: 'r'},
+  {zh: '首尔', ko: '서울', lon: 126.98, lat: 37.57, lab: 't', kr: true},
+  {zh: '广州', ko: '광저우', lon: 113.26, lat: 23.13, lab: 'l'},
+  {zh: '厦门', ko: '샤먼', lon: 118.09, lat: 24.48, lab: 'r'},
+  {zh: '大连', ko: '다롄', lon: 121.61, lat: 38.91, lab: 't'}
+];
+const SERVICES = [
+  {zh: '空运', py: 'kōngyùn', ko: '항공운송', bg: '#0089c4', mark: 'ECWU 199802 1', route: '上海 PVG → 仁川 ICN', st: '航班已起飞', stpy: 'hángbān yǐ qǐfēi', stko: '항공편이 이륙했습니다', y: '2002', fact: 'Class A 항공화물 운송주선 라이선스 획득', vis: 'air'},
+  {zh: '海运', py: 'hǎiyùn', ko: '해상운송', bg: '#0b3a8c', mark: 'ECWU 199802 2', route: '上海港 → 仁川港', st: '货船已到港', stpy: 'huòchuán yǐ dào gǎng', stko: '화물선이 항구에 도착했습니다', y: '2008', fact: 'NVOCC 인증, 20여 개 선사·항공사와 업무 계약', vis: 'sea'},
+  {zh: '陆运', py: 'lùyùn', ko: '육상운송', bg: '#25704a', mark: 'ECWU 199802 3', route: '仁川 → 首尔', st: '货车已发车', stpy: 'huòchē yǐ fāchē', stko: '트럭이 출발했습니다', y: '', fact: '항구와 공항에서 고객의 문 앞까지 이어 줍니다', vis: 'land'},
+  {zh: '清关', py: 'qīngguān', ko: '통관', bg: '#3a4859', mark: 'ECWU 199802 4', route: '仁川海关', st: '已清关放行', stpy: 'yǐ qīngguān fàngxíng', stko: '통관을 마치고 반출되었습니다', y: '', fact: '수출입 통관 절차까지 한 번에 맡습니다', vis: 'cus'},
+  {zh: '仓储', py: 'cāngchǔ', ko: '창고', bg: '#9c4c27', mark: 'ECWU 199802 5', route: '仁川仓库', st: '货物已入库', stpy: 'huòwù yǐ rùkù', stko: '화물이 창고에 입고되었습니다', y: '2010', fact: '인천 창고 준공', vis: 'wh'}
+];
+const CHAT = [
+  {side: 'in', who: '上海 상하이 지점', zh: '这票货明天能到仁川吗？', ko: '이 화물, 내일 인천에 도착할 수 있나요?'},
+  {side: 'out', who: '首尔 서울', zh: '没问题！明天上午清关，下午送到。', ko: '문제없어요! 내일 오전에 통관하고 오후에 배송합니다.'},
+  {side: 'in', who: '上海 상하이 지점', zh: '太好了，辛苦了！', ko: '좋아요, 수고 많았어요!'}
+];
+const TALENT = [
+  {t: 'Global 인재', d: '다양한 문화를 열린 마음으로'},
+  {t: '열정', d: '물류 전문가를 꿈꾸는 사람'},
+  {t: '도전', d: '목표를 향해 패기 있게'}
+];
+const STEPS = ['지원서 접수', '서류전형', '실무진 면접', '임원 면접', '채용 확정'];
+const PERKS = ['성과에 따른 급여 인상', '매년 전 지점 우수사원 포상', '실적 연동 인센티브', '동호회 활동 지원'];
+
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'})[c]);
+const SV = (d, fill) => `<svg viewBox="0 0 24 24" ${fill ? 'fill="currentColor"' : 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"'} aria-hidden="true">${d}</svg>`;
+const ICON = {
+  pause: SV('<rect x="6" y="4.5" width="4" height="15" rx="1"/><rect x="14" y="4.5" width="4" height="15" rx="1"/>', 1),
+  play: SV('<path d="M8 5.2v13.6a.8.8 0 0 0 1.2.7l10.6-6.8a.8.8 0 0 0 0-1.4L9.2 4.5a.8.8 0 0 0-1.2.7z"/>', 1),
+  replay: SV('<path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1"/><path d="M3.5 4v4.6h4.6"/>'),
+  ext: SV('<path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>'),
+  check: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+  sndOn: SV('<path d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z"/><path d="M15.5 9.2a4 4 0 0 1 0 5.6"/><path d="M18.2 6.5a7.6 7.6 0 0 1 0 11"/>'),
+  sndOff: SV('<path d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/>')
+};
+$('#cue').insertAdjacentHTML('beforeend', ICON.ext);
+
+/* 장식용 바코드(실제로 읽히지는 않습니다) */
+const barcode = seed => {
+  let x = 0, s = seed, out = '';
+  const r = () => (s = (s * 1103515245 + 12345) & 0x7fffffff) / 0x7fffffff;
+  while (x < 236) { const w = 1 + (r() * 3 | 0); out += `<rect x="${x}" y="0" width="${w}" height="50"/>`; x += w + 1 + (r() * 2.6 | 0); }
+  return `<svg viewBox="0 0 240 50" preserveAspectRatio="none" aria-hidden="true">${out}</svg>`;
+};
+
+/* ── 장면 만들기 ── 장면 길이는 모두 2초(한 마디)의 배수입니다. lv는 배경음악 단계, sfx는 [초, 효과음, 값] */
+const S = [], parts = [];
+const add = (html, dur, lv, sfx) => { parts.push(html); S.push({dur, lv, sfx}); };
+
+add(`<article class="scene" aria-hidden="true" aria-label="인트로">
+<div class="bigzh"><div class="a rise" style="--d:.05s" lang="zh-CN">物流</div></div>
+<div class="fit two">
+<div class="col" style="order:2">
+<h1 class="h"><span class="a drop" style="--d:2s">중국과 세계 사이,</span><span class="a drop" style="--d:2.2s">길을 내는 회사</span></h1>
+<p class="lede a up" style="--d:2.7s">이카고웨이 로지스틱스는 1998년부터 항공·해상·육상 운송과 통관, 창고까지 한 번에 맡아 온 종합물류 기업입니다.</p>
+</div>
+<div class="col" style="order:1">
+<div class="label a slap" style="--d:.2s">
+<div class="lb-top"><b>e-Cargoway</b><span>이카고웨이 로지스틱스</span></div>
+<dl class="lb-f a prt" style="--d:.75s;--du:.6s">
+<div><dt>起运地 ORIGIN</dt><dd><span class="zh" lang="zh-CN">青岛</span> 칭다오</dd></div>
+<div><dt>SINCE</dt><dd class="code">1998</dd></div>
+<div class="w"><dt>服务 SERVICE</dt><dd class="zh" lang="zh-CN">空运 海运 陆运 清关 仓储</dd></div>
+</dl>
+<div class="bc">${barcode(19980201)}<span class="laser"></span></div>
+<div class="lb-no"><span>ECW 1998 0201</span><span>KR</span></div>
+</div>
+</div>
+</div>
+</article>`, 6000, 0, [[0, 'gong'], [.45, 'slap'], [.75, 'printer', .6], [1.8, 'scan']]);
+
+/* 지점망 지도 */
+const PJ = (lon, lat) => [(lon - 111.6) * 8.2, (41.4 - lat) * 10];
+const MW = (128.6 - 111.6) * 8.2, MH = (41.4 - 20.8) * 10;
+const LAB = {
+  l: [-5, 1.5, 'end'], r: [5, 1.5, 'start'], t: [0, -12.5, 'middle'], b: [0, 10.5, 'middle'], bl: [-4, 9.5, 'end']
+};
+const mapSfx = [], mapSvg = (() => {
+  const [ox, oy] = PJ(CITIES[0].lon, CITIES[0].lat);
+  let g = '';
+  for (const lon of [115, 120, 125]) { const x = PJ(lon, 0)[0]; g += `<path class="grat" d="M${x.toFixed(1)} 0V${MH.toFixed(1)}"/>`; }
+  for (const lat of [25, 30, 35, 40]) { const y = PJ(0, lat)[1]; g += `<path class="grat" d="M0 ${y.toFixed(1)}H${MW.toFixed(1)}"/>`; }
+  g += `<text class="sea" x="${PJ(123.2, 35.2)[0]}" y="${PJ(123.2, 35.2)[1]}" lang="zh-CN">黄海</text><text class="sea" x="${PJ(123.6, 28.6)[0]}" y="${PJ(123.6, 28.6)[1]}" lang="zh-CN">东海</text><text class="sea" x="${PJ(115.6, 21.3)[0]}" y="${PJ(115.6, 21.3)[1]}" lang="zh-CN">南海</text>`;
+  let rt = '', nd = '';
+  CITIES.forEach((c, i) => {
+    const [x, y] = PJ(c.lon, c.lat), [lx, ly, an] = LAB[c.lab] || LAB.r;
+    if (i) {
+      const d0 = .9 + (i - 1) * .4, dx = x - ox, dy = y - oy, L = Math.hypot(dx, dy), k = (i % 2 ? 1 : -1) * .16 * L;
+      const cx = (ox + x) / 2 - dy / L * k, cy = (oy + y) / 2 + dx / L * k;
+      rt += `<path class="rt" pathLength="1" style="--d:${d0}s" d="M${ox.toFixed(1)} ${oy.toFixed(1)}Q${cx.toFixed(1)} ${cy.toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)}"/>`;
+      nd += `<g class="nd${c.kr ? ' kr' : ''}" style="--d:${(d0 + .38).toFixed(2)}s"><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="2.2"/><text class="cz" x="${(x + lx).toFixed(1)}" y="${(y + ly).toFixed(1)}" text-anchor="${an}" lang="zh-CN">${c.zh}</text><text class="ck" x="${(x + lx).toFixed(1)}" y="${(y + ly + 6.4).toFixed(1)}" text-anchor="${an}">${c.ko}</text></g>`;
+      mapSfx.push([d0, 'zip'], [d0 + .38, 'node', i]);
+    } else {
+      nd += `<g class="nd origin" style="--d:.35s"><circle class="ring" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.4"/><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3"/><text class="cz" x="${(x - 5).toFixed(1)}" y="${(y + 12).toFixed(1)}" text-anchor="end" lang="zh-CN">${c.zh}</text><text class="cy" x="${(x - 5).toFixed(1)}" y="${(y + 21).toFixed(1)}" text-anchor="end">SINCE 1998</text></g>`;
+    }
+  });
+  return `<svg viewBox="-14 -10 ${(MW + 28).toFixed(1)} ${(MH + 20).toFixed(1)}" role="img" aria-label="칭다오에서 중국 각 지점과 서울로 이어지는 지점망">${g}${rt}${nd}</svg>`;
+})();
+add(`<article class="scene" aria-hidden="true" aria-label="지점망">
+<div class="fit two">
+<div class="col">
+<h2 class="h"><span class="a sl" style="--d:.1s">칭다오에서 시작해</span><span class="a sl" style="--d:.25s">중국 9개 도시로</span></h2>
+<p class="lede a up" style="--d:5s">상하이, 톈진, 다롄, 칭다오, 웨이하이, 광저우, 선전, 샤먼, 홍콩. 서울을 거쳐 하노이와 호치민, 로스앤젤레스와 뉴욕까지 이어집니다.</p>
+</div>
+<div class="map">${mapSvg}</div>
+</div>
+</article>`, 8000, 1, [[.4, 'node', 0], ...mapSfx]);
+
+/* 사업 영역 */
+const VIS = {
+  air: `<div class="runway"></div><svg class="pl" viewBox="0 0 120 44" aria-hidden="true"><path d="M8 25c0-3 3-5 9-5h74c10 0 19 2 25 5-6 3-15 5-25 5H17c-6 0-9-2-9-5z"/><path d="M12 20 5 6h10l14 14z"/><path d="M54 20 72 7h9L69 20z" opacity=".7"/><path d="M52 30l20 12h10L69 30z"/></svg>`,
+  sea: `<div class="ship"><svg viewBox="0 0 220 80" aria-hidden="true"><path d="M6 48h208l-14 22H22z" fill="#0d1d3f"/><path d="M15 62h191l-6 8H22z" fill="#b8262c"/>${[0, 1].map(r => Array.from({length: 12}, (_, c) => `<rect x="${40 + c * 13.6}" y="${38 - r * 10}" width="12.6" height="9" fill="${['#62c6ef', '#f2f5f8', '#d8232a', '#2f8f5b', '#e08a2e', '#0a2b6e'][(c * 2 + r * 3) % 6]}"/>`).join('')).join('')}<rect x="12" y="20" width="22" height="28" fill="#f2f5f8"/><rect x="15" y="24" width="16" height="4" fill="#0d1d3f"/><rect x="18" y="9" width="8" height="11" fill="#d8232a"/></svg></div><div class="waves"><svg viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path d="${Array.from({length: 20}, (_, i) => `${i ? '' : 'M0 20'}q10 -12 20 0t20 0`).join('')}"/></svg><svg viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path d="${Array.from({length: 20}, (_, i) => `${i ? '' : 'M0 20'}q10 -9 20 0t20 0`).join('')}"/></svg></div>`,
+  land: `<div class="road"></div><svg class="truck" viewBox="0 0 200 76" aria-hidden="true"><rect x="4" y="6" width="134" height="46" rx="2" fill="#f2f5f8"/>${Array.from({length: 11}, (_, i) => `<rect x="${12 + i * 12}" y="9" width="2" height="40" fill="#c8d1dd"/>`).join('')}<text x="71" y="36" text-anchor="middle" font-family="Big Shoulders Stencil Display, Arial Narrow, sans-serif" font-weight="800" font-size="17" fill="#25704a">e-CARGOWAY</text><rect x="4" y="52" width="190" height="5" fill="#0d1d3f"/><path d="M142 18h30l18 18v20h-48z" fill="#f2f5f8"/><path d="M150 24h20l12 12h-32z" fill="#0d1d3f" opacity=".85"/>${[28, 48, 110, 156, 180].map(x => `<g class="wl"><circle cx="${x}" cy="60" r="9" fill="#0d1d3f"/><circle cx="${x}" cy="60" r="3.6" fill="#f2f5f8"/><path d="M${x - 7} 60h14M${x} 53v14" stroke="#56637b" stroke-width="1.6"/></g>`).join('')}</svg>`,
+  cus: `<div class="cdoc hitme"><b lang="zh-CN">报关单</b><span>수출입 신고서</span><i></i><i></i><i></i><i></i><div class="stamp a stampin" style="--d:.7s"><b lang="zh-CN">放行</b><small>CLEARED</small></div></div>`,
+  wh: `<div class="whs"><svg viewBox="0 0 330 200" preserveAspectRatio="none" aria-hidden="true"><path d="M8 70 165 8l157 62v130H8z" fill="rgba(242,245,248,.92)"/><path d="M8 70 165 8l157 62" fill="none" stroke="#0d1d3f" stroke-width="6" stroke-linejoin="round"/><rect x="20" y="84" width="40" height="12" fill="#c8d1dd"/><rect x="270" y="84" width="40" height="12" fill="#c8d1dd"/></svg><div class="door"><div class="boxes"><i class="bx b1" style="--d:.95s"></i><i class="bx b2" style="--d:1.2s"></i><i class="bx b3" style="--d:1.45s"></i></div><div class="shutter"></div></div></div>`
+};
+const SVC_SFX = {
+  air: [[.3, 'jet', 2.6], [1.2, 'printer', .45]],
+  sea: [[.05, 'waves', 3.6], [.5, 'horn', 1.1], [1.25, 'printer', .45], [2.05, 'horn', .55]],
+  land: [[.1, 'truck'], [1.65, 'printer', .45]],
+  cus: [[.3, 'slap', .55], [.92, 'stamp'], [1.35, 'printer', .45]],
+  wh: [[.25, 'shutter', .8], [1.28, 'thud'], [1.53, 'thud'], [1.78, 'thud'], [1.95, 'forklift'], [2.2, 'printer', .45]]
+};
+SERVICES.forEach(v => {
+  const tk = v.vis === 'land' ? 1.65 : v.vis === 'wh' ? 2.2 : v.vis === 'cus' ? 1.35 : v.vis === 'sea' ? 1.25 : 1.2;
+  add(`<article class="scene" style="--sbg:${v.bg}" aria-hidden="true" aria-label="${esc(v.ko)}">
+<div class="mark">${v.mark}</div>
+<div class="fit two">
+<div class="col">
+<header class="svc-h"><div class="hz a rise" style="--d:.05s" lang="zh-CN">${v.zh}</div><span class="py a fd" style="--d:.3s" lang="zh-Latn-pinyin">${v.py}</span><h2 class="nm a sl" style="--d:.15s">${esc(v.ko)}</h2></header>
+<p class="fact a up" style="--d:${(tk + .55).toFixed(2)}s">${v.y ? `<span class="code">${v.y}</span>` : ''}<span>${esc(v.fact)}</span></p>
+</div>
+<div class="col">
+<div class="vis">${VIS[v.vis]}</div>
+<div class="ticket a prt" style="--d:${tk}s;--du:.45s"><div class="tk-h"><span><span class="zh" lang="zh-CN">状态</span> STATUS</span><span class="zh" lang="zh-CN">${v.route}</span></div><div class="tk-zh" lang="zh-CN">${v.st}</div><div class="tk-py" lang="zh-Latn-pinyin">${v.stpy}</div><div class="tk-ko">${esc(v.stko)}</div></div>
+</div>
+</div>
+</article>`, 4000, 2, SVC_SFX[v.vis]);
+});
+
+/* 중국어로 일하는 장면 */
+const chatT = [.7, 2, 3.3];
+add(`<article class="scene" aria-hidden="true" aria-label="현장의 언어">
+<div class="bigzh"><div class="a rise" style="--d:.05s" lang="zh-CN">中文</div></div>
+<div class="fit two">
+<div class="col">
+<h2 class="h"><span class="a sl" style="--d:.1s">현장의 언어,</span><span class="a sl" style="--d:.25s">중국어</span></h2>
+<p class="lede a up" style="--d:4.1s">중국 9개 도시의 동료들과 손발을 맞추는 일. 배운 중국어가 그대로 일의 실력이 됩니다.</p>
+</div>
+<div class="chat a up" style="--d:.3s"><div class="chat-h"><b lang="zh-CN">上海 ⇄ 首尔</b><span>업무 대화</span></div>
+${CHAT.map((m, i) => `<div class="msg ${m.side} a pop" style="--d:${chatT[i]}s"><span class="who">${esc(m.who)}</span><span class="mz" lang="zh-CN">${esc(m.zh)}</span><span class="mk">${esc(m.ko)}</span></div>`).join('')}
+</div>
+</div>
+</article>`, 6000, 2, [[chatT[0], 'msgIn'], [chatT[1], 'msgOut'], [chatT[2], 'msgIn']]);
+
+/* 인재 레이더 — 탐색선이 지나가는 순간에 점이 잡히도록 각도를 맞춥니다 */
+const blipT = [1, 2.33, 3.67], S0 = 234;  /* 탐색선은 234°에서 출발해 2초에 한 바퀴 → 세 점이 0°·240°·120°에 잡힘 */
+const blips = TALENT.map((p, i) => {
+  const ang = (S0 + (blipT[i] - .3) * 180) % 360, r = .8, rad = ang * Math.PI / 180;
+  const x = 50 + Math.sin(rad) * r * 50, y = 50 - Math.cos(rad) * r * 50;
+  return `<div class="blip${x > 60 ? ' l' : ''}" style="--x:${x.toFixed(1)}%;--y:${y.toFixed(1)}%;--d:${blipT[i]}s"><i></i><span>${esc(p.t)}</span></div>`;
+}).join('');
+add(`<article class="scene" aria-hidden="true" aria-label="인재 탐색">
+<div class="fit two">
+<div class="col">
+<h2 class="h"><span class="a sl" style="--d:.1s">지금,</span><span class="a sl" style="--d:.25s">눈독 들이는 중</span></h2>
+<ul class="tal a fd" style="--d:.5s">${TALENT.map((p, i) => `<li style="--d:${blipT[i]}s"><i></i><b>${esc(p.t)}</b><span>${esc(p.d)}</span></li>`).join('')}</ul>
+<p class="lede a up" style="--d:6.4s">글로벌 무대를 꿈꾸는 사람에게 이카고웨이의 문은 늘 열려 있습니다.</p>
+</div>
+<div class="radar a pop" style="--d:.15s"><svg class="rings" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="16"/><circle cx="50" cy="50" r="32"/><circle cx="50" cy="50" r="48"/><path d="M50 2v96M2 50h96"/></svg><div class="sweep" style="--s0:${S0}deg"></div>${blips}<div class="ret"></div><div class="you"><b>바로 당신</b><em lang="zh-CN">中文 OK</em></div></div>
+</div>
+</article>`, 8000, 3, [[.3, 'sonar'], [blipT[0], 'blip', 0], [blipT[1], 'blip', 1], [2.3, 'sonar'], [blipT[2], 'blip', 2], [4.3, 'sonar'], [4.9, 'lock']]);
+
+/* 채용 절차 */
+add(`<article class="scene" aria-hidden="true" aria-label="채용 절차">
+<div class="fit two">
+<div class="col">
+<h2 class="h"><span class="a sl" style="--d:.1s">출발까지,</span><span class="a sl" style="--d:.25s">다섯 단계</span></h2>
+<p class="lede a up" style="--d:3s">입사지원서는 홈페이지 채용정보에서 양식을 내려받아 작성한 뒤 등록합니다.</p>
+<p class="perks-h a fd" style="--d:3.2s">이런 제도가 있습니다</p>
+<div class="perks">${PERKS.map((p, i) => `<span class="perk a pop" style="--d:${(3.3 + i * .18).toFixed(2)}s">${esc(p)}</span>`).join('')}</div>
+</div>
+<ol class="trk"><span class="fill"></span>${STEPS.map((s, i) => `<li class="st" style="--d:${(.6 + i * .5).toFixed(1)}s"><i>${ICON.check}</i><b>${esc(s)}</b><small>STEP ${i + 1}</small></li>`).join('')}</ol>
+</div>
+</article>`, 6000, 2, [...STEPS.map((_, i) => [.6 + i * .5, 'check', i]), ...PERKS.map((_, i) => [3.3 + i * .18, 'tag'])]);
+
+/* 마무리: 당신 앞으로 발행된 선하증권 */
+add(`<article class="scene" aria-hidden="true" aria-label="마무리">
+<div class="mark">ECW 1998 NEXT</div>
+<div class="fit two">
+<div class="col">
+<h2 class="h"><span class="a drop" style="--d:.1s">다음 목적지는,</span><span class="a drop" style="--d:.3s">당신입니다.</span></h2>
+<p class="lede a up" style="--d:2.2s">중국어로 세계와 일하고 싶다면, 이카고웨이 채용정보에서 출발하세요.</p>
+<div class="obtns a up" style="--d:2.4s"><button type="button" class="obtn" data-act="replay">${ICON.replay}처음부터 다시 보기</button><a class="obtn pri" href="${RECRUIT}" target="_blank" rel="noopener">채용정보 보기${ICON.ext}</a></div>
+</div>
+<div class="bl a up" style="--d:.25s">
+<div class="bl-h"><b>BILL OF LADING</b><span lang="zh-CN">提单</span><em>No. ECW-1998-NEXT</em></div>
+<dl class="bl-f a prt" style="--d:.7s;--du:1s">
+<div class="w"><dt><span class="zh" lang="zh-CN">收货人</span>CONSIGNEE</dt><dd>중국어를 배우는, 바로 당신</dd></div>
+<div class="w"><dt><span class="zh" lang="zh-CN">品名</span>DESCRIPTION</dt><dd>글로벌 물류 전문가로 가는 초대장 1부</dd></div>
+<div><dt><span class="zh" lang="zh-CN">起运港</span>FROM</dt><dd>지금, 여기</dd></div>
+<div><dt><span class="zh" lang="zh-CN">目的港</span>TO</dt><dd>중국 9개 도시, 그리고 세계</dd></div>
+</dl>
+<dl class="bl-sig a fd" style="--d:1.5s"><div><dt><span class="zh" lang="zh-CN">签发</span>ISSUED BY</dt><dd>e-Cargoway Logistics</dd></div></dl>
+<div class="seal a stampin" style="--d:1.75s" lang="zh-CN" aria-label="환영합니다"><span>欢迎</span><span>加入</span></div>
+</div>
+</div>
+</article>`, Infinity, 9, [[.45, 'slap', .5], [.7, 'printer', 1], [1.97, 'seal']]);
+
+const stage = $('#stage'), scenesEl = $('#scenes'), progEl = $('#prog');
+scenesEl.innerHTML = parts.join('');
+[...scenesEl.children].forEach((el, k) => { S[k].el = el; });
+progEl.innerHTML = S.map(() => '<span class="seg"><i></i></span>').join('');
+const fills = [...progEl.querySelectorAll('i')];
+
+/* ── 재생 제어 ── */
+const btn = $('#btnPause'), hint = $('#hint');
+let cur = -1, elapsed = 0, last = 0, started = false, userPaused = false, held = false, wasT = 0;
+
+/* ── 사운드: 배경음악과 효과음 ──
+   모든 소리는 Web Audio로 그 자리에서 합성합니다. 음원 파일이 없어 인터넷 없이도 재생되고 저작권 문제가 없습니다.
+   브라우저 정책상 소리는 오른쪽 위 '소리 켜기'를 누른 뒤부터 납니다(키보드 M으로도 켜고 끕니다).
+   배경음악: D장조 120BPM × 속도 배율(1.5배면 180BPM, 한 마디 1.33초), vi–IV–I–V 진행 위에 고쟁 아르페지오와 디즈(중국 피리) 느낌의 선율.
+   장면 길이를 모두 마디 단위로 맞춰 두어, 장면이 바뀌는 순간과 음악의 마디가 함께 넘어갑니다.
+   음량은 바로 아래 VOL 값으로 조절합니다(master 전체, bgm 배경음악, sfx 효과음). */
+function makeSound(o) {
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if (!AC && !o.ctx) return null;
+  const SP = o.speed || 1;  /* 전체 속도 배율 — 화면 쪽 SPEED 값이 들어옵니다 */
+  const VOL = {master: 1.1, bgm: .33, sfx: .9};
+  const BPM = 120 * SP, ST = 60 / BPM / 4, BAR = ST * 16, LOOK = .15;
+  const PEN = [2, 4, 6, 9, 11];
+  const CH = {
+    Bm: {b: 47, pad: [54, 57, 59, 62], arp: [71, 74, 78, 81, 83]},
+    G:  {b: 43, pad: [55, 59, 62, 66], arp: [71, 74, 76, 78, 83]},
+    D:  {b: 38, pad: [54, 57, 62, 64], arp: [69, 74, 76, 78, 81]},
+    A:  {b: 45, pad: [57, 61, 64, 66], arp: [69, 71, 76, 78, 81]},
+    Em: {b: 40, pad: [55, 59, 62, 64], arp: [71, 74, 76, 78, 83]}
+  };
+  const PROG = ['Bm', 'G', 'D', 'A', 'Bm', 'G', 'Em', 'A'];
+  const ARP = [
+    [0, -1, -1, -1, 2, -1, -1, -1, 4, -1, -1, -1, 3, -1, -1, -1],
+    [0, -1, 2, -1, 4, -1, 3, -1, 1, -1, 3, -1, 4, -1, 2, -1],
+    [0, 2, 4, 1, 3, -1, 2, 4, 0, 2, 4, 1, 3, -1, 3, 1],
+    [4, 2, 0, 3, 1, -1, 2, 0, 4, 2, 0, 3, 1, -1, 1, 3]
+  ];
+  const ARP3 = [0, -1, 4, -1, 0, -1, 4, -1, 0, -1, 4, -1, 0, 2, 4, 2];
+  const ACC = [1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0];
+  /* 디즈 선율 4마디: [음, 시작 칸, 길이(16분음표 수), 꾸밈음] */
+  const HOOK = [
+    [[78, 0, 3, 76], [81, 3, 3], [83, 6, 4, 81], [81, 10, 2], [78, 12, 4]],
+    [[76, 0, 3], [78, 3, 3], [74, 6, 6, 76], [71, 12, 4]],
+    [[71, 0, 2], [74, 2, 2], [76, 4, 4, 74], [78, 8, 2], [81, 10, 2], [78, 12, 4]],
+    [[76, 0, 6, 78], [78, 6, 2], [76, 8, 8]]
+  ];
+  const mtof = m => 440 * Math.pow(2, (m - 69) / 12);
+  const R = (a, b) => a + Math.random() * (b - a);
+  const lvOf = i => o.lv[Math.max(0, Math.min(o.lv.length - 1, i))];
+  const last = o.lv.length - 1;
+  let ctx = null, on = false, timer = 0, offT = 0, sess = null, bag = null;
+  let master, sfxB, sfxRv, bgmIn, bgmTone, bgmDuck, bgmLvl, bgmRv, noise;
+  const ksC = new Map();
+
+  /* 한 번 울리고 끝나는 소리는 쓰인 노드를 모아 두었다가, 소리가 끝나면 연결을 끊어 정리합니다(오래 틀어 두어도 느려지지 않게). */
+  const T = n => { if (bag) bag.push(n); return n; };
+  const voice = fn => (...a) => {
+    const prev = bag, b = bag = [];
+    try { fn(...a); } finally {
+      bag = prev;
+      const src = b.filter(n => 'onended' in n);
+      let left = src.length;
+      const end = () => { if (--left === 0) for (const n of b) try { n.disconnect(); } catch (e) {} };
+      for (const s of src) s.addEventListener('ended', end);
+    }
+  };
+  const G = (v = 0) => { const n = T(ctx.createGain()); n.gain.value = v; return n; };
+  const F = (type, f, q) => { const n = T(ctx.createBiquadFilter()); n.type = type; n.frequency.value = f; if (q != null) n.Q.value = q; return n; };
+  const OSC = (type, f, t, d) => { const n = T(ctx.createOscillator()); n.type = type; n.frequency.value = f; n.start(t); n.stop(t + d); return n; };
+  const P = v => { const n = T(ctx.createStereoPanner ? ctx.createStereoPanner() : ctx.createGain()); if (n.pan) n.pan.value = v; return n; };
+  const BUF = (b, rate = 1) => { const s = T(ctx.createBufferSource()); s.buffer = b; s.playbackRate.value = rate; return s; };
+  const NZ = (t, d) => { const s = BUF(noise); s.loop = true; s.start(t, R(0, 1.6)); s.stop(t + d); return s; };
+  const W = (...a) => { for (let i = 1; i < a.length; i++) a[i - 1].connect(a[i]); return a[a.length - 1]; };
+  const hit = (p, t, v, a, tau) => { p.setValueAtTime(0, t); p.linearRampToValueAtTime(v, t + a); p.setTargetAtTime(0, t + a, tau); };
+  const ping = (t, f, v, tau, dst, type = 'sine') => { const g = G(); hit(g.gain, t, v, .002, tau); W(OSC(type, f, t, tau * 8 + .05), g, dst); };
+  const bus = (wet = .2, pn = 0) => { const g = G(1), p = P(pn); W(g, p, sfxB); if (wet) W(p, G(wet), sfxRv); return g; };
+  const duck = (t, a, h) => { const p = bgmDuck.gain; p.cancelScheduledValues(t); p.setTargetAtTime(a, t, .03); p.setTargetAtTime(1, t + h, .35); };
+  const env = (p, t, pts) => { p.setValueAtTime(0, t); for (const [dt, v] of pts) p.linearRampToValueAtTime(v, t + dt); };
+
+  /* 잔향(합성 임펄스 응답) */
+  function ir(sec, dec) {
+    const sr = ctx.sampleRate, n = sr * sec | 0, b = ctx.createBuffer(2, n, sr), pre = sr * .015 | 0;
+    for (let c = 0; c < 2; c++) {
+      const d = b.getChannelData(c); let y = 0;
+      for (let i = 0; i < n; i++) {
+        const u = i / n; y += (.92 - .82 * u) * (Math.random() * 2 - 1 - y);
+        d[i] = i < pre ? 0 : y * Math.pow(1 - u, dec);
+      }
+    }
+    return b;
+  }
+  /* 고쟁처럼 뜯는 현 소리(Karplus–Strong) — 음마다 한 번만 만들어 둡니다 */
+  function ks(m) {
+    let k = ksC.get(m); if (k) return k;
+    const sr = ctx.sampleRate, f = mtof(m), N = Math.max(4, Math.floor(sr / f + .5)), len = sr * 1.7 | 0;
+    const buf = ctx.createBuffer(1, len, sr), d = buf.getChannelData(0), line = new Float32Array(N);
+    let y = 0, mean = 0;
+    for (let i = 0; i < N; i++) { y += .7 * (Math.random() * 2 - 1 - y); line[i] = y; mean += y; }
+    mean /= N;
+    const pick = Math.max(1, Math.round(N * .13)), ex = Float32Array.from(line, v => v - mean);
+    for (let i = 0; i < N; i++) line[i] = ex[i] - .85 * ex[(i - pick + N) % N];
+    const T60 = Math.min(2.4, Math.max(.75, 2.4 - .85 * Math.log2(f / 220))), rho = Math.pow(.001, 1 / (f * T60));
+    let j = 0, pk = 0;
+    for (let i = 0; i < len; i++) {
+      const a = line[j], j2 = j + 1 === N ? 0 : j + 1;
+      d[i] = a; line[j] = rho * .5 * (a + line[j2]); j = j2;
+      if (Math.abs(a) > pk) pk = Math.abs(a);
+    }
+    const fade = sr * .1 | 0, g = pk ? .9 / pk : 1;
+    for (let i = 0; i < len; i++) d[i] *= g * (i > len - fade ? (len - i) / fade : 1);
+    k = {buf, rate: f * (N - .5) / sr};  /* 이 루프의 실제 주기는 N−0.5샘플 → 재생 속도로 정확한 음정에 맞춤 */
+    ksC.set(m, k);
+    return k;
+  }
+
+  function build() {
+    ctx = o.ctx || (() => { try { return new AC({latencyHint: 'interactive'}); } catch (e) { return new AC(); } })();
+    const sr = ctx.sampleRate;
+    noise = ctx.createBuffer(1, sr * 2, sr);
+    const nd = noise.getChannelData(0); for (let i = 0; i < nd.length; i++) nd[i] = Math.random() * 2 - 1;
+    const comp = ctx.createDynamicsCompressor();
+    comp.threshold.value = -10; comp.knee.value = 6; comp.ratio.value = 4; comp.attack.value = .003; comp.release.value = .2;
+    master = G(); W(master, comp, ctx.destination);
+    sfxB = G(VOL.sfx); sfxB.connect(master);
+    sfxRv = ctx.createConvolver(); sfxRv.buffer = ir(1.8, 3.4); W(sfxRv, G(.5), master);
+    bgmIn = G(1); bgmTone = F('lowpass', 18000, .5); bgmDuck = G(1); bgmLvl = G(VOL.bgm);
+    W(bgmIn, bgmTone, bgmDuck, bgmLvl, master);
+    bgmRv = ctx.createConvolver(); bgmRv.buffer = ir(2, 3); W(bgmRv, G(.5), bgmIn);
+    for (let m = 62; m <= 98; m++) if (PEN.includes(m % 12)) ks(m);
+  }
+
+  /* ── 배경음악 ── 단계: 0 인트로, 1 쌓기, 2 본격, 3 긴장(레이더), 9 마무리 */
+  function newSess(t, intro) {
+    if (sess) dropSess(t);
+    const s = sess = {pos: intro ? 1 : 0, k: 0, next: t, lvl: -1, ch: CH.Bm, ph2: false, hook: -1, end: null, done: false, hold: !!o.flags().paused, intro};
+    s.out = G(1); s.out.connect(bgmIn);
+    s.rv = G(1); s.rv.connect(bgmRv);
+    s.dr = G(1); s.dr.connect(s.out); W(s.dr, G(.07), s.rv);
+    s.bs = G(1); s.bs.connect(s.out);
+    s.pump = G(1); s.pd = G(1); W(s.pd, s.pump, s.out); W(s.pump, G(.55), s.rv);
+    const lp = F('lowpass', 6500, .3); s.pk = G(1); W(s.pk, lp, s.out); W(lp, G(.45), s.rv);
+    return s;
+  }
+  function dropSess(t) {
+    const s = sess; sess = null; if (!s) return;
+    s.done = true; s.out.gain.setTargetAtTime(0, t, .06); s.rv.gain.setTargetAtTime(0, t, .06);
+  }
+  function run(h) {
+    const s = sess; if (!ctx || !s || s.done || s.hold) return;
+    if (h == null) { const now = ctx.currentTime; if (s.next < now - .2) s.next = now + .03; h = now + LOOK; }
+    while (s.next < h && !s.done) { step(s, s.k++, s.next); s.next += ST; }
+  }
+  function bar(s, b, t) {
+    const ms = Math.max(0, (t - ctx.currentTime) * 1000);
+    const lv = lvOf(o.sceneAt(ms + 150)), nx = lvOf(o.sceneAt(ms + BAR * 1000 + 150));
+    if (lv === 9) { if (!s.end) s.end = {b}; } else s.end = null;
+    let name, L = lv;
+    if (s.end) {
+      const ph = b - s.end.b;
+      if (ph >= 2) { final(s, t); return; }
+      name = ph ? 'A' : 'G'; L = 2; s.hook = -1; s.ph2 = false;
+      if (ph) riser(s, t + BAR * .5, BAR * .5, .7);
+    } else if (L === 3) {
+      name = nx === 3 ? 'Bm' : 'A'; s.hook = -1;
+    } else {
+      const bi = s.pos++; name = PROG[bi % PROG.length]; s.ph2 = ((bi >> 2) & 1) === 1;
+      if (L === 2 && bi % 8 === 4 && lvOf(o.sceneAt(ms + 3 * BAR * 1000 + 150)) === 2) s.hook = 0;
+      else if (L === 2 && s.hook >= 0 && s.hook < 3) s.hook++;
+      else s.hook = -1;
+    }
+    if (s.lvl < 0 && !s.intro) gliss(s, t, 69, 93, .5 / SP, .55);
+    if (L === 2 && s.lvl !== 2) crash(s, t, s.lvl < 0 ? .6 : 1);
+    s.lvl = L; s.ch = CH[name];
+    pad(s, t, s.ch.pad, BAR + .04, L);
+    if (L !== 2 && !s.end && nx === 2) {
+      riser(s, t + BAR * .4, BAR * .6, 1);
+      gliss(s, t + BAR - .44 / SP, 69, 93, .4 / SP, .5);
+    }
+  }
+  function step(s, k, t) {
+    const st = k & 15, b = k >> 4;
+    if (!st) { bar(s, b, t); if (s.done) return; }
+    const L = s.lvl, ch = s.ch, ph = s.end ? b - s.end.b : -1;
+    if (L === 2) {
+      if (!(st & 3)) kick(s, t, st ? .85 : 1);
+      if (st === 4 || st === 12) clap(s, t, .7);
+      else if (ph === 1 && st > 12) clap(s, t, .3 + (st - 13) * .14);
+      if ((st & 3) === 2) hat(s, t, .85, st === 14 && (b & 1) === 1);
+      shaker(s, t, st & 1 ? .28 : (st & 3) === 2 ? .7 : .45);
+      if (!(st & 1)) bass(s, t, ch.b + (st === 6 || st === 14 ? 12 : 0), ST * 1.6, st & 3 ? .8 : 1);
+    } else if (L === 1) {
+      if (st === 0) kick(s, t, .5); else if (st === 8) kick(s, t, .38);
+      if (!(st & 1)) { shaker(s, t, (st & 3) === 2 ? .55 : .3); bass(s, t, ch.b, ST * 1.4, .55); }
+    } else if (L === 3) {
+      if (st === 0) kick(s, t, .7); else if (st === 3) kick(s, t, .3); else if (st === 8) kick(s, t, .55);
+      hat(s, t, st & 3 ? .22 : .5, false);
+      if (!st) bass(s, t, ch.b, BAR - .05, .8, .2);
+    }
+    const pat = L === 3 ? ARP3 : L === 2 && s.ph2 ? ARP[3] : ARP[Math.min(L, 2)];
+    const ai = pat[st];
+    if (ai >= 0) pluck(s.pk, t, ch.arp[ai], L === 2 ? (ACC[st] ? .85 : .48) : L === 3 ? .3 + st * .02 : L ? .6 : .9, (ai - 2) * .2 + R(-.15, .15));
+    if (s.hook >= 0) for (const n of HOOK[s.hook]) if (n[1] === st) lead(s, t, n[0], n[2] * ST, n[3]);
+  }
+  function final(s, t) {
+    s.done = true;
+    kick(s, t, 1.1); crash(s, t, 1.1); gong(s.out, t, .9, 98);
+    bass(s, t, 38, 1.2, 1.1, .7);
+    pad(s, t, CH.D.pad, .7, 2, 1.1);
+    gliss(s, t, 69, 98, .7 / SP, .6);
+  }
+  const kick = voice((s, t, v) => {
+    const g = G(), os = OSC('sine', 160, t, .5);
+    os.frequency.setValueAtTime(160, t); os.frequency.exponentialRampToValueAtTime(55, t + .09); os.frequency.exponentialRampToValueAtTime(42, t + .35);
+    hit(g.gain, t, .95 * v, .003, .085); W(os, g, s.dr);
+    const gc = G(); hit(gc.gain, t, .18 * v, .001, .006); W(NZ(t, .03), F('highpass', 2000, .7), gc, s.dr);
+    const p = s.pump.gain; p.setTargetAtTime(.5, t, .006); p.setTargetAtTime(1, t + .04, .1);
+  });
+  const clap = voice((s, t, v) => {
+    const g = G(), p = g.gain;
+    p.setValueAtTime(0, t);
+    for (const d of [0, .012, .024]) { p.setValueAtTime(.55 * v, t + d); p.setTargetAtTime(.0001, t + d + .0005, .0035); }
+    p.setValueAtTime(.5 * v, t + .036); p.setTargetAtTime(0, t + .037, .055);
+    W(NZ(t, .4), F('bandpass', 1400, .8), F('highpass', 500, .5), g, s.dr); W(g, G(.35 * v), s.rv);
+    const g2 = G(), os = OSC('triangle', 230, t, .2);
+    os.frequency.setValueAtTime(230, t); os.frequency.exponentialRampToValueAtTime(160, t + .07);
+    hit(g2.gain, t, .22 * v, .002, .03); W(os, g2, s.dr);
+  });
+  const hat = voice((s, t, v, open) => {
+    t += R(-.003, .003);
+    const g = G(); hit(g.gain, t, .16 * v, .001, open ? .07 : .012);
+    W(NZ(t, open ? .4 : .08), F('highpass', 7000, .6), F('bandpass', 10500, .8), g, P(.22), s.dr);
+  });
+  const shaker = voice((s, t, v) => {
+    t += R(-.004, .004);
+    const g = G(), p = g.gain;
+    p.setValueAtTime(0, t); p.linearRampToValueAtTime(.07 * v * R(.85, 1.1), t + .012); p.setTargetAtTime(0, t + .014, .018);
+    W(NZ(t, .1), F('bandpass', 6200, 1.1), g, P(-.25), s.dr);
+  });
+  const bass = voice((s, t, m, d, v, rel = .035) => {
+    const f = mtof(m), lp = F('lowpass', 1100, 2), g = G(), p = g.gain;
+    lp.frequency.setValueAtTime(1100, t); lp.frequency.setTargetAtTime(380, t + .01, .09);
+    p.setValueAtTime(0, t); p.linearRampToValueAtTime(.42 * v, t + .006); p.setTargetAtTime(.3 * v, t + .02, .12); p.setTargetAtTime(0, t + d, rel);
+    OSC('triangle', f, t, d + Math.max(.3, rel * 7)).connect(lp);
+    const sw = OSC('sawtooth', f, t, d + Math.max(.3, rel * 7)); sw.detune.value = 5; W(sw, G(.22), lp);
+    W(lp, g, s.bs);
+  });
+  const pad = voice((s, t, ns, d, L, rel = .26) => {
+    const g = G(), lp = F('lowpass', [1150, 1300, 1700, 800][L] || 1700, .35), v = L === 3 ? .03 : L ? .028 : .034;
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(v, t + .3); g.gain.setTargetAtTime(0, t + d, rel);
+    W(lp, g, s.pd);
+    for (const m of ns) for (const c of [-8, 8]) { const n = OSC('sawtooth', mtof(m), t, d + rel * 7); n.detune.value = c + R(-3, 3); n.connect(lp); }
+  });
+  const pluck = voice((dst, t, m, v, pn) => {
+    const k = ks(m), s = BUF(k.buf, k.rate), g = G();
+    g.gain.setValueAtTime(.3 * v, t); g.gain.setTargetAtTime(0, t + .6 / SP, .25 / SP);
+    W(s, g, P(Math.max(-.9, Math.min(.9, pn))), dst); s.start(t); s.stop(t + 1.6 / SP);
+  });
+  function gliss(s, t, lo, hi, dur, v) {
+    const ns = []; for (let m = lo; m <= hi; m++) if (PEN.includes(m % 12)) ns.push(m);
+    ns.forEach((m, i) => { const u = ns.length > 1 ? i / (ns.length - 1) : 1; pluck(s.pk, t + u * dur, m, v * (.5 + .6 * u), -.7 + 1.4 * u); });
+  }
+  const crash = voice((s, t, v) => {
+    const g = G(); hit(g.gain, t, .1 * v, .002, .55);
+    W(NZ(t, 3), F('highpass', 4500, .6), g, s.dr); W(g, G(.5), s.rv);
+  });
+  const riser = voice((s, t, d, v) => {
+    const bp = F('bandpass', 350, 1.8), g = G(), p = g.gain;
+    bp.frequency.setValueAtTime(350, t); bp.frequency.exponentialRampToValueAtTime(6500, t + d);
+    p.setValueAtTime(0, t); p.linearRampToValueAtTime(.11 * v, t + d * .95); p.linearRampToValueAtTime(0, t + d + .02);
+    W(NZ(t, d + .05), bp, g, s.dr); W(g, G(.5), s.rv);
+  });
+  /* 디즈(중국 피리) 느낌: 사인파 + 갈대막 떨림(밴드패스 톱니파) + 숨소리, 꾸밈음에서 미끄러져 들어감 */
+  const lead = voice((s, t, m, d, g0) => {
+    const f = mtof(m), end = t + d, o1 = OSC('sine', f, t, d + .4), o2 = OSC('sawtooth', f, t, d + .4), lf = OSC('sine', 5.6, t, d + .4);
+    if (g0) for (const x of [o1, o2]) { x.frequency.setValueAtTime(mtof(g0), t); x.frequency.exponentialRampToValueAtTime(f, t + .07); }
+    const vg = G(); vg.gain.setValueAtTime(0, t); vg.gain.linearRampToValueAtTime(14, t + Math.min(.35, d * .6));
+    W(lf, vg); vg.connect(o1.detune); vg.connect(o2.detune);
+    const e = G(), p = e.gain;
+    W(o1, G(.55), e); W(o2, F('bandpass', 2400, 2.2), G(.16), e);
+    const br = G(), q = br.gain; q.setValueAtTime(0, t); q.linearRampToValueAtTime(.05, t + .03); q.setTargetAtTime(.012, t + .06, .1); q.setTargetAtTime(0, end, .05);
+    W(NZ(t, d + .4), F('bandpass', f * 2, 6), br, e);
+    p.setValueAtTime(0, t); p.linearRampToValueAtTime(.2, t + .035); p.setTargetAtTime(.16, t + .05, .2); p.setTargetAtTime(0, end - .02, .06);
+    W(e, P(.12), s.out); W(e, G(.35), s.rv);
+  });
+  /* 징(중국 대라) — 처음에 살짝 높았다가 내려앉는 '쾅~' */
+  const gong = voice((dst, t, v, f0 = 110) => {
+    const out = G(1); out.connect(dst);
+    for (const [r, a, dec] of [[1, 1, 4.5], [1.48, .7, 3.6], [2.02, .55, 3.2], [2.51, .45, 2.6], [2.97, .35, 2.2], [3.61, .3, 1.8], [4.27, .22, 1.4], [5.13, .15, 1.1], [6.3, .1, .8]]) {
+      const os = OSC('sine', f0 * r, t, dec * 1.5 + .1), g = G(), p = g.gain, att = r > 3 ? .12 : .01;
+      os.detune.value = R(-8, 8);
+      os.frequency.setValueAtTime(f0 * r * 1.04, t); os.frequency.exponentialRampToValueAtTime(f0 * r, t + .5);
+      p.setValueAtTime(0, t); p.linearRampToValueAtTime(.12 * a * v, t + att); p.setTargetAtTime(0, t + att, dec / 4);
+      W(os, g, out);
+    }
+    const n = G(); hit(n.gain, t, .25 * v, .002, .05); W(NZ(t, .3), F('lowpass', 1800, .7), n, out);
+    const sh = G(), q = sh.gain; q.setValueAtTime(0, t); q.linearRampToValueAtTime(.03 * v, t + .25); q.setTargetAtTime(0, t + .3, .9);
+    W(NZ(t, 4.5), F('bandpass', 3800, 1.2), sh, out);
+  });
+
+  /* ── 효과음: 장면별 ── */
+  const RAW = {
+    /* 인트로: 징 */
+    gong(t, v = 1) { gong(bus(.45), t, v); duck(t, .5, 1.6); },
+    /* 송장 라벨이 '탁' 붙는 소리 */
+    slap(t, v = 1) {
+      const d = bus(.15), g = G(), os = OSC('sine', 150, t, .3);
+      os.frequency.setValueAtTime(150, t); os.frequency.exponentialRampToValueAtTime(70, t + .08);
+      hit(g.gain, t, .5 * v, .002, .045); W(os, g, d);
+      const g2 = G(); hit(g2.gain, t, .6 * v, .0008, .012); W(NZ(t, .08), F('bandpass', 2200, .7), g2, d);
+      const g3 = G(); hit(g3.gain, t + .012, .2 * v, .001, .03); W(NZ(t + .012, .12), F('highpass', 3000, .5), g3, d);
+      duck(t, .65, .35);
+    },
+    /* 감열 프린터가 출력하는 '지이익' */
+    printer(t, du = .6) {
+      du /= SP;
+      const d = bus(.08, .2), g = G(), p = g.gain, am = OSC('square', 150, t, du + .1), nb = G(.5);
+      p.setValueAtTime(0, t); p.linearRampToValueAtTime(.4, t + .02); p.setValueAtTime(.4, t + du); p.linearRampToValueAtTime(0, t + du + .04);
+      W(am, G(.5), nb.gain);
+      W(NZ(t, du + .1), F('bandpass', 3300, 2.5), nb, g, d);
+      W(OSC('triangle', 1650, t, du + .1), G(.22), g);
+      duck(t, .8, du);
+    },
+    /* 바코드 스캐너 '삑' */
+    scan(t) {
+      const d = bus(.12, .1), g = G(), p = g.gain;
+      p.setValueAtTime(0, t); p.linearRampToValueAtTime(.42, t + .006); p.setValueAtTime(.42, t + .11); p.linearRampToValueAtTime(0, t + .125);
+      W(OSC('triangle', 2350, t, .14), g, d); duck(t, .7, .3);
+    },
+    /* 지점이 하나씩 켜질 때 — 5음 음계로 한 칸씩 올라감 */
+    node(t, i = 0) {
+      const ns = [74, 76, 78, 81, 83, 86, 88, 90, 93, 95], f = mtof(ns[Math.min(i, 9)]), d = bus(.35, -.5 + Math.min(1, i / 9));
+      ping(t, f, .26, .1, d); ping(t, f * 2.756, .05, .03, d); if (!i) ping(t, f / 2, .24, .3, d);
+      duck(t, .75, .4);
+    },
+    /* 노선이 그려지는 '슝' */
+    zip(t) {
+      const d = bus(.05), bp = F('bandpass', 900, 2), g = G();
+      bp.frequency.setValueAtTime(900, t); bp.frequency.exponentialRampToValueAtTime(4200, t + .28 / SP);
+      env(g.gain, t, [[.2 / SP, .12], [.3 / SP, 0]]); W(NZ(t, .32 / SP), bp, g, d);
+    },
+    /* 항공: 활주로를 달려 이륙하는 제트음(왼쪽→오른쪽) */
+    jet(t, du = 2.6) {
+      du /= SP;
+      const p = P(-.8); W(p, sfxB); W(p, G(.14), sfxRv);
+      if (p.pan) { p.pan.setValueAtTime(-.8, t); p.pan.linearRampToValueAtTime(.8, t + du); }
+      const bp = F('bandpass', 260, .7), g1 = G();
+      bp.frequency.setValueAtTime(260, t); bp.frequency.exponentialRampToValueAtTime(2400, t + du * .7);
+      env(g1.gain, t, [[du * .3, .35], [du * .65, .8], [du, 0]]); W(NZ(t, du + .05), bp, g1, p);
+      const g2 = G(); env(g2.gain, t, [[du * .4, .5], [du * .6, .6], [du, 0]]); W(NZ(t, du + .05), F('lowpass', 220, .7), g2, p);
+      const wn = OSC('triangle', 900, t, du + .05), g3 = G();
+      wn.frequency.setValueAtTime(900, t); wn.frequency.exponentialRampToValueAtTime(2600, t + du * .75);
+      env(g3.gain, t, [[du * .5, .03], [du * .7, .05], [du, 0]]); W(wn, g3, p);
+      duck(t + .3, .55, du * .7);
+    },
+    /* 해상: 뱃고동 '부웅—' */
+    horn(t, du = 1.1) {
+      du /= SP;
+      const d = bus(.45), lp = F('lowpass', 900, .8), g = G(), p = g.gain;
+      p.setValueAtTime(0, t); p.linearRampToValueAtTime(.24, t + .12); p.setValueAtTime(.24, t + du - .05); p.linearRampToValueAtTime(0, t + du + .3);
+      W(lp, g, d);
+      for (const [f, a] of [[92.5, 1], [92.5 * 1.006, .8], [138.6, .45], [185, .3]]) { const os = OSC('sawtooth', f, t, du + .4); os.frequency.setValueAtTime(f * .97, t); os.frequency.linearRampToValueAtTime(f, t + .15); W(os, G(a), lp); }
+      duck(t, .5, du);
+    },
+    /* 해상: 출렁이는 물결 */
+    waves(t, du = 3.5) {
+      du /= SP;
+      const d = bus(.2), g = G(), am = G(.07);
+      env(g.gain, t, [[.6, 1], [du - .6, 1], [du, 0]]);
+      W(OSC('sine', .45, t, du + .1), G(.05), am.gain);
+      W(NZ(t, du + .1), F('lowpass', 750, .6), am, g, d);
+    },
+    /* 육상: 트럭 엔진을 밟았다가 에어브레이크 '치익' */
+    truck(t) {
+      const k = 1 / SP, d = bus(.15), g = G(), os = OSC('sawtooth', 46, t, 1.8 * k), am = OSC('sine', 10, t, 1.8 * k), ab = G(.6);
+      os.frequency.setValueAtTime(46, t); os.frequency.linearRampToValueAtTime(70, t + .9 * k); os.frequency.linearRampToValueAtTime(52, t + 1.4 * k);
+      am.frequency.setValueAtTime(10, t); am.frequency.linearRampToValueAtTime(16, t + .9 * k); am.frequency.linearRampToValueAtTime(11, t + 1.4 * k);
+      W(am, G(.4), ab.gain);
+      env(g.gain, t, [[.25 * k, .55], [1.3 * k, .4], [1.7 * k, 0]]);
+      W(os, F('lowpass', 420, 1.2), ab, g, d);
+      const tb = t + 1.35 * k, g2 = G(), q = g2.gain; q.setValueAtTime(0, tb); q.linearRampToValueAtTime(.24, tb + .02); q.setTargetAtTime(0, tb + .05, .14);
+      W(NZ(tb, .7), F('highpass', 2500, .6), g2, d);
+      duck(t, .6, 1.6);
+    },
+    /* 통관: 서류에 도장 '쾅' */
+    stamp(t) {
+      const d = bus(.25), g0 = G(); hit(g0.gain, t - .07, .07, .001, .008); W(NZ(t - .07, .03), F('bandpass', 1800, 2), g0, d);
+      const g = G(), os = OSC('sine', 125, t, .5);
+      os.frequency.setValueAtTime(125, t); os.frequency.exponentialRampToValueAtTime(46, t + .15);
+      hit(g.gain, t, .75, .002, .075); W(os, g, d);
+      const g2 = G(); hit(g2.gain, t, .5, .001, .02); W(NZ(t, .2), F('lowpass', 1500, 1), g2, d);
+      const g3 = G(); hit(g3.gain, t + .004, .2, .0005, .007); W(NZ(t + .004, .05), F('bandpass', 2800, .8), g3, d);
+      duck(t, .55, .5);
+    },
+    /* 창고: 셔터가 '드르륵' 올라감 */
+    shutter(t, du = .8) {
+      du /= SP;
+      const d = bus(.2, .25), g = G(), am = OSC('square', 22, t, du + .1), ab = G(.5);
+      am.frequency.setValueAtTime(22, t); am.frequency.linearRampToValueAtTime(34, t + du);
+      W(am, G(.5), ab.gain);
+      env(g.gain, t, [[.06, .7], [du - .1, .7], [du, 0]]);
+      W(NZ(t, du + .1), F('bandpass', 1500, 1.2), ab, g, d);
+      const g2 = G(); hit(g2.gain, t + du - .02, .45, .002, .04); W(NZ(t + du - .02, .1), F('lowpass', 900, 1), g2, d);
+      duck(t, .65, du);
+    },
+    /* 창고: 상자가 내려앉는 '툭' */
+    thud(t) {
+      const d = bus(.12), g = G(), os = OSC('sine', 175, t, .4);
+      os.frequency.setValueAtTime(175, t); os.frequency.exponentialRampToValueAtTime(68, t + .1);
+      hit(g.gain, t, .6, .003, .055); W(os, g, d);
+      const g2 = G(); hit(g2.gain, t, .36, .002, .028); W(NZ(t, .15), F('lowpass', 1200, .9), g2, d);
+      duck(t, .7, .3);
+    },
+    /* 창고: 지게차 후진 경고음 '삐-삐-삐' */
+    forklift(t) {
+      const d = bus(.25, .3), lp = F('lowpass', 2500, .7); W(lp, d);
+      for (let i = 0; i < 3; i++) { const tt = t + i * .42 / SP, g = G(), p = g.gain; p.setValueAtTime(0, tt); p.linearRampToValueAtTime(.24, tt + .01); p.setValueAtTime(.24, tt + .21); p.linearRampToValueAtTime(0, tt + .23); W(OSC('square', 1040, tt, .25), g, lp); }
+      duck(t, .7, 1.2);
+    },
+    /* 대화: 받은 메시지 '띠롱' / 보낸 메시지 '슝' */
+    msgIn(t) { const d = bus(.2, -.3); ping(t, 1175, .4, .05, d); ping(t + .07, 1760, .36, .06, d); duck(t, .75, .4); },
+    msgOut(t) {
+      const d = bus(.2, .3), g = G(), os = OSC('sine', 600, t, .2);
+      os.frequency.setValueAtTime(600, t); os.frequency.exponentialRampToValueAtTime(1180, t + .09);
+      hit(g.gain, t, .48, .004, .05); W(os, g, d); duck(t, .75, .3);
+    },
+    /* 레이더: 탐색 '핑—' */
+    sonar(t) { const d = bus(.6); ping(t, 1175, .27, .3, d); ping(t, 2350, .05, .08, d); duck(t, .8, .6); },
+    /* 레이더: 인재 포착 '삐빅' */
+    blip(t, i = 0) {
+      const f = [1760, 1976, 2349][i % 3], d = bus(.25, [-.5, .5, -.2][i % 3]);
+      ping(t, f, .25, .04, d); ping(t + .09, f, .18, .03, d); duck(t, .75, .3);
+    },
+    /* 레이더: 조준이 좁혀지며 빨라지는 경고음 → 고정 '띠링' */
+    lock(t) {
+      const d = bus(.2); let x = 0, gap = .2 / SP;
+      while (x < 1.05 / SP) { ping(t + x, 2200, .16, .018, d, 'square'); x += gap; gap = Math.max(.05 / SP, gap * .78); }
+      const tt = t + 1.1 / SP;
+      [1175, 1480, 1760].forEach((f, i) => { ping(tt + i * .035, f, .22, .25, d); ping(tt + i * .035, f * 2, .05, .06, d); });
+      duck(t, .6, 1.8);
+    },
+    /* 채용 절차: 단계마다 '딩' (한 단계씩 올라감) */
+    check(t, i = 0) {
+      const f = mtof([74, 78, 81, 86, 90][Math.min(i, 4)]), d = bus(.3, -.4 + i * .2);
+      ping(t, f, .42, .09, d); ping(t, f * 2.756, .07, .03, d);
+      const g = G(); hit(g.gain, t, .2, .001, .006); W(NZ(t, .03), F('bandpass', 3000, 2), g, d);
+      duck(t, .75, .35);
+    },
+    /* 복리후생 태그가 붙을 때 '톡' */
+    tag(t) { const d = bus(.15, R(-.4, .4)), g = G(), os = OSC('sine', 480, t, .2); os.frequency.setValueAtTime(480, t); os.frequency.exponentialRampToValueAtTime(960, t + .05); hit(g.gain, t, .3, .002, .035); W(os, g, d); },
+    /* 마무리: '환영' 도장 + 작은 징(소라)의 올라가는 '징!' */
+    seal(t) {
+      RAW.stamp(t);
+      const d = bus(.35), f0 = 760;
+      [[1, 1, 1.1], [1.53, .45, .7], [2.21, .3, .5], [2.9, .18, .35]].forEach(([r, a, dec]) => {
+        const os = OSC('sine', f0 * r * .94, t + .06, dec * 1.6 + .05), g = G();
+        os.frequency.setValueAtTime(f0 * r * .94, t + .06); os.frequency.exponentialRampToValueAtTime(f0 * r * 1.03, t + .28);
+        hit(g.gain, t + .06, .12 * a, .002, dec / 4.5); W(os, g, d);
+      });
+    },
+    /* 장면 전환: 컨베이어처럼 밀려 들어오는 '쉭' */
+    swish(t, dir) {
+      const p = P(0), bp = F('bandpass', 1500, 1.1), g = G();
+      if (p.pan) { p.pan.setValueAtTime(dir > 0 ? .5 : -.5, t); p.pan.linearRampToValueAtTime(dir > 0 ? -.5 : .5, t + .3 / SP); }
+      bp.frequency.setValueAtTime(1500, t); bp.frequency.exponentialRampToValueAtTime(5200, t + .26 / SP);
+      env(g.gain, t, [[.11 / SP, .1], [.3 / SP, 0]]);
+      W(NZ(t, .32 / SP), bp, g, p, sfxB);
+    },
+    pop(t) {
+      const d = bus(.2), g = G(), os = OSC('sine', 380, t, .25);
+      os.frequency.setValueAtTime(380, t); os.frequency.exponentialRampToValueAtTime(900, t + .06);
+      hit(g.gain, t, .25, .002, .04); W(os, g, d);
+    }
+  };
+  const SFX = {};
+  for (const k in RAW) SFX[k] = voice(RAW[k]);
+
+  /* ── 화면 쪽에서 부르는 함수 ── */
+  function scene(i, prev, dir, at) {
+    if (!on || !ctx) return;
+    const t = (at != null ? at : ctx.currentTime) + .02;
+    if (i === 0 && (prev === last || !sess || sess.done)) newSess(t, true);
+    else if ((!sess || sess.done) && i !== last) newSess(t, false);
+    if (prev >= 0 && prev !== i) SFX.swish(t, dir);
+    for (const [dt, name, a] of o.sfx[i] || []) (SFX[name] || SFX.pop)(t + dt / SP, a);
+    run();
+  }
+  /* 일시정지·길게 누르기 상태를 음악에 반영 */
+  function sync() {
+    if (!ctx) return;
+    const f = o.flags(), t = ctx.currentTime, k = f.paused ? 0 : f.held ? .55 : 1;
+    bgmLvl.gain.setTargetAtTime(VOL.bgm * k, t, f.paused ? .15 : .1);
+    bgmTone.frequency.setTargetAtTime(f.held ? 850 : 18000, t, .1);
+    const s = sess;
+    if (s && !s.done) {
+      if (f.paused) s.hold = true;
+      else if (s.hold) { s.hold = false; s.next = t + .1; run(); }
+    }
+  }
+  function start(fromTop) {
+    if (!ctx) build();
+    on = true; clearTimeout(offT);
+    if (ctx.state !== 'running' && ctx.resume) ctx.resume();
+    const z = ctx.createBufferSource(); z.buffer = ctx.createBuffer(1, 1, ctx.sampleRate); z.connect(ctx.destination); z.start(0);
+    const t = ctx.currentTime;
+    master.gain.cancelScheduledValues(t); master.gain.setTargetAtTime(VOL.master, t, .1);
+    if (fromTop) newSess(t + .02, true);
+    else if (!sess || sess.done) newSess(t + .08, false);
+    sync();
+    if (!timer) timer = setInterval(run, 25);
+    run();
+  }
+  function stop() {
+    on = false;
+    if (!ctx) return;
+    const t = ctx.currentTime;
+    master.gain.cancelScheduledValues(t); master.gain.setTargetAtTime(0, t, .05);
+    clearTimeout(offT);
+    offT = setTimeout(() => { if (!on && ctx.state === 'running') ctx.suspend(); }, 350);
+  }
+  document.addEventListener('visibilitychange', () => {
+    if (!ctx || o.ctx) return;
+    if (document.hidden) ctx.suspend(); else if (on) ctx.resume();
+  });
+  return {toggle(fromTop) { on ? stop() : start(fromTop); return on; }, scene, sync, get on() { return on; }};
+}
+const snd = makeSound({
+  speed: SPEED,
+  lv: S.map(s => s.lv),
+  sfx: S.map(s => s.sfx),
+  flags: () => ({paused: userPaused, held}),
+  sceneAt: ms => {
+    if (cur < 0) return 0;
+    if (!started || userPaused || held || document.hidden) return cur;
+    let i = cur, rem = (S[i].dur - elapsed) / SPEED;
+    while (ms > rem && i < S.length - 1) { ms -= rem; rem = S[++i].dur / SPEED; }
+    return i;
+  }
+});
+
+function syncBtn() {
+  const end = cur === S.length - 1;
+  btn.innerHTML = end ? ICON.replay : userPaused ? ICON.play : ICON.pause;
+  btn.setAttribute('aria-label', end ? '처음부터 다시 보기' : userPaused ? '재생' : '일시정지');
+}
+function setPaused(v) { userPaused = v; stage.classList.toggle('paused', v); syncBtn(); if (snd) snd.sync(); }
+
+function show(i, dir) {
+  const prev = cur;
+  S.forEach((s, k) => { if (k !== prev && k !== i) s.el.classList.remove('on', 'was', 'in', 'back'); });
+  if (prev >= 0 && prev !== i) {
+    const p = S[prev].el;
+    p.classList.remove('on', 'in', 'back');
+    p.classList.add('was');
+    p.setAttribute('aria-hidden', 'true');
+  }
+  const el = S[i].el;
+  el.classList.remove('on', 'was', 'in', 'back');
+  void el.offsetWidth;
+  el.classList.add('on', dir < 0 ? 'back' : 'in');
+  if (SPEED !== 1 && el.getAnimations) for (const an of el.getAnimations({subtree: true})) an.playbackRate = SPEED;
+  el.setAttribute('aria-hidden', 'false');
+  cur = i; elapsed = 0;
+  if (snd) snd.scene(i, prev, dir < 0 ? -1 : 1);
+  clearTimeout(wasT);
+  wasT = setTimeout(() => S.forEach((s, k) => { if (k !== cur) s.el.classList.remove('was'); }), 700 / SPEED);
+  fills.forEach((f, k) => { f.style.transform = `scaleX(${k < cur ? 1 : 0})`; });
+  syncBtn();
+}
+const go = (i, dir) => { if (i >= 0 && i < S.length) show(i, dir == null ? (i >= cur ? 1 : -1) : dir); };
+const next = () => { if (cur < S.length - 1) go(cur + 1, 1); };
+const prevScene = () => go(Math.max(0, cur - 1), -1);
+
+function tick(t) {
+  const dt = last ? Math.min(80, t - last) : 0;
+  last = t;
+  const s = S[cur];
+  if (s) {
+    if (s.dur === Infinity) fills[cur].style.transform = 'scaleX(1)';
+    else {
+      if (started && !userPaused && !held && !document.hidden) elapsed += dt * SPEED;
+      fills[cur].style.transform = `scaleX(${Math.min(1, elapsed / s.dur).toFixed(4)})`;
+      if (elapsed >= s.dur) next();
+    }
+  }
+  requestAnimationFrame(tick);
+}
+
+/* 탭: 오른쪽 다음·왼쪽 이전 / 스와이프 / 길게 눌러 멈춤 */
+let down = null, holdT = 0, hintOff = false;
+const killHint = () => { if (!hintOff) { hintOff = true; hint.classList.add('off'); } };
+const release = () => { clearTimeout(holdT); if (held) { held = false; stage.classList.remove('held'); if (snd) snd.sync(); } down = null; };
+stage.addEventListener('pointerdown', e => {
+  if ((e.pointerType === 'mouse' && e.button !== 0) || e.target.closest('button, a')) return;
+  down = {x: e.clientX, y: e.clientY};
+  clearTimeout(holdT);
+  holdT = setTimeout(() => { if (down) { held = true; stage.classList.add('held'); if (snd) snd.sync(); } }, 240);
+});
+stage.addEventListener('pointermove', e => {
+  if (down && !held && Math.hypot(e.clientX - down.x, e.clientY - down.y) > 10) clearTimeout(holdT);
+});
+stage.addEventListener('pointerup', e => {
+  if (!down) return;
+  const dx = e.clientX - down.x, dy = e.clientY - down.y, wasHeld = held;
+  release(); killHint();
+  if (Math.abs(dx) > 44 && Math.abs(dx) > Math.abs(dy) * 1.2) { if (dx < 0) next(); else prevScene(); return; }
+  if (wasHeld || Math.hypot(dx, dy) > 10) return;
+  const r = stage.getBoundingClientRect();
+  if (e.clientX - r.left < r.width * .3) prevScene(); else next();
+});
+stage.addEventListener('pointercancel', release);
+stage.addEventListener('contextmenu', e => e.preventDefault());
+
+btn.addEventListener('click', () => { killHint(); if (cur === S.length - 1) { setPaused(false); go(0, 1); } else setPaused(!userPaused); });
+stage.addEventListener('click', e => {
+  const b = e.target.closest('[data-act]');
+  if (b && b.dataset.act === 'replay') { setPaused(false); go(0, 1); }
+});
+/* 소리 켜기·끄기 — 처음 켤 때는 음악과 장면이 맞게 처음부터 다시 시작합니다(마지막 장면에서는 그대로) */
+const sbtn = $('#btnSnd');
+let sndTried = false;
+function syncSnd() {
+  const v = !!(snd && snd.on), lab = v ? '소리 끄기' : '소리 켜기';
+  sbtn.classList.toggle('cta', !v && !sndTried);
+  sbtn.innerHTML = (v ? ICON.sndOn : ICON.sndOff) + '<span class="lbl">소리 켜기</span>';
+  sbtn.setAttribute('aria-label', lab);
+  sbtn.title = lab + ' (M)';
+}
+if (snd) {
+  sbtn.hidden = false;
+  syncSnd();
+  sbtn.addEventListener('click', () => {
+    killHint();
+    const fromTop = !sndTried && cur !== S.length - 1;
+    sndTried = true;
+    snd.toggle(fromTop);
+    if (fromTop && snd.on) { setPaused(false); go(0, 1); }
+    syncSnd();
+  });
+}
+document.addEventListener('keydown', e => {
+  if (e.altKey || e.ctrlKey || e.metaKey) return;
+  if (e.code === 'KeyM' && snd && !e.repeat) { e.preventDefault(); sbtn.click(); return; }
+  const tgt = e.target instanceof Element ? e.target : null;
+  if (e.key === 'ArrowRight') { e.preventDefault(); killHint(); next(); }
+  else if (e.key === 'ArrowLeft') { e.preventDefault(); killHint(); prevScene(); }
+  else if (e.key === ' ' && !(tgt && tgt.closest('button, a'))) { e.preventDefault(); btn.click(); }
+});
+
+/* 화면 크기에 맞춰 장면 안 글자·도형 크기를 맞춤(넘치면 조금씩 줄임) */
+function fitAll() {
+  const base = innerWidth >= 1600 && innerHeight >= 900 ? 1.25 : 1;  /* 부스 TV처럼 큰 화면에서는 25% 크게 */
+  S.forEach(s => {
+    const f = s.el.querySelector('.fit');
+    if (!f) return;
+    let k = base;
+    f.style.setProperty('--k', k);
+    for (let n = 0; n < 16 && f.scrollHeight > f.clientHeight + 1; n++) { k -= .05; f.style.setProperty('--k', k.toFixed(2)); }
+  });
+}
+
+hint.textContent = fine ? '클릭하거나 ← → 키로 넘깁니다' : '탭하면 다음, 길게 누르면 멈춤';
+setTimeout(killHint, 8000);
+const wait = ms => new Promise(r => setTimeout(r, ms));
+const fontsP = document.fonts && document.fonts.load
+  ? Promise.all([document.fonts.load('700 48px "IBM Plex Sans KR"', '중국과 세계 사이'), document.fonts.load('900 64px "Noto Serif SC"', '物流空运海运'), document.fonts.load('800 24px "Big Shoulders Stencil Display"', 'ECW 1998')]).catch(() => {})
+  : Promise.resolve();
+function start() {
+  if (started) return;
+  started = true;
+  stage.classList.add('ready');
+  fitAll();
+  go(0, 1);
+}
+Promise.race([fontsP, wait(1500)]).then(start);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { if (started) fitAll(); });
+let rz = 0;
+addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(fitAll, 120); });
+syncBtn();
+requestAnimationFrame(tick);
+window.__show = {go: i => go(i, 1), pause: v => setPaused(v !== false)};
+})();
+</script>
 </body>
 </html>

@@ -1,106 +1,685 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#B3122E">
-<title>자료 준비 중 | 경기대학교 중어중문전공</title>
+<title>경기대학교 중어중문전공 경진대회</title>
+<meta name="description" content="경기대학교 글로벌어문학부 중어중문전공 중국어 프레젠테이션·토론 경진대회와 학생 포트폴리오 경진대회 홍보 애니메이션">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gothic+A1:wght@400;600;800&family=Nanum+Brush+Script&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --crimson: #B3122E;
-    --crimson-deep: #7E0A1F;
-    --gold: #F2C14E;
-    --navy: #14234B;
-    --paper: #FFF8EC;
+:root{
+  --paper:#E7E3DD; --paper2:#DCD6CE; --ink:#221C1B; --mute:#5F5652;
+  --red:#B5232B; --ox:#5C1014; --gold:#A8843F; --line:#221C1B; --pill:#F6F3EE; --shell:#CFC8BF;
+  --kr:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --disp:"Black Han Sans","Gothic A1","Malgun Gothic",sans-serif;
+  --brush:"Nanum Brush Script","Gothic A1",cursive;
+  --zh:"Noto Serif SC","Songti SC","SimSun",serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#1C1414; --paper2:#2A1D1C; --ink:#F1EAE3; --mute:#B5A8A1;
+    --red:#E0434B; --ox:#F0B8A8; --gold:#D3B06A; --line:#E9DED4; --pill:#2A1D1C; --shell:#0F0B0B;
   }
-  * { box-sizing: border-box; }
-  html, body { height: 100%; margin: 0; }
-  body {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.75rem;
-    padding: calc(2rem + env(safe-area-inset-top, 0px)) 1.5rem calc(2rem + env(safe-area-inset-bottom, 0px));
-    background:
-      radial-gradient(circle at 50% 38%, rgba(242,193,78,.18) 0 22%, transparent 60%),
-      radial-gradient(rgba(126,10,31,.55) 1.2px, transparent 1.4px) 0 0 / 9px 9px,
-      var(--crimson);
-    color: var(--paper);
-    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-    text-align: center;
-  }
-  .dept {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: .02em;
-    color: var(--gold);
-  }
-  .bubble {
-    position: relative;
-    max-width: 22rem;
-    margin: 0;
-    padding: 1.6rem 1.8rem;
-    background: #fff;
-    color: var(--navy);
-    border: 4px solid var(--navy);
-    border-radius: 2.2rem;
-    box-shadow: 7px 7px 0 var(--navy);
-    font-family: "Black Han Sans", -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-    font-weight: 400;
-    font-size: clamp(1.9rem, 8.5vw, 2.6rem);
-    line-height: 1.25;
-    word-break: keep-all;
-    text-wrap: balance;
-    animation: pop .45s cubic-bezier(.2, 1.4, .4, 1) both;
-  }
-  .bubble::after {
-    content: "";
-    position: absolute;
-    left: 22%;
-    bottom: -26px;
-    width: 34px;
-    height: 34px;
-    background: #fff;
-    border-right: 4px solid var(--navy);
-    border-bottom: 4px solid var(--navy);
-    transform: skewY(28deg) rotate(38deg);
-  }
-  .guide {
-    margin: .6rem 0 0;
-    max-width: 20rem;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    word-break: keep-all;
-    text-wrap: balance;
-  }
-  .code {
-    margin: 0;
-    padding: .25rem .8rem;
-    border: 1.5px solid rgba(242,193,78,.7);
-    border-radius: 999px;
-    font-size: .85rem;
-    font-weight: 700;
-    color: var(--gold);
-  }
-  @keyframes pop {
-    from { transform: scale(.85); opacity: 0; }
-    to   { transform: scale(1);   opacity: 1; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .bubble { animation: none; }
-  }
+}
+:root[data-theme="dark"]{
+  --paper:#1C1414; --paper2:#2A1D1C; --ink:#F1EAE3; --mute:#B5A8A1;
+  --red:#E0434B; --ox:#F0B8A8; --gold:#D3B06A; --line:#E9DED4; --pill:#2A1D1C; --shell:#0F0B0B;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;height:100%}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--shell);color:var(--ink);font-family:var(--kr);-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+
+/* 세로 9:16 화면 틀: 휴대폰에서는 꽉 차고, 넓은 화면에서는 가운데 세로 화면으로 보입니다 */
+.shell{display:flex;justify-content:center;align-items:center;height:100%}
+.stage{position:relative;width:min(100vw,calc(100svh * 9 / 16));height:100%;overflow:hidden;background:var(--paper);
+  container-type:size;user-select:none;-webkit-user-select:none;touch-action:pan-y}
+@media (min-aspect-ratio:10/16){
+  .shell{padding:2svh 0}
+  .stage{width:calc(96svh * 9 / 16);border-radius:22px;box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent),0 24px 60px -24px rgba(0,0,0,.45)}
+}
+
+/* 학교 마크 */
+.lockup{display:inline-flex;align-items:center;gap:2.6cqw;background:#FFFDF9;color:#231F20;border:1px solid rgba(34,28,27,.14);border-radius:3.6cqw;padding:1.5cqw 3.6cqw 1.5cqw 2cqw}
+.lockup .mk{display:block;height:11.3cqw;width:auto;aspect-ratio:300/210}
+.lockup b{display:block;font:800 4.4cqw/1.1 var(--kr);letter-spacing:-.01em}
+.lockup .en{display:block;font:600 2.2cqw/1.2 var(--kr);letter-spacing:.03em;margin-top:.8cqw;white-space:nowrap}
+.lockup.lg{border-radius:5cqw;padding:3cqw 5.6cqw 3cqw 3.6cqw;gap:3.6cqw;margin-bottom:5.6cqw}
+.lockup.lg .mk{height:21cqw}
+.lockup.lg b{font-size:7.2cqw}
+.lockup.lg .en{font-size:2.8cqw;margin-top:1.5cqw}
+
+.wash{position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(60% 45% at 100% 0%,color-mix(in srgb,var(--red) 16%,transparent),transparent 70%),
+             radial-gradient(55% 40% at 0% 100%,color-mix(in srgb,var(--gold) 18%,transparent),transparent 70%)}
+.bar{position:absolute;left:0;right:0;top:0;z-index:20;display:flex;gap:1.3cqw;padding:3cqw 4.6cqw 0}
+.bar i{flex:1;height:.8cqw;min-height:2px;border-radius:2px;background:color-mix(in srgb,var(--ink) 16%,transparent);overflow:hidden}
+.bar i b{display:block;height:100%;width:0;background:var(--red)}
+.top{position:absolute;left:4.6cqw;right:4.6cqw;top:6.2cqw;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:2cqw}
+.top .lockup{flex:none}
+.top .lockup{transition:opacity .25s,transform .25s}
+.stage.brand .top .lockup{opacity:0;transform:translateY(-8px)}
+.ctl{display:flex;gap:1.2cqw;flex:none}
+.ctl button{font:600 3.3cqw var(--kr);color:var(--ink);background:color-mix(in srgb,var(--paper) 75%,transparent);border:1px solid color-mix(in srgb,var(--ink) 22%,transparent);border-radius:999px;height:8.2cqw;min-width:8.2cqw;padding:0 2.4cqw;cursor:pointer}
+.ctl button:focus-visible,.cta:focus-visible,.snd-pill:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.ctl svg{display:block;width:4.4cqw;height:4.4cqw;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round}
+#snd{padding:0;display:grid;place-items:center}
+#snd[aria-pressed="false"] .w,#snd[aria-pressed="true"] .x{display:none}
+#snd[aria-pressed="true"]{background:#B5232B;border-color:#B5232B;color:#fff}
+.snd-pill{position:absolute;left:50%;bottom:2.6cqw;z-index:21;transform:translateX(-50%);white-space:nowrap;font:800 3.6cqw/1 var(--kr);color:#fff;background:#B5232B;border:2px solid #FFF6EE;border-radius:999px;padding:2.8cqw 4.6cqw;cursor:pointer;animation:pill 1.6s ease-in-out infinite}
+.snd-pill[hidden]{display:none}
+@keyframes pill{0%,100%{box-shadow:0 0 0 0 rgba(181,35,43,.45)}50%{box-shadow:0 0 0 3cqw rgba(181,35,43,0)}}
+.stage.ask.brand .hint{visibility:hidden}
+.stage:not(.brand) .snd-pill{display:none}
+.wipe{position:absolute;top:0;bottom:0;left:-30%;width:160%;z-index:18;pointer-events:none;transform:translateX(-120%);
+  background:linear-gradient(100deg,transparent 0 8%,var(--wc,#5C1014) 8% 92%,transparent 92%)}
+.wipe.run{animation:wipe .4s cubic-bezier(.7,0,.3,1) both}
+@keyframes wipe{from{transform:translateX(-120%)}to{transform:translateX(120%)}}
+
+.scene{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:28cqw 5.6cqw 13cqw;visibility:hidden}
+.scene.on{visibility:visible}
+.col{width:100%;position:relative;z-index:3}
+.a{opacity:0}
+.on .a{animation:rise .45s cubic-bezier(.2,.8,.2,1) var(--d,0s) both}
+.on .a.pop{animation:pop .4s cubic-bezier(.3,1.5,.5,1) var(--d,0s) both}
+.on .a.fade{animation:fade .5s ease var(--d,0s) both}
+.on .a.slam{animation:slam .38s cubic-bezier(.2,1.4,.4,1) var(--d,0s) both}
+@keyframes rise{from{opacity:0;transform:translateY(5.6cqw)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes slam{0%{opacity:0;transform:scale(1.7)}100%{opacity:1;transform:none}}
+.on .draw{stroke-dasharray:var(--len,1);stroke-dashoffset:var(--len,1);animation:draw var(--t,1s) cubic-bezier(.6,0,.2,1) var(--d,0s) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+.k-sm{font:600 3.9cqw/1.5 var(--kr);color:var(--mute);margin:0 0 2cqw}
+.k-h{font:400 10.6cqw/1.04 var(--disp);margin:0;letter-spacing:-.01em}
+.k-h2{font:400 8.2cqw/1.1 var(--disp);margin:0;letter-spacing:-.01em}
+.kick{display:inline-block;font:800 3.3cqw/1 var(--kr);color:#FFF6EE;background:#5C1014;padding:2cqw 2.6cqw;border-radius:.8cqw;margin:0 0 2.6cqw}
+.kick.g{background:#8C6A2A}
+
+/* 1 */
+.s1 .zh-big{position:absolute;right:-.06em;top:50%;transform:translateY(-52%);font:900 100cqw/1 var(--zh);color:color-mix(in srgb,var(--red) 12%,transparent);pointer-events:none;z-index:1}
+
+/* 2 */
+.steps{list-style:none;margin:6cqw 0 0;padding:0}
+.steps li{display:grid;grid-template-columns:auto 1fr;gap:3.6cqw;align-items:center;margin:0 0 3.6cqw;padding-left:calc(var(--i)*7cqw)}
+.steps .zh{font:900 11cqw/1 var(--zh);color:#FFF6EE;background:#B5232B;width:1.35em;height:1.35em;display:grid;place-items:center;border-radius:1.5cqw}
+.steps li:nth-child(2) .zh{background:#5C1014}
+.steps li:nth-child(3) .zh{background:#A8843F}
+.steps b{display:block;font:800 4.8cqw/1.25 var(--kr)}
+.steps span{display:block;font:400 3.5cqw/1.45 var(--kr);color:var(--mute)}
+
+/* 대회 장면 */
+.split{display:flex;flex-direction:column;gap:2.4cqw}
+.art{display:block;width:100%;height:auto;max-height:28cqh;overflow:visible}
+.ln{stroke:var(--line);stroke-width:2;stroke-linejoin:round}
+.lns{stroke:var(--line);stroke-linecap:round;stroke-linejoin:round;fill:none}
+.lf{fill:var(--line)}
+.floor{stroke:color-mix(in srgb,var(--ink) 30%,transparent);stroke-width:2}
+.aud{fill:color-mix(in srgb,var(--ink) 22%,transparent)}
+.shadow{fill:color-mix(in srgb,var(--ink) 14%,transparent)}
+.pd{font:900 24px var(--zh);text-anchor:middle}
+.bt{font:700 16px var(--zh);text-anchor:middle}
+.vst{font:400 21px var(--disp);fill:#fff;text-anchor:middle}
+.slt{font:700 14px var(--zh);fill:#5C1014}
+.sln{font:400 18px var(--disp);fill:#B5232B}
+.slp{font:600 8px var(--kr);fill:#8A7F78;text-anchor:end}
+.pgt{font:800 10px var(--kr);fill:#5C1014;text-anchor:middle}
+.fdt{font:900 22px var(--zh);fill:#FFF8EA;text-anchor:middle}
+.fdk{font:800 10px var(--kr);fill:#FFF8EA;text-anchor:middle}
+.hd .eyes,.mouth,.vs,.bb,.bar,.clap,.twk{transform-box:fill-box;transform-origin:center}
+.bb{transform-origin:50% 100%}
+.bar{transform-origin:50% 100%}
+.bub,.stay,.laser,.clap,.heart,.twk,.medal,.page{opacity:0}
+.on .eyes{animation:blink 2.4s infinite}
+@keyframes blink{0%,90%,100%{transform:scaleY(1)}94%{transform:scaleY(.1)}}
+.on .talk{animation:talk .24s steps(1) infinite}
+.on .t2{animation-delay:.12s}
+@keyframes talk{0%{transform:scaleY(.35)}50%{transform:scaleY(1.15)}}
+.on .bob{animation:bob .6s ease-in-out var(--d,0s) infinite alternate}
+@keyframes bob{to{transform:translateY(-3px)}}
+.on .gest{animation:gest .42s ease-in-out infinite alternate}
+@keyframes gest{from{transform:rotate(-18deg)}to{transform:rotate(12deg)}}
+.on .jab{animation:jab .36s ease-in-out infinite alternate}
+@keyframes jab{from{transform:rotate(-8deg)}to{transform:rotate(7deg) translateX(-3px)}}
+.on .vs{animation:vs .5s ease-in-out infinite alternate}
+@keyframes vs{to{transform:scale(1.15)}}
+.on .spark{animation:fl .25s steps(1) infinite}
+@keyframes fl{50%{opacity:.2}}
+.on .bub{animation:bub 1.1s ease var(--d) both}
+@keyframes bub{0%{opacity:0}12%,85%{opacity:1}100%{opacity:0}}
+.on .bub .bb{animation:bbs 1.1s ease var(--d) both}
+@keyframes bbs{0%{transform:scale(.4)}12%{transform:scale(1.08)}20%,100%{transform:scale(1)}}
+.on .stay{animation:fade .15s ease var(--d) both}
+.on .stay .bb{animation:pop .35s cubic-bezier(.3,1.5,.5,1) var(--d) both}
+.on .bar{animation:grow .4s cubic-bezier(.3,1.4,.5,1) var(--d) both}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.on .laser{animation:laser 1.2s ease-in-out .35s forwards}
+@keyframes laser{0%{opacity:1;transform:translate(176px,96px)}25%{transform:translate(206px,82px)}50%{transform:translate(236px,64px)}75%{transform:translate(266px,42px)}100%{opacity:1;transform:translate(320px,86px)}}
+.on .point{animation:gest2 .5s ease-in-out infinite alternate}
+@keyframes gest2{from{transform:rotate(-4deg)}to{transform:rotate(5deg)}}
+.on .nod{animation:nod .45s ease-in-out infinite alternate}
+@keyframes nod{to{transform:translateY(2px) rotate(2deg)}}
+.on .clap{fill:color-mix(in srgb,var(--ink) 40%,transparent);animation:clap .18s ease-in-out var(--d) 8 alternate both}
+@keyframes clap{from{opacity:1;transform:scaleX(1)}to{opacity:1;transform:scaleX(.55)}}
+.on .heart{animation:heart 1.1s ease-out var(--d) both}
+@keyframes heart{0%{opacity:0;transform:translateY(0) scale(.5)}25%{opacity:1;transform:translateY(-14px) scale(1.1)}100%{opacity:0;transform:translateY(-60px) scale(1)}}
+.on .page{animation:page .7s cubic-bezier(.3,.7,.3,1) var(--d) both}
+@keyframes page{0%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--r))}20%{opacity:1}75%{opacity:1;transform:translate(0,-4px) rotate(0)}100%{opacity:1;transform:translate(0,26px) rotate(0)}}
+.on .hop{animation:hop .5s cubic-bezier(.3,1.6,.5,1) 1.05s both}
+@keyframes hop{0%,100%{transform:none}45%{transform:translateY(-12px)}}
+.on .medal{transform-box:fill-box;transform-origin:50% 0;animation:medal .8s cubic-bezier(.3,1.5,.5,1) 1.2s both}
+@keyframes medal{0%{opacity:0;transform:translateY(-40px) rotate(-14deg)}60%{opacity:1;transform:translateY(0) rotate(8deg)}100%{opacity:1;transform:rotate(0)}}
+.on .twk{animation:twk .7s ease var(--d) both}
+@keyframes twk{0%{opacity:0;transform:scale(0) rotate(0)}50%{opacity:1;transform:scale(1.3) rotate(45deg)}100%{opacity:.85;transform:scale(1) rotate(90deg)}}
+
+.pz{position:relative}
+.why{margin:0;padding:2.4cqw 3.2cqw;border-left:1cqw solid var(--red);background:color-mix(in srgb,var(--paper2) 75%,transparent);font:600 3.8cqw/1.5 var(--kr)}
+.s5 .why{border-left-color:var(--gold)}
+.gh{display:block;font:800 3.5cqw/1.3 var(--kr);color:var(--mute);margin:3.6cqw 0 2.2cqw}
+.gains{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.2cqw}
+.gains li{position:relative;display:flex;flex-direction:column;align-items:center;gap:1.6cqw;padding:3cqw 1.4cqw 2.6cqw;border:1.5px solid var(--ink);border-radius:3cqw;background:var(--pill);text-align:center;font:800 3.5cqw/1.25 var(--kr);opacity:0}
+.gains li i{display:grid;place-items:center;width:10cqw;height:10cqw;border-radius:50%;background:#B5232B;color:#fff}
+.gains li:nth-child(2) i{background:#5C1014}
+.gains li:nth-child(3) i{background:#A8843F}
+.gains svg{width:5.6cqw;height:5.6cqw;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.gains li::after{content:"+";position:absolute;top:-2.2cqw;right:-1.4cqw;width:6cqw;height:6cqw;border-radius:50%;background:#B5232B;color:#fff;font:800 4.2cqw/6cqw var(--kr);text-align:center}
+.on .gains li{animation:badge .45s cubic-bezier(.3,1.6,.5,1) var(--d) both}
+@keyframes badge{0%{opacity:0;transform:scale(.5) rotate(-6deg)}100%{opacity:1;transform:none}}
+
+/* 6 세상으로 */
+.s6{justify-content:flex-end}
+.s6 .bgw{position:absolute;inset:0;z-index:0;pointer-events:none}
+.globe{position:absolute;right:-16%;top:9%;width:82cqw;height:auto;fill:none;stroke:color-mix(in srgb,var(--ink) 13%,transparent);stroke-width:1.2}
+.mer{transform-box:fill-box;transform-origin:center}
+.on .mer{animation:mer 6s infinite;animation-delay:var(--d)}
+@keyframes mer{0%{transform:scaleX(1);animation-timing-function:ease-in}50%{transform:scaleX(0);animation-timing-function:ease-out}100%{transform:scaleX(1)}}
+.cl{position:absolute;height:auto;fill:color-mix(in srgb,var(--paper) 60%,transparent);stroke:color-mix(in srgb,var(--red) 34%,transparent);stroke-width:2;stroke-linecap:round}
+.on .cl{animation:drift 5s ease-in-out var(--d) infinite alternate}
+@keyframes drift{to{transform:translateX(6.6cqw)}}
+.skyline{position:absolute;left:0;right:0;bottom:0;width:100%;height:30cqh;-webkit-mask-image:linear-gradient(90deg,transparent 0 28%,#000 62%);mask-image:linear-gradient(90deg,transparent 0 28%,#000 62%)}
+.sk1{fill:color-mix(in srgb,var(--ink) 8%,transparent)}
+.sk2{fill:color-mix(in srgb,var(--red) 15%,transparent)}
+.route{position:absolute;inset:0;width:100%;height:100%;z-index:1;overflow:visible}
+.plane{position:absolute;left:0;top:0;z-index:2;width:9.7cqw;height:9.7cqw;margin:-4.85cqw 0 0 -4.85cqw;offset-rotate:auto;opacity:0}
+.on .plane{animation:fly 1.6s cubic-bezier(.55,0,.25,1) .15s forwards}
+@keyframes fly{0%{offset-distance:0%;opacity:0}8%{opacity:1}100%{offset-distance:100%;opacity:1}}
+.stops{position:absolute;inset:0;z-index:2;pointer-events:none}
+.stop{position:absolute;left:0;top:0;display:flex;align-items:center;gap:1.8cqw;padding:1.3cqw 3cqw 1.3cqw 1.3cqw;border-radius:999px;background:var(--pill);border:1.5px solid var(--ink);font:800 3.7cqw/1 var(--kr);white-space:nowrap;opacity:0;transform:translate(-50%,-50%)}
+.stop[hidden]{display:none}
+.stop i{display:grid;place-items:center;width:7.2cqw;height:7.2cqw;border-radius:50%;background:#B5232B;color:#fff;flex:none}
+.stop:nth-child(even) i{background:#A8843F}
+.stop svg{width:4.4cqw;height:4.4cqw;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.on .stop{animation:stopIn .38s cubic-bezier(.3,1.5,.5,1) var(--d,0s) both}
+@keyframes stopIn{from{opacity:0;transform:translate(-50%,-50%) scale(.4)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+.zh-w{font:900 11cqw/1 var(--zh);color:var(--red);margin:0 0 2.6cqw;letter-spacing:.04em}
+
+/* 7 */
+.s7{background:#5C1014;color:#FFF6EE}
+.s7 .lockup.lg{margin-bottom:6.6cqw}
+.s7 .brush{font:400 10.5cqw/1.05 var(--brush);color:#FFF6EE;margin:0}
+.s7 .brush em{font-style:normal;color:#E2C68C}
+.s7 .info{margin:5.6cqw 0 0;display:grid;gap:2.6cqw;font:600 3.9cqw/1.4 var(--kr)}
+.s7 .info div{display:flex;gap:3cqw;border-top:1px solid rgba(255,246,238,.3);padding-top:2.6cqw}
+.s7 .info dt{width:3.2em;flex:none;color:#E2C68C}
+.s7 .info dd{margin:0}
+.cta{display:inline-block;margin-top:5.6cqw;font:800 4.1cqw/1 var(--kr);color:#5C1014;background:#FFF6EE;padding:3.9cqw 5.1cqw;border-radius:999px;text-decoration:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .s7{background:#4A0E12}}
+:root[data-theme="dark"] .s7{background:#4A0E12}
+.stage.inv .bar i{background:rgba(255,246,238,.25)}
+.stage.inv .bar i b{background:#FFF6EE}
+.stage.inv .hint{color:rgba(255,246,238,.75)}
+.stage.inv .ctl button{color:#FFF6EE;background:rgba(255,246,238,.12);border-color:rgba(255,246,238,.35)}
+
+.hint{position:absolute;left:0;right:0;bottom:4cqw;z-index:20;text-align:center;font:600 3.1cqw var(--kr);color:var(--mute);margin:0}
+
+/* 읽는 영역: 위 화면과 같은 폭 */
+.read{width:min(100vw,calc(100svh * 9 / 16));margin:0 auto;padding:48px 22px 72px;background:var(--paper)}
+@media (min-aspect-ratio:10/16){.read{width:calc(96svh * 9 / 16);margin:2svh auto 4svh;border-radius:22px}}
+.read h2{font:400 30px/1.15 var(--disp);margin:0 0 6px}
+.read h3{font:800 18px/1.35 var(--kr);margin:0 0 12px}
+.read p{line-height:1.7;margin:0 0 12px}
+.card{border-top:3px solid var(--red);padding:20px 0 26px;margin-top:22px}
+.card.g{border-color:var(--gold)}
+.read h4{font:800 15px/1.4 var(--kr);color:var(--red);margin:18px 0 6px}
+.card.g h4{color:var(--gold)}
+.gl{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:10px}
+.gl li{padding:10px 12px;border-radius:10px;background:color-mix(in srgb,var(--paper2) 70%,transparent);line-height:1.6;font-size:15px}
+.gl b{display:block;font-weight:800;margin-bottom:2px}
+.foot{font-size:13px;color:var(--mute);border-top:1px solid color-mix(in srgb,var(--ink) 20%,transparent);padding-top:16px;margin-top:30px}
+
+@media (prefers-reduced-motion:reduce){
+  .on .a,.on .stop,.on .page,.on .medal,.on .stay,.on .twk,.on .gains li{animation:none!important;opacity:1}
+  .on .draw{animation:none;stroke-dashoffset:0}
+  .on *{animation-duration:0s!important}
+  .bub,.laser,.plane,.heart,.clap,.wipe{display:none}
+  .snd-pill{animation:none}
+  .stay{opacity:1}
+}
 </style>
 </head>
 <body>
-  <p class="dept">경기대학교 중어중문전공</p>
-  <h1 class="bubble">자료를 준비하고 있습니다</h1>
-  <p class="guide">궁금한 점은 중어중문전공 부스에서 바로 물어보세요.</p>
-  <p class="code">QR 2</p>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="kgu" viewBox="0 0 300 210"><path fill-rule="evenodd" fill="currentColor" d="M177.08 145.67C176.89 145.58 179.81 145.52 184.00 145.52C188.19 145.52 191.11 145.58 190.92 145.67C190.73 145.75 187.62 145.81 184.00 145.81C180.38 145.81 177.27 145.75 177.08 145.67ZM103.25 136.82C102.42 136.73 101.23 136.55 100.58 136.41C99.94 136.27 98.78 136.09 98.00 136.00C97.21 135.91 95.95 135.65 95.17 135.42C94.40 135.19 93.59 135.00 93.37 135.00C93.15 135.00 92.46 134.78 91.83 134.50C91.21 134.22 90.59 134.00 90.46 134.00C90.33 134.00 89.85 133.81 89.40 133.58C88.95 133.35 88.32 133.08 88.00 132.98C87.68 132.88 87.29 132.68 87.14 132.55C86.99 132.42 86.51 132.20 86.09 132.08C85.66 131.95 85.08 131.65 84.81 131.42C84.53 131.19 84.24 131.00 84.15 131.00C83.96 131.00 82.23 129.86 80.46 128.58C78.83 127.40 75.74 124.10 74.45 122.15C73.74 121.08 73.08 119.96 72.97 119.65C72.87 119.34 72.65 118.89 72.49 118.66C72.05 118.03 71.56 116.57 70.72 113.42L69.96 110.58L69.96 105.58C69.96 100.43 69.98 100.16 70.75 97.08C71.28 94.98 71.94 93.09 72.56 91.93C72.80 91.48 73.00 91.02 73.00 90.90C73.00 90.79 73.18 90.48 73.40 90.22C73.62 89.96 73.92 89.49 74.06 89.17C74.33 88.60 74.48 88.38 75.95 86.48C77.11 84.98 81.55 81.00 82.07 81.00C82.19 81.00 82.54 80.81 82.85 80.57C83.97 79.73 85.25 79.00 85.59 79.00C85.79 79.00 86.28 78.78 86.68 78.50C87.09 78.23 87.54 78.00 87.68 78.00C87.83 78.00 88.31 77.81 88.75 77.58C89.18 77.34 89.93 77.07 90.40 76.97C90.87 76.87 91.52 76.66 91.84 76.49C92.17 76.33 92.73 76.15 93.09 76.09C93.45 76.03 94.69 75.76 95.83 75.50C96.98 75.23 98.64 74.94 99.52 74.84C100.41 74.75 101.64 74.55 102.27 74.41C103.18 74.20 104.88 74.12 110.42 74.05C116.96 73.97 117.55 73.99 119.50 74.31C120.65 74.50 122.37 74.74 123.33 74.85C124.30 74.96 125.72 75.19 126.50 75.36C127.28 75.54 128.75 75.82 129.77 75.99C130.79 76.16 131.80 76.39 132.02 76.51C132.24 76.63 132.75 76.81 133.17 76.91C134.35 77.22 134.33 77.10 134.29 84.04C134.24 91.52 134.40 91.09 132.13 89.97C130.55 89.18 129.30 88.72 127.25 88.15C126.62 87.97 125.72 87.69 125.25 87.52C124.79 87.35 123.67 87.08 122.75 86.92C121.83 86.77 120.63 86.51 120.08 86.36C118.64 85.96 110.02 85.99 108.17 86.40C107.48 86.56 106.17 86.80 105.25 86.94C104.33 87.08 103.13 87.37 102.58 87.58C102.03 87.79 101.36 88.01 101.08 88.05C100.21 88.21 96.78 89.93 95.87 90.67C95.59 90.90 95.04 91.31 94.66 91.58C93.68 92.29 91.58 94.55 91.05 95.48C90.81 95.90 90.52 96.36 90.41 96.50C90.30 96.64 90.11 97.04 90.00 97.40C89.88 97.76 89.65 98.29 89.49 98.57C89.32 98.85 89.10 99.61 89.00 100.25C88.90 100.89 88.71 101.83 88.59 102.33C87.89 105.12 88.43 110.77 89.59 112.75C89.82 113.13 90.00 113.59 90.00 113.78C90.00 113.96 90.22 114.40 90.50 114.76C90.77 115.12 90.99 115.48 91.00 115.55C91.00 115.63 91.34 116.17 91.76 116.75C92.87 118.31 94.50 119.84 96.06 120.79C96.33 120.95 96.74 121.24 96.98 121.43C97.22 121.62 97.68 121.87 97.99 121.98C98.31 122.08 98.76 122.30 98.99 122.46C100.04 123.17 103.78 124.20 107.08 124.69C109.01 124.97 113.50 124.77 115.17 124.33C115.95 124.13 116.68 123.84 116.79 123.70C116.95 123.49 117.00 121.16 117.00 113.31C117.00 103.46 117.01 103.17 117.32 103.01C117.53 102.89 120.45 102.83 125.66 102.83C133.40 102.83 133.68 102.84 133.99 103.16C134.32 103.48 134.32 103.79 134.32 118.49L134.32 133.49L133.95 133.92C133.68 134.23 133.23 134.42 132.17 134.66C129.87 135.17 126.86 135.69 125.25 135.86C122.69 136.12 119.46 136.52 118.50 136.69C117.24 136.91 105.10 137.01 103.25 136.82ZM177.25 136.84C176.33 136.76 175.39 136.63 175.16 136.53C174.92 136.44 173.84 136.24 172.74 136.08C171.65 135.93 170.43 135.66 170.04 135.49C169.65 135.32 168.91 135.11 168.40 135.01C167.89 134.92 167.29 134.69 167.06 134.52C166.84 134.34 166.42 134.14 166.14 134.08C165.59 133.96 163.33 132.84 162.89 132.47C162.74 132.35 162.38 132.10 162.08 131.92C160.66 131.04 160.06 130.55 158.66 129.13C157.83 128.29 157.06 127.45 156.95 127.25C156.50 126.46 156.06 125.75 155.55 125.00C155.26 124.57 154.95 123.92 154.85 123.56C154.75 123.21 154.56 122.76 154.43 122.56C154.29 122.37 154.10 121.84 154.00 121.40C153.90 120.95 153.68 120.21 153.50 119.75C152.82 118.00 152.78 116.75 152.72 95.74C152.67 79.37 152.70 75.51 152.88 75.27C153.08 75.00 153.63 74.98 161.67 74.99C168.38 75.01 170.29 75.06 170.46 75.22C170.63 75.39 170.67 78.92 170.67 92.59C170.66 112.67 170.74 114.68 171.62 117.33C172.54 120.12 174.04 122.28 175.60 123.05C175.88 123.20 176.20 123.43 176.32 123.57C176.44 123.71 176.80 123.88 177.14 123.94C177.47 124.00 178.08 124.20 178.49 124.39C179.11 124.67 179.70 124.74 181.75 124.80C184.11 124.87 184.32 124.85 185.51 124.44C186.21 124.20 186.88 124.00 187.00 124.00C187.38 124.00 188.87 122.99 189.81 122.10C191.37 120.61 192.51 118.47 192.92 116.25C193.68 112.19 193.65 113.12 193.66 93.78C193.67 79.49 193.72 75.38 193.88 75.22C194.16 74.93 194.12 74.94 203.11 74.97C210.16 75.00 211.17 75.03 211.40 75.26C211.64 75.50 211.67 77.41 211.66 93.89C211.65 103.99 211.58 113.08 211.50 114.08C211.28 116.80 210.84 119.84 210.58 120.33C210.46 120.57 210.24 121.22 210.10 121.77C209.87 122.65 209.44 123.58 208.15 125.92C207.22 127.60 203.88 130.99 202.20 131.93C201.86 132.13 201.29 132.48 200.94 132.73C200.58 132.97 200.22 133.17 200.13 133.17C200.05 133.17 199.71 133.35 199.37 133.58C199.03 133.81 198.63 134.00 198.49 134.00C198.34 134.00 197.86 134.19 197.43 134.42C197.00 134.65 196.29 134.91 195.86 135.01C195.43 135.10 194.74 135.32 194.32 135.50C193.90 135.67 192.59 135.97 191.40 136.15C190.22 136.34 188.91 136.57 188.50 136.67C187.55 136.89 179.46 137.02 177.25 136.84ZM5.35 135.77C5.13 135.51 5.07 75.36 5.29 75.14C5.48 74.96 22.68 74.94 22.86 75.13C22.95 75.21 23.01 80.31 23.01 87.05C23.01 93.53 23.05 98.94 23.11 99.08C23.25 99.46 23.79 99.39 24.02 98.96C24.20 98.61 25.56 96.92 26.36 96.04C26.54 95.84 27.05 95.20 27.47 94.62C27.90 94.05 29.00 92.68 29.92 91.58C30.84 90.48 31.78 89.32 32.00 89.00C32.22 88.68 32.70 88.10 33.06 87.72C33.42 87.33 33.83 86.84 33.98 86.63C34.13 86.41 34.40 86.07 34.58 85.88C34.77 85.68 35.22 85.13 35.58 84.66C35.95 84.18 37.00 82.90 37.92 81.80C38.83 80.70 39.69 79.64 39.83 79.44C39.96 79.24 40.30 78.81 40.58 78.47C40.86 78.13 41.61 77.21 42.25 76.43L43.41 75.00L53.16 74.96C64.54 74.92 64.15 74.91 64.48 75.24C64.70 75.46 64.63 75.59 63.82 76.46C62.42 77.96 59.62 81.11 56.72 84.45C55.27 86.12 52.47 89.33 50.50 91.59C42.44 100.80 40.50 103.09 40.50 103.39C40.50 103.69 41.49 104.95 45.92 110.23C47.02 111.54 48.22 113.01 48.58 113.50C48.95 113.98 50.07 115.37 51.08 116.58C52.09 117.80 53.22 119.17 53.58 119.62C53.95 120.08 55.04 121.38 56.00 122.51C56.96 123.65 58.11 125.06 58.56 125.66C59.00 126.26 59.49 126.87 59.64 127.02C59.79 127.17 60.59 128.13 61.42 129.16C62.24 130.18 63.72 131.97 64.71 133.13C65.69 134.30 66.50 135.34 66.50 135.45C66.50 135.96 65.75 136.00 55.12 136.00L44.38 136.00L43.65 135.20C43.25 134.76 42.69 134.09 42.42 133.70C42.14 133.31 41.54 132.50 41.08 131.89C39.86 130.27 39.50 129.79 38.67 128.67C38.25 128.12 37.50 127.15 37.00 126.51C36.50 125.88 35.82 124.98 35.50 124.51C35.18 124.04 34.54 123.19 34.08 122.62C33.62 122.05 33.11 121.40 32.95 121.17C32.79 120.94 32.40 120.38 32.08 119.92C31.76 119.46 31.09 118.56 30.58 117.92C30.07 117.27 29.45 116.45 29.21 116.08C28.96 115.72 28.39 114.99 27.95 114.46C26.99 113.34 26.46 112.61 26.06 111.92C25.91 111.64 25.40 110.95 24.93 110.39C24.47 109.82 23.96 109.18 23.81 108.97C23.58 108.65 23.50 108.62 23.28 108.81C23.03 109.01 23.01 110.33 23.01 122.29C23.01 131.96 22.95 135.60 22.82 135.77C22.53 136.11 5.63 136.11 5.35 135.77Z"/><path fill-rule="evenodd" fill="#1AAE5A" d="M292.55 201.44C291.52 200.30 290.41 198.91 290.08 198.35C289.75 197.78 289.33 197.23 289.15 197.12C288.97 197.01 288.58 196.54 288.29 196.08C288.00 195.62 287.00 194.44 286.06 193.45C285.03 192.36 284.24 191.36 284.06 190.93C283.85 190.41 283.56 190.08 283.05 189.77C282.58 189.49 282.33 189.22 282.33 189.00C282.33 188.80 281.89 188.20 281.27 187.57C280.68 186.98 280.01 186.19 279.76 185.82C279.52 185.46 279.03 184.89 278.67 184.57C278.32 184.25 277.87 183.68 277.67 183.31C277.30 182.60 276.22 181.23 275.50 180.55C274.13 179.27 271.83 176.79 271.83 176.59C271.83 176.51 271.65 176.20 271.42 175.90L271.00 175.36L271.06 104.97C271.10 66.26 271.14 34.41 271.16 34.21C271.18 34.00 271.27 33.83 271.35 33.83C271.42 33.83 271.75 33.42 272.07 32.93C272.39 32.43 272.85 31.89 273.09 31.73C273.32 31.58 273.67 31.14 273.86 30.77C274.05 30.39 274.53 29.76 274.93 29.36C275.34 28.97 275.88 28.33 276.15 27.95C276.42 27.56 276.91 26.99 277.25 26.67C277.59 26.35 277.96 25.88 278.07 25.64C278.17 25.39 278.84 24.59 279.55 23.85C280.25 23.11 280.83 22.44 280.83 22.36C280.83 22.27 281.02 22.08 281.25 21.93C281.47 21.79 281.78 21.42 281.93 21.12C282.09 20.83 282.61 20.22 283.09 19.79C283.58 19.35 284.03 18.82 284.09 18.62C284.16 18.42 284.52 17.90 284.90 17.47C285.27 17.05 285.88 16.34 286.25 15.90C286.62 15.47 287.18 14.80 287.51 14.43C287.83 14.06 288.30 13.49 288.55 13.17C288.79 12.85 289.26 12.28 289.59 11.92C291.27 10.02 291.81 9.36 292.13 8.83C292.32 8.51 292.72 8.07 293.00 7.86C293.29 7.64 293.63 7.22 293.76 6.93C293.98 6.39 294.44 5.89 294.58 6.03C294.63 6.07 294.73 6.62 294.83 7.26C295.05 8.83 295.06 202.47 294.84 203.07C294.75 203.31 294.62 203.50 294.54 203.50C294.47 203.50 293.57 202.57 292.55 201.44Z"/><path fill-rule="evenodd" fill="#2056AF" d="M292.67 204.01C292.35 203.95 291.86 203.78 291.58 203.64C291.31 203.50 290.48 203.33 289.75 203.27C286.58 203.02 285.34 202.84 284.33 202.51C283.74 202.31 282.61 202.09 281.82 202.02C281.03 201.94 280.17 201.77 279.90 201.62C279.63 201.48 278.37 201.24 277.08 201.08C275.73 200.92 274.44 200.67 274.02 200.48C273.62 200.31 273.01 200.17 272.66 200.17C271.85 200.17 269.62 199.74 269.17 199.50C268.98 199.40 267.94 199.24 266.87 199.14C265.79 199.04 264.30 198.78 263.54 198.55C262.78 198.33 261.55 198.08 260.79 198.00C260.03 197.92 259.08 197.74 258.67 197.60C258.25 197.46 256.75 197.19 255.33 196.99C253.91 196.79 252.50 196.53 252.19 196.40C251.89 196.28 250.95 196.06 250.11 195.92C249.27 195.78 248.17 195.56 247.67 195.43C247.16 195.30 246.00 195.11 245.08 195.00C244.17 194.90 243.04 194.70 242.58 194.56C242.12 194.43 240.94 194.21 239.95 194.08C238.97 193.95 237.99 193.75 237.79 193.64C237.33 193.39 235.02 193.01 233.98 193.00C233.56 193.00 232.88 192.86 232.48 192.68C232.08 192.51 231.00 192.27 230.08 192.16C229.17 192.05 228.07 191.83 227.65 191.65C227.20 191.47 226.03 191.26 224.90 191.16C222.52 190.94 221.49 190.75 220.88 190.44C220.62 190.31 219.78 190.15 219.00 190.09C218.22 190.02 217.17 189.82 216.67 189.65C216.16 189.47 214.89 189.25 213.83 189.15C212.78 189.05 211.30 188.78 210.54 188.55C209.78 188.33 208.49 188.08 207.66 187.99C206.83 187.90 205.95 187.73 205.70 187.60C205.45 187.47 204.27 187.24 203.08 187.09C200.50 186.75 199.43 186.56 199.04 186.36C198.88 186.27 198.26 186.15 197.67 186.08C197.07 186.02 196.02 185.78 195.33 185.56C194.62 185.32 193.30 185.08 192.25 184.98C191.24 184.89 190.04 184.70 189.58 184.57C189.12 184.43 187.94 184.21 186.96 184.08C185.97 183.95 184.96 183.73 184.70 183.60C184.44 183.47 183.52 183.28 182.66 183.18C180.53 182.94 178.42 182.56 178.00 182.33C177.82 182.23 176.93 182.09 176.04 182.01C175.15 181.93 174.08 181.74 173.67 181.60C173.25 181.46 172.56 181.30 172.11 181.24C170.51 181.04 170.66 182.87 170.71 163.25C170.75 147.61 170.78 145.99 171.02 145.74C171.34 145.42 176.08 145.36 177.13 145.67C177.80 145.87 190.20 145.79 191.80 145.58C192.59 145.48 192.74 145.51 193.10 145.85L193.50 146.22L193.51 152.49C193.53 159.65 193.63 161.60 194.00 161.84C194.14 161.92 194.50 162.00 194.80 162.00C195.11 162.00 195.71 162.15 196.14 162.33C196.87 162.63 198.38 162.87 201.33 163.16C202.02 163.22 202.81 163.39 203.08 163.53C203.36 163.67 204.11 163.83 204.75 163.88C205.39 163.94 206.25 164.10 206.65 164.24C207.05 164.38 208.29 164.62 209.40 164.76C213.43 165.27 214.89 165.51 215.09 165.67C215.20 165.77 215.92 165.88 216.69 165.93C217.46 165.98 218.50 166.16 219.00 166.33C220.11 166.70 221.98 167.00 223.24 167.00C223.76 167.00 224.54 167.15 225.04 167.33C225.52 167.52 226.78 167.78 227.84 167.91C228.90 168.04 230.33 168.30 231.01 168.49C231.69 168.67 233.13 168.90 234.20 169.00C235.34 169.10 236.49 169.30 236.95 169.48C237.39 169.66 238.43 169.85 239.25 169.92C240.08 169.99 240.90 170.12 241.08 170.22C241.44 170.41 241.99 170.51 244.92 170.90C246.97 171.17 247.45 171.26 248.42 171.59C248.78 171.71 249.68 171.85 250.42 171.90C251.15 171.95 252.12 172.11 252.58 172.25C253.59 172.57 256.39 173.00 257.39 173.00C257.80 173.00 258.60 173.15 259.19 173.34C259.77 173.53 260.89 173.76 261.67 173.85C262.45 173.94 263.61 174.16 264.25 174.33C264.89 174.51 266.20 174.77 267.17 174.90C268.13 175.04 269.16 175.24 269.46 175.34C269.76 175.45 270.24 175.50 270.52 175.46C270.94 175.40 271.10 175.48 271.43 175.92C271.65 176.21 271.83 176.51 271.83 176.59C271.83 176.79 274.13 179.27 275.50 180.55C276.22 181.23 277.30 182.60 277.67 183.31C277.87 183.68 278.32 184.25 278.67 184.57C279.03 184.89 279.52 185.46 279.76 185.82C280.01 186.19 280.68 186.98 281.27 187.57C281.89 188.21 282.33 188.80 282.33 189.00C282.33 189.21 282.53 189.46 282.83 189.63C283.11 189.79 283.33 190.01 283.33 190.12C283.33 190.22 283.47 190.41 283.64 190.53C283.81 190.65 284.07 190.98 284.21 191.26C284.36 191.54 285.15 192.49 285.98 193.36C286.81 194.24 287.44 195.00 287.38 195.06C287.32 195.12 287.53 195.42 287.84 195.73C289.09 196.95 289.82 197.83 290.17 198.50C290.49 199.14 292.99 202.06 294.18 203.20C294.61 203.61 294.63 203.68 294.40 203.91C294.13 204.18 293.64 204.21 292.67 204.01Z"/><path fill-rule="evenodd" fill="#F68712" d="M170.95 66.37C170.70 66.09 170.67 64.47 170.67 47.91C170.66 37.92 170.66 29.66 170.66 29.55C170.67 29.19 172.05 28.52 173.33 28.26C176.28 27.66 176.97 27.51 178.00 27.27C178.60 27.13 179.38 27.01 179.75 27.01C180.53 27.00 182.55 26.62 183.22 26.35C183.48 26.25 184.23 26.12 184.89 26.07C185.54 26.01 186.91 25.76 187.92 25.50C188.92 25.25 190.36 24.99 191.11 24.93C191.86 24.87 193.02 24.65 193.70 24.43C194.37 24.22 195.48 23.99 196.17 23.93C196.85 23.86 198.05 23.63 198.83 23.42C199.61 23.20 200.83 22.99 201.55 22.93C202.26 22.88 203.59 22.65 204.49 22.42C205.40 22.19 206.32 22.00 206.53 22.00C206.74 22.00 207.67 21.81 208.58 21.59C209.50 21.36 211.19 21.06 212.34 20.92C213.49 20.79 214.69 20.57 215.01 20.44C215.32 20.31 216.21 20.12 216.98 20.02C217.75 19.92 218.87 19.69 219.48 19.51C220.09 19.33 221.33 19.10 222.25 19.00C223.17 18.90 224.25 18.71 224.67 18.58C225.08 18.45 226.38 18.19 227.56 18.00C228.74 17.81 229.82 17.60 229.98 17.52C230.34 17.33 232.13 17.04 233.61 16.93C234.26 16.88 235.29 16.68 235.89 16.50C236.49 16.31 237.60 16.08 238.36 15.99C239.13 15.90 240.42 15.64 241.25 15.43C242.08 15.21 243.38 14.99 244.14 14.93C244.91 14.87 245.81 14.71 246.14 14.57C246.48 14.42 247.84 14.12 249.17 13.90C250.50 13.67 251.95 13.38 252.41 13.24C252.86 13.11 253.49 13.00 253.82 13.00C254.50 13.00 256.84 12.58 257.58 12.32C257.86 12.23 258.83 12.04 259.75 11.91C260.67 11.78 261.83 11.56 262.33 11.42C262.84 11.28 263.96 11.08 264.83 10.98C265.70 10.89 266.94 10.67 267.58 10.50C268.22 10.32 269.34 10.10 270.05 10.01C270.77 9.91 272.00 9.65 272.80 9.43C273.60 9.21 274.83 8.99 275.55 8.93C276.26 8.88 277.57 8.66 278.46 8.44C279.35 8.22 280.50 7.99 281.00 7.93C281.50 7.87 282.44 7.67 283.08 7.50C283.72 7.32 285.25 7.06 286.47 6.91C287.68 6.76 288.94 6.54 289.25 6.41C289.57 6.27 290.63 6.05 291.61 5.90C292.59 5.76 293.56 5.57 293.77 5.49C294.05 5.39 294.23 5.42 294.41 5.60C294.65 5.84 294.63 5.90 294.25 6.19C294.02 6.38 293.83 6.64 293.83 6.78C293.83 6.92 293.42 7.44 292.92 7.94C292.41 8.44 292.00 8.92 292.00 9.01C292.00 9.15 291.33 9.96 289.59 11.92C288.91 12.68 287.36 14.55 287.02 15.02C286.90 15.19 286.69 15.33 286.56 15.33C286.44 15.33 286.33 15.41 286.33 15.51C286.33 15.74 285.61 16.73 284.82 17.58C284.48 17.95 284.15 18.42 284.09 18.62C284.03 18.82 283.58 19.35 283.09 19.79C282.61 20.22 282.09 20.83 281.93 21.13C281.78 21.42 281.36 21.86 281.00 22.10C280.64 22.34 280.38 22.61 280.43 22.69C280.48 22.77 279.99 23.39 279.35 24.06C278.70 24.73 278.17 25.37 278.17 25.48C278.17 25.60 277.77 26.12 277.28 26.64C276.79 27.16 276.22 27.83 276.02 28.12C275.81 28.42 275.32 28.99 274.92 29.37C274.53 29.76 274.05 30.39 273.86 30.77C273.67 31.14 273.32 31.58 273.09 31.73C272.85 31.89 272.39 32.43 272.07 32.93C271.75 33.42 271.44 33.84 271.37 33.85C270.14 33.98 269.58 34.07 268.37 34.35C267.57 34.53 266.39 34.75 265.75 34.84C263.49 35.16 262.57 35.32 261.33 35.59C260.65 35.74 259.26 36.00 258.25 36.18C257.24 36.36 256.19 36.58 255.92 36.66C255.64 36.75 254.64 36.90 253.69 37.00C252.75 37.10 251.49 37.34 250.90 37.52C250.31 37.70 249.25 37.92 248.54 38.00C247.83 38.08 246.72 38.27 246.08 38.41C245.44 38.56 244.39 38.75 243.75 38.84C241.47 39.17 240.40 39.35 239.33 39.60C238.74 39.74 237.65 39.93 236.92 40.02C236.18 40.11 235.13 40.33 234.58 40.49C234.03 40.66 233.05 40.85 232.41 40.91C230.89 41.06 228.32 41.50 227.98 41.68C227.83 41.76 226.92 41.94 225.96 42.08C225.00 42.22 223.80 42.45 223.31 42.57C222.82 42.70 221.67 42.89 220.75 42.99C219.83 43.09 218.67 43.29 218.17 43.43C217.66 43.57 216.42 43.79 215.42 43.93C214.41 44.07 213.13 44.32 212.58 44.49C212.03 44.66 211.05 44.85 210.41 44.91C208.87 45.06 206.58 45.47 205.75 45.74C205.38 45.87 204.48 46.02 203.75 46.09C203.02 46.16 201.97 46.35 201.43 46.52C200.89 46.70 199.59 46.91 198.54 47.00C196.33 47.20 194.18 47.71 193.88 48.12C193.71 48.33 193.67 50.41 193.67 57.17L193.67 65.94L193.28 66.30L192.90 66.67L182.06 66.67C171.82 66.67 171.20 66.65 170.95 66.37ZM182.51 66.17C190.37 66.17 192.67 66.12 192.89 65.96C193.17 65.75 193.22 62.71 193.17 48.45C193.17 48.03 191.36 46.20 190.83 46.08C190.41 45.99 188.65 44.38 187.22 42.78C186.83 42.35 186.41 42.00 186.28 42.00C186.15 42.00 185.94 41.88 185.81 41.73C185.69 41.58 185.27 41.32 184.88 41.15C184.49 40.98 184.17 40.77 184.17 40.67C184.17 40.40 182.26 38.56 181.46 38.07C181.07 37.82 180.36 37.26 179.88 36.81C179.41 36.36 178.93 36.00 178.83 36.00C178.65 36.00 177.43 35.00 175.08 32.94C173.60 31.63 173.09 31.22 172.71 31.02C172.50 30.91 172.22 30.60 172.08 30.32C171.89 29.95 171.71 29.83 171.45 29.86L171.08 29.92L171.04 47.79L171.00 65.67L171.35 66.01C171.58 66.25 171.82 66.33 172.06 66.27C172.25 66.21 176.96 66.17 182.51 66.17Z"/><path fill-rule="evenodd" fill="#F2471C" d="M171.35 66.01L171.00 65.67L171.04 47.79L171.08 29.92L171.45 29.86C171.71 29.83 171.89 29.95 172.08 30.32C172.22 30.60 172.50 30.91 172.71 31.02C173.09 31.22 173.60 31.63 175.08 32.94C177.43 35.00 178.65 36.00 178.83 36.00C178.93 36.00 179.41 36.36 179.88 36.81C180.36 37.26 181.07 37.82 181.46 38.07C182.26 38.56 184.17 40.40 184.17 40.67C184.17 40.77 184.49 40.98 184.88 41.15C185.27 41.32 185.69 41.58 185.81 41.73C185.94 41.88 186.15 42.00 186.28 42.00C186.41 42.00 186.83 42.35 187.22 42.78C188.65 44.38 190.41 45.99 190.83 46.08C191.36 46.20 193.17 48.03 193.17 48.45C193.22 62.71 193.17 65.75 192.89 65.96C192.67 66.12 190.37 66.17 182.51 66.17C176.96 66.17 172.25 66.21 172.06 66.27C171.82 66.33 171.58 66.25 171.35 66.01Z"/></symbol></defs></svg>
+
+<div class="shell">
+<section class="stage brand" id="stage" aria-roledescription="carousel" aria-label="중어중문전공 경진대회 홍보">
+  <div class="wash"></div>
+  <div class="bar" id="bar" aria-hidden="true"></div>
+  <div class="top">
+    <div class="lockup" role="img" aria-label="경기대학교 KYONGGI UNIVERSITY"><svg class="mk"><use href="#kgu"/></svg><span><b>경기대학교</b><span class="en">KYONGGI UNIVERSITY</span></span></div>
+    <div class="ctl">
+      <button id="snd" aria-label="배경음악 켜기" aria-pressed="false"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 7.5h3l4-3.5v12l-4-3.5H3z" fill="currentColor" stroke="none"/><path class="w" d="M13 7.2a4 4 0 0 1 0 5.6M15.3 5a7 7 0 0 1 0 10"/><path class="x" d="M13.5 8l4 4M17.5 8l-4 4"/></svg></button>
+      <button id="prev" aria-label="이전 장면">‹</button>
+      <button id="play" aria-label="일시정지">II</button>
+      <button id="next" aria-label="다음 장면">›</button>
+    </div>
+  </div>
+
+  <article class="scene s1" data-dur="2500" aria-label="시작">
+    <div class="zh-big a fade" style="--d:.05s" aria-hidden="true">中</div>
+    <div class="col">
+      <div class="lockup lg a pop" style="--d:.05s" role="img" aria-label="경기대학교 KYONGGI UNIVERSITY"><svg class="mk"><use href="#kgu"/></svg><span><b>경기대학교</b><span class="en">KYONGGI UNIVERSITY</span></span></div>
+      <p class="k-sm a" style="--d:.3s">글로벌어문학부 중어중문전공</p>
+      <h1 class="k-h a" style="--d:.4s">배운 중국어,<br>무대에서<br>증명하세요</h1>
+    </div>
+  </article>
+
+  <article class="scene s2" data-dur="3500" aria-label="성장의 세 단계">
+    <div class="col">
+      <h2 class="k-h2 a" style="--d:.05s">역량은<br>무대 위에서 자랍니다</h2>
+      <ol class="steps">
+        <li class="a" style="--i:0;--d:.35s"><span class="zh" aria-hidden="true">说</span><div><b>중국어로 말하기</b><span>내 주제를 중국어로 발표합니다</span></div></li>
+        <li class="a" style="--i:1;--d:.75s"><span class="zh" aria-hidden="true">辩</span><div><b>논리로 설득하기</b><span>3인 1조로 찬반을 겨룹니다</span></div></li>
+        <li class="a" style="--i:2;--d:1.15s"><span class="zh" aria-hidden="true">记</span><div><b>성장을 기록하기</b><span>수업과 경력을 포트폴리오로 엮습니다</span></div></li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="scene s3" data-dur="5000" aria-label="중국어 토론 대회">
+    <div class="col split">
+      <div class="hd"><span class="kick a pop" style="--d:.05s">토론 대회, 3인 1조</span><h2 class="k-h2 a" style="--d:.1s">논리로 맞붙는<br>중국어 토론</h2></div>
+      <svg class="art a fade" style="--d:.05s" viewBox="0 0 360 250" role="img" aria-label="정방과 반방 학생들이 연단에서 중국어로 토론하는 장면"><line class="floor" x1="0" y1="238" x2="360" y2="238"/><g class="bob" style="--d:.1s"><path class="ln" fill="#2E2A2A" d="M28.4 145.8 Q28.4 138.0 46.0 138.0 Q63.5 138.0 63.5 145.8 L64.4 182.2 L27.6 182.2 Z"/><path class="ln" fill="#FFFDF9" d="M40.0 138.5 L46.0 154.9 L52.0 138.5 Z"/><path fill="#B5232B" d="M44.3 142.2 L47.7 142.2 L48.7 157.5 L46.0 161.1 L43.3 157.5 Z"/><g class="hd "><path class="ln" fill="#2B201E" d="M32.0 124.7 Q29.4 148.1 38.9 149.4 L53.1 149.4 Q62.6 148.1 60.0 124.7 Z"/><circle class="ln" fill="#F3CDAE" cx="46.0" cy="126.0" r="13.0"/><path class="ln" fill="#2B201E" d="M32.4 128.6 Q31.4 110.1 46.0 111.2 Q60.6 110.1 59.6 128.6 Q57.2 120.5 48.9 119.5 Q41.3 123.7 32.4 128.6 Z"/><g class="eyes"><circle class="lf" cx="43.7" cy="127.8" r="1.6"/><circle class="lf" cx="53.0" cy="127.8" r="1.6"/></g><circle fill="#E8897A" opacity=".5" cx="40.3" cy="131.7" r="1.9"/><circle fill="#E8897A" opacity=".5" cx="56.4" cy="131.7" r="1.9"/><ellipse class="mouth" fill="#8A2A2A" cx="48.3" cy="133.2" rx="2.6" ry="1.8"/></g></g><g class="bob" style="--d:.45s"><path class="ln" fill="#2E2A2A" d="M110.5 147.8 Q110.5 140.0 128.0 140.0 Q145.6 140.0 145.6 147.8 L146.4 184.2 L109.6 184.2 Z"/><path class="ln" fill="#FFFDF9" d="M122.0 140.5 L128.0 156.9 L134.0 140.5 Z"/><path fill="#B5232B" d="M126.3 144.2 L129.7 144.2 L130.7 159.5 L128.0 163.1 L125.3 159.5 Z"/><g class="hd "><circle class="ln" fill="#F3CDAE" cx="128.0" cy="128.0" r="13.0"/><path class="ln" fill="#2B201E" d="M114.7 127.7 Q113.7 112.1 128.7 113.2 Q142.8 114.2 141.3 128.0 Q137.4 121.5 129.6 120.7 Q121.5 121.5 114.7 127.7 Z"/><g class="eyes"><circle class="lf" cx="125.7" cy="129.8" r="1.6"/><circle class="lf" cx="135.0" cy="129.8" r="1.6"/></g><circle fill="#E8897A" opacity=".5" cx="122.3" cy="133.7" r="1.9"/><circle fill="#E8897A" opacity=".5" cx="138.4" cy="133.7" r="1.9"/><ellipse class="mouth" fill="#8A2A2A" cx="130.3" cy="135.2" rx="2.6" ry="1.8"/></g></g><g class="bob" style="--d:.3s"><path class="ln" fill="#2E2A2A" d="M214.4 147.8 Q214.4 140.0 232.0 140.0 Q249.6 140.0 249.6 147.8 L250.4 184.2 L213.6 184.2 Z"/><path class="ln" fill="#FFFDF9" d="M226.0 140.5 L232.0 156.9 L238.0 140.5 Z"/><path fill="#C99A3E" d="M232.0 145.5 L226.5 142.3 L226.5 148.6 Z M232.0 145.5 L237.5 142.3 L237.5 148.6 Z"/><circle fill="#C99A3E" cx="232.0" cy="145.5" r="1.3"/><g class="hd "><circle class="ln" fill="#F3CDAE" cx="232.0" cy="128.0" r="13.0"/><path class="ln" fill="#2B201E" d="M218.7 127.7 Q217.7 112.1 232.7 113.2 Q246.8 114.2 245.3 128.0 Q241.4 121.5 233.6 120.7 Q225.5 121.5 218.7 127.7 Z"/><g class="eyes"><circle class="lf" cx="225.0" cy="129.8" r="1.6"/><circle class="lf" cx="234.3" cy="129.8" r="1.6"/></g><circle fill="#E8897A" opacity=".5" cx="221.6" cy="133.7" r="1.9"/><circle fill="#E8897A" opacity=".5" cx="237.7" cy="133.7" r="1.9"/><ellipse class="mouth" fill="#8A2A2A" cx="229.7" cy="135.2" rx="2.6" ry="1.8"/></g></g><g class="bob" style="--d:.6s"><path class="ln" fill="#2E2A2A" d="M296.4 145.8 Q296.4 138.0 314.0 138.0 Q331.6 138.0 331.6 145.8 L332.4 182.2 L295.6 182.2 Z"/><path class="ln" fill="#FFFDF9" d="M308.0 138.5 L314.0 154.9 L320.0 138.5 Z"/><path fill="#C99A3E" d="M314.0 143.5 L308.5 140.3 L308.5 146.6 Z M314.0 143.5 L319.5 140.3 L319.5 146.6 Z"/><circle fill="#C99A3E" cx="314.0" cy="143.5" r="1.3"/><g class="hd "><path class="ln" fill="#2B201E" d="M300.0 124.7 Q297.4 148.1 306.9 149.4 L321.1 149.4 Q330.6 148.1 328.0 124.7 Z"/><circle class="ln" fill="#F3CDAE" cx="314.0" cy="126.0" r="13.0"/><path class="ln" fill="#2B201E" d="M300.4 128.6 Q299.4 110.1 314.0 111.2 Q328.6 110.1 327.6 128.6 Q325.2 120.5 316.9 119.5 Q309.3 123.7 300.4 128.6 Z"/><g class="eyes"><circle class="lf" cx="307.0" cy="127.8" r="1.6"/><circle class="lf" cx="316.3" cy="127.8" r="1.6"/></g><circle fill="#E8897A" opacity=".5" cx="303.6" cy="131.7" r="1.9"/><circle fill="#E8897A" opacity=".5" cx="319.7" cy="131.7" r="1.9"/><ellipse class="mouth" fill="#8A2A2A" cx="311.7" cy="133.2" rx="2.6" ry="1.8"/></g></g><path class="ln" fill="#2E2A2A" d="M64.0 116.2 Q64.0 106.0 87.0 106.0 Q110.0 106.0 110.0 116.2 L111.1 163.8 L62.9 163.8 Z"/><path class="ln" fill="#FFFDF9" d="M79.2 106.7 L87.0 128.1 L94.8 106.7 Z"/><path fill="#B5232B" d="M84.8 111.4 L89.2 111.4 L90.6 131.5 L87.0 136.3 L83.4 131.5 Z"/><g class="hd "><circle class="ln" fill="#F3CDAE" cx="87.0" cy="90.0" r="17.0"/><path class="ln" fill="#2B201E" d="M69.7 89.7 Q68.3 69.3 87.8 70.6 Q106.4 72.0 104.3 90.0 Q99.2 81.5 89.0 80.5 Q78.5 81.5 69.7 89.7 Z"/><g class="eyes"><circle class="lf" cx="83.9" cy="92.4" r="2.0"/><circle class="lf" cx="96.2" cy="92.4" r="2.0"/></g><circle fill="#E8897A" opacity=".5" cx="79.5" cy="97.5" r="2.5"/><circle fill="#E8897A" opacity=".5" cx="100.6" cy="97.5" r="2.5"/><ellipse class="mouth talk" fill="#8A2A2A" cx="90.1" cy="99.3" rx="3.4" ry="2.4"/></g><g transform="translate(66.0 113.0)"><g class=""><path class="lns" stroke-width="14.2" d="M0 0 L-6 20 L3 33"/><path fill="none" stroke="#2E2A2A" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.2" d="M0 0 L-6 20 L3 33"/><circle class="ln" fill="#F3CDAE" cx="3.0" cy="33.0" r="5.4"/></g></g><g transform="translate(108.0 113.0)"><g class="gest"><path class="lns" stroke-width="14.2" d="M0 0 L16 8 L30 -10"/><path fill="none" stroke="#2E2A2A" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.2" d="M0 0 L16 8 L30 -10"/><circle class="ln" fill="#F3CDAE" cx="30.0" cy="-10.0" r="5.4"/></g></g><path class="ln" fill="#2E2A2A" d="M250.1 116.2 Q250.1 106.0 273.0 106.0 Q295.9 106.0 295.9 116.2 L297.1 163.8 L248.9 163.8 Z"/><path class="ln" fill="#FFFDF9" d="M265.2 106.7 L273.0 128.1 L280.8 106.7 Z"/><path fill="#C99A3E" d="M273.0 113.1 L265.9 109.1 L265.9 117.2 Z M273.0 113.1 L280.1 109.1 L280.1 117.2 Z"/><circle fill="#C99A3E" cx="273.0" cy="113.1" r="1.7"/><g class="hd "><path class="ln" fill="#2B201E" d="M254.6 88.3 Q251.2 118.9 263.6 120.6 L282.4 120.6 Q294.8 118.9 291.4 88.3 Z"/><circle class="ln" fill="#F3CDAE" cx="273.0" cy="90.0" r="17.0"/><path class="ln" fill="#2B201E" d="M255.2 93.4 Q254.0 69.3 273.0 70.6 Q292.0 69.3 290.9 93.4 Q287.6 82.9 276.7 81.5 Q266.9 86.9 255.2 93.4 Z"/><g class="eyes"><circle class="lf" cx="263.8" cy="92.4" r="2.0"/><circle class="lf" cx="276.1" cy="92.4" r="2.0"/></g><circle fill="#E8897A" opacity=".5" cx="259.4" cy="97.5" r="2.5"/><circle fill="#E8897A" opacity=".5" cx="280.5" cy="97.5" r="2.5"/><ellipse class="mouth talk t2" fill="#8A2A2A" cx="269.9" cy="99.3" rx="3.4" ry="2.4"/></g><g transform="translate(294.0 113.0)"><g class=""><path class="lns" stroke-width="14.2" d="M0 0 L6 20 L-3 33"/><path fill="none" stroke="#2E2A2A" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.2" d="M0 0 L6 20 L-3 33"/><circle class="ln" fill="#F3CDAE" cx="-3.0" cy="33.0" r="5.4"/></g></g><g transform="translate(252.0 113.0)"><g class="jab"><path class="lns" stroke-width="14.2" d="M0 0 L-16 8 L-32 -4"/><path fill="none" stroke="#2E2A2A" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.2" d="M0 0 L-16 8 L-32 -4"/><path class="lns" stroke-width="4" d="M-33 -4 L-41 -7"/><path stroke="#F3CDAE" stroke-width="2" stroke-linecap="round" d="M-33 -4 L-41 -7"/><circle class="ln" fill="#F3CDAE" cx="-32.0" cy="-4.0" r="5.4"/></g></g><path class="ln" fill="#5C1014" d="M22 150 H152 L144 238 H30 Z"/><rect class="ln" fill="#3A0A0C" x="16" y="143" width="142" height="9" rx="3"/><text x="87" y="206" class="pd" fill="#E2C68C">正方</text><path class="ln" fill="#8C6A2A" d="M208 150 H338 L330 238 H216 Z"/><rect class="ln" fill="#5E4318" x="202" y="143" width="142" height="9" rx="3"/><text x="273" y="206" class="pd" fill="#FFF3DC">反方</text><path d="M102 143 Q104 126 97 114" stroke="#3A3A3A" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="96.5" cy="112" r="4.2" fill="#3A3A3A"/><path d="M258 143 Q256 126 263 114" stroke="#3A3A3A" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="263.5" cy="112" r="4.2" fill="#3A3A3A"/><g class="spark"><path d="M180 82 V72 M206 96 L214 90 M154 96 L146 90 M206 140 L214 146 M154 140 L146 146" stroke="#C99A3E" stroke-width="3" stroke-linecap="round"/></g><g class="vs"><circle cx="180" cy="118" r="23" fill="#B5232B" stroke="#FFF6EE" stroke-width="3"/><text x="180" y="126" class="vst">VS</text></g><g class="bub" style="--d:0.2s" transform="translate(14 20)"><g class="bb"><path class="ln" fill="#FFFDF9" d="M12 0 H122 Q134 0 134 12 V26 Q134 38 122 38 H78 L68 52 L62 38 H12 Q0 38 0 26 V12 Q0 0 12 0 Z"/><text x="67.0" y="25" class="bt" fill="#5C1014">我方认为！</text></g></g><g class="bub" style="--d:1.05s" transform="translate(212 20)"><g class="bb"><path class="ln" fill="#FFFDF9" d="M12 0 H122 Q134 0 134 12 V26 Q134 38 122 38 H73 L63 52 L57 38 H12 Q0 38 0 26 V12 Q0 0 12 0 Z"/><text x="67.0" y="25" class="bt" fill="#6B4E16">请问对方辩友</text></g></g><g class="bub" style="--d:1.9s" transform="translate(14 20)"><g class="bb"><path class="ln" fill="#FFFDF9" d="M12 0 H122 Q134 0 134 12 V26 Q134 38 122 38 H78 L68 52 L62 38 H12 Q0 38 0 26 V12 Q0 0 12 0 Z"/><text x="67.0" y="25" class="bt" fill="#5C1014">事实证明！</text></g></g><g class="stay" style="--d:2.75s" transform="translate(212 20)"><g class="bb"><path class="ln" fill="#FFFDF9" d="M12 0 H122 Q134 0 134 12 V26 Q134 38 122 38 H73 L63 52 L57 38 H12 Q0 38 0 26 V12 Q0 0 12 0 Z"/><text x="67.0" y="25" class="bt" fill="#6B4E16">我方不同意！</text></g></g></svg>
+      <div class="pz">
+        <p class="why a" style="--d:.7s">중국 사회의 쟁점을 중국어로 깊이 파고들어, 근거를 들어 주장하고 반박해 봅니다.</p>
+        <span class="gh a" style="--d:1.25s">이 대회에서 얻어 가는 힘</span>
+        <ul class="gains"><li style="--d:1.5s"><i><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.2 14.6h5.6M8 17.2h4"/><path d="M10 2.8a5.2 5.2 0 0 0-3.2 9.3c.6.5.9 1.2.9 1.9v.6h4.6V14c0-.7.3-1.4.9-1.9A5.2 5.2 0 0 0 10 2.8z"/></svg></i>논리적 사고력</li><li style="--d:2.0s"><i><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 7h12.5l-3-3M17 13H4.5l3 3"/></svg></i>반론 대응력</li><li style="--d:2.5s"><i><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="6.5" r="2.5"/><circle cx="4.5" cy="8" r="2"/><circle cx="15.5" cy="8" r="2"/><path d="M5.5 16.5c0-2.6 2-4.5 4.5-4.5s4.5 1.9 4.5 4.5M1.5 15.5c0-2 1.4-3.4 3.3-3.6M18.5 15.5c0-2-1.4-3.4-3.3-3.6"/></svg></i>팀워크</li></ul>
+      </div>
+    </div>
+  </article>
+
+  <article class="scene s4" data-dur="5000" aria-label="중국어 프레젠테이션 대회">
+    <div class="col split">
+      <div class="hd"><span class="kick a pop" style="--d:.05s">프레젠테이션 대회, 2인 1조</span><h2 class="k-h2 a" style="--d:.1s">무대를 사로잡는<br>중국어 PT</h2></div>
+      <svg class="art a fade" style="--d:.05s" viewBox="0 0 360 252" role="img" aria-label="두 학생이 화면 앞에서 중국어로 발표하고 관객이 박수 치는 장면"><line class="floor" x1="0" y1="197" x2="360" y2="197"/><rect x="140" y="10" width="208" height="134" rx="8" fill="#2E2A2A"/><rect x="148" y="18" width="192" height="114" rx="3" fill="#FFFDF9"/><path d="M244 144 V190 M224 194 H264" stroke="#2E2A2A" stroke-width="4" stroke-linecap="round"/><text x="160" y="40" class="slt">中国新能源市场</text><rect x="160" y="46" width="40" height="3" fill="#B5232B"/><line x1="160" y1="122" x2="328" y2="122" stroke="#D8CFC4" stroke-width="1.5"/><rect class="bar" x="166" y="104" width="20" height="18" fill="#E2C68C" style="--d:0.30s"/><rect class="bar" x="196" y="90" width="20" height="32" fill="#D3AE66" style="--d:0.43s"/><rect class="bar" x="226" y="72" width="20" height="50" fill="#C9573F" style="--d:0.56s"/><rect class="bar" x="256" y="50" width="20" height="72" fill="#B5232B" style="--d:0.69s"/><path class="draw" pathLength="1" d="M176 96 L206 82 L236 64 L266 42 L296 30" stroke="#5C1014" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="--len:1;--t:.45s;--d:.85s"/><path class="a pop" style="--d:1.25s" d="M290 24 L303 28 L294 38 Z" fill="#5C1014"/><text x="296" y="98" class="sln a pop" style="--d:1.3s">+120%</text><text x="334" y="128" class="slp">2/10</text><circle class="laser" r="3.6" fill="#FF3B3B"/><rect x="37" y="166" width="8" height="30" fill="#2E2A2A"/><rect x="48" y="166" width="8" height="30" fill="#2E2A2A"/><ellipse cx="41" cy="197" rx="7" ry="3" fill="#1A1515"/><ellipse cx="52" cy="197" rx="7" ry="3" fill="#1A1515"/><path class="ln" fill="#2E2A2A" d="M25.8 129.0 Q25.8 120.0 46.0 120.0 Q66.2 120.0 66.2 129.0 L67.3 171.0 L24.7 171.0 Z"/><path class="ln" fill="#FFFDF9" d="M39.1 120.6 L46.0 139.5 L52.9 120.6 Z"/><path fill="#B5232B" d="M44.0 124.8 L48.0 124.8 L49.1 142.5 L46.0 146.7 L42.9 142.5 Z"/><g class="nod"><g class="hd "><circle class="ln" fill="#F3CDAE" cx="46.0" cy="106.0" r="15.0"/><path class="ln" fill="#2B201E" d="M30.7 105.7 Q29.5 87.7 46.8 88.9 Q63.1 90.1 61.3 106.0 Q56.8 98.5 47.8 97.6 Q38.5 98.5 30.7 105.7 Z"/><g class="eyes"><circle class="lf" cx="43.3" cy="108.1" r="1.8"/><circle class="lf" cx="54.1" cy="108.1" r="1.8"/></g><circle fill="#E8897A" opacity=".5" cx="39.4" cy="112.6" r="2.2"/><circle fill="#E8897A" opacity=".5" cx="58.0" cy="112.6" r="2.2"/><ellipse class="mouth talk" fill="#8A2A2A" cx="48.7" cy="114.2" rx="3.0" ry="2.1"/></g></g><g transform="translate(28.0 126.0)"><g class=""><path class="lns" stroke-width="13.0" d="M0 0 L-6 18 L2 30"/><path fill="none" stroke="#2E2A2A" stroke-linecap="round" stroke-linejoin="round" stroke-width="9.0" d="M0 0 L-6 18 L2 30"/><rect class="ln" fill="#FFFDF9" x="-5" y="24" width="15" height="19" rx="1.5"/><circle class="ln" fill="#F3CDAE" cx="2.0" cy="30.0" r="4.8"/></g></g><g transform="translate(63.0 126.0)"><g class=""><path class="lns" stroke-width="13.0" d="M0 0 L9 12 L-1 -3"/><path fill="none" stroke="#2E2A2A" stroke-linecap="round" stroke-linejoin="round" stroke-width="9.0" d="M0 0 L9 12 L-1 -3"/><path d="M-1 -3 L-9 -9" stroke="#3A3A3A" stroke-width="3.5" stroke-linecap="round"/><circle cx="-10.5" cy="-11" r="3.8" fill="#3A3A3A"/><circle class="ln" fill="#F3CDAE" cx="-1.0" cy="-3.0" r="4.8"/></g></g><path class="ln" fill="#2E2A2A" d="M80 165 H120 L125 184 H75 Z"/><path d="M92 184 V196 M108 184 V196" stroke="#F3CDAE" stroke-width="4" stroke-linecap="round"/><ellipse cx="91" cy="197" rx="6" ry="2.6" fill="#1A1515"/><ellipse cx="109" cy="197" rx="6" ry="2.6" fill="#1A1515"/><path class="ln" fill="#5C1014" d="M78.4 124.6 Q78.4 115.0 100.0 115.0 Q121.6 115.0 121.6 124.6 L122.7 167.0 L77.3 167.0 Z"/><path class="ln" fill="#FFFDF9" d="M92.6 115.6 L100.0 135.8 L107.4 115.6 Z"/><path fill="#E2C68C" d="M100.0 121.7 L93.3 117.9 L93.3 125.6 Z M100.0 121.7 L106.7 117.9 L106.7 125.6 Z"/><circle fill="#E2C68C" cx="100.0" cy="121.7" r="1.6"/><g class="hd "><path class="ln" fill="#2B201E" d="M82.7 98.4 Q79.5 127.2 91.2 128.8 L108.8 128.8 Q120.5 127.2 117.3 98.4 Z"/><circle class="ln" fill="#F3CDAE" cx="100.0" cy="100.0" r="16.0"/><path class="ln" fill="#2B201E" d="M83.2 103.2 Q82.1 80.5 100.0 81.8 Q117.9 80.5 116.8 103.2 Q113.8 93.3 103.5 92.0 Q94.2 97.1 83.2 103.2 Z"/><g class="eyes"><circle class="lf" cx="97.1" cy="102.2" r="1.9"/><circle class="lf" cx="108.6" cy="102.2" r="1.9"/></g><circle fill="#E8897A" opacity=".5" cx="93.0" cy="107.0" r="2.4"/><circle fill="#E8897A" opacity=".5" cx="112.8" cy="107.0" r="2.4"/><ellipse class="mouth talk t2" fill="#8A2A2A" cx="102.9" cy="108.8" rx="3.2" ry="2.2"/></g><g transform="translate(80.0 121.0)"><g class=""><path class="lns" stroke-width="13.6" d="M0 0 L-5 20 L2 36"/><path fill="none" stroke="#5C1014" stroke-linecap="round" stroke-linejoin="round" stroke-width="9.6" d="M0 0 L-5 20 L2 36"/><circle class="ln" fill="#F3CDAE" cx="2.0" cy="36.0" r="5.1"/></g></g><g transform="translate(120.0 121.0)"><g class="point"><path class="lns" stroke-width="13.6" d="M0 0 L18 -8 L36 -20"/><path fill="none" stroke="#5C1014" stroke-linecap="round" stroke-linejoin="round" stroke-width="9.6" d="M0 0 L18 -8 L36 -20"/><rect x="33" y="-27" width="6" height="11" rx="2" fill="#3A3A3A" transform="rotate(-30 36 -21)"/><circle class="ln" fill="#F3CDAE" cx="36.0" cy="-20.0" r="5.1"/></g></g><g class="aud"><circle cx="24" cy="221" r="13"/><path d="M1 252 Q1 236 24 236 Q47 236 47 252 Z"/></g><g class="aud"><circle cx="74" cy="221" r="13"/><path d="M51 252 Q51 236 74 236 Q97 236 97 252 Z"/></g><g class="aud"><circle cx="124" cy="221" r="13"/><path d="M101 252 Q101 236 124 236 Q147 236 147 252 Z"/></g><g class="aud"><circle cx="174" cy="221" r="13"/><path d="M151 252 Q151 236 174 236 Q197 236 197 252 Z"/></g><g class="aud"><circle cx="224" cy="221" r="13"/><path d="M201 252 Q201 236 224 236 Q247 236 247 252 Z"/></g><g class="aud"><circle cx="274" cy="221" r="13"/><path d="M251 252 Q251 236 274 236 Q297 236 297 252 Z"/></g><g class="aud"><circle cx="324" cy="221" r="13"/><path d="M301 252 Q301 236 324 236 Q347 236 347 252 Z"/></g><g class="clap" style="--d:2.1s"><circle cx="65" cy="204" r="4.5"/><circle cx="83" cy="204" r="4.5"/></g><g class="clap" style="--d:2.25s"><circle cx="165" cy="204" r="4.5"/><circle cx="183" cy="204" r="4.5"/></g><g class="clap" style="--d:2.4s"><circle cx="265" cy="204" r="4.5"/><circle cx="283" cy="204" r="4.5"/></g><g transform="translate(60 200)"><path class="heart" style="--d:2.2s" d="M0 2 C-4 -3 -10 1 0 9 C10 1 4 -3 0 2Z" fill="#E0434B"/></g><g transform="translate(150 200)"><path class="heart" style="--d:2.35s" d="M0 2 C-4 -3 -10 1 0 9 C10 1 4 -3 0 2Z" fill="#E0434B"/></g><g transform="translate(205 200)"><path class="heart" style="--d:2.5s" d="M0 2 C-4 -3 -10 1 0 9 C10 1 4 -3 0 2Z" fill="#E0434B"/></g><g transform="translate(300 200)"><path class="heart" style="--d:2.3s" d="M0 2 C-4 -3 -10 1 0 9 C10 1 4 -3 0 2Z" fill="#E0434B"/></g><g transform="translate(110 200)"><path class="heart" style="--d:2.6s" d="M0 2 C-4 -3 -10 1 0 9 C10 1 4 -3 0 2Z" fill="#E0434B"/></g></svg>
+      <div class="pz">
+        <p class="why a" style="--d:.7s">관심 있는 주제를 직접 골라 자료를 모으고, 중국어로 청중을 설득하는 발표를 완성합니다.</p>
+        <span class="gh a" style="--d:1.25s">이 대회에서 얻어 가는 힘</span>
+        <ul class="gains"><li style="--d:1.5s"><i><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M3 8h14M8 8v9"/></svg></i>기획·구성력</li><li style="--d:2.0s"><i><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="7.5" y="2.5" width="5" height="9" rx="2.5"/><path d="M4.5 9.5a5.5 5.5 0 0 0 11 0M10 15v2.5M7 17.5h6"/></svg></i>발표 전달력</li><li style="--d:2.5s"><i><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.5l2.3 4.7 5.2.8-3.8 3.7.9 5.2L10 14.4l-4.6 2.5.9-5.2L2.5 8l5.2-.8z"/></svg></i>무대 자신감</li></ul>
+      </div>
+    </div>
+  </article>
+
+  <article class="scene s5" data-dur="5000" aria-label="학생 포트폴리오 경진대회">
+    <div class="col split">
+      <div class="hd"><span class="kick g a pop" style="--d:.05s">포트폴리오 경진대회, 교과목·경력 두 부문</span><h2 class="k-h2 a" style="--d:.1s">배운 것과 해낸 것을<br>한 권에</h2></div>
+      <svg class="art a fade" style="--d:.05s" viewBox="0 0 360 230" role="img" aria-label="학생이 교과목과 경력 자료를 모아 포트폴리오를 완성하고 기뻐하는 장면"><ellipse cx="182" cy="214" rx="56" ry="6" class="shadow"/><g class="hop"><rect x="170" y="172" width="9" height="38" fill="#2E2A2A"/><rect x="185" y="172" width="9" height="38" fill="#2E2A2A"/><ellipse cx="174" cy="211" rx="8" ry="3.2" fill="#1A1515"/><ellipse cx="190" cy="211" rx="8" ry="3.2" fill="#1A1515"/><path class="ln" fill="#2E2A2A" d="M157.7 85.8 Q157.7 75.0 182.0 75.0 Q206.3 75.0 206.3 85.8 L207.5 136.2 L156.5 136.2 Z"/><path class="ln" fill="#FFFDF9" d="M173.7 75.7 L182.0 98.4 L190.3 75.7 Z"/><path fill="#B5232B" d="M179.7 80.8 L184.3 80.8 L185.8 102.0 L182.0 107.0 L178.2 102.0 Z"/><g class="hd "><path class="ln" fill="#2B201E" d="M162.6 56.2 Q159.0 88.6 172.1 90.4 L191.9 90.4 Q205.0 88.6 201.4 56.2 Z"/><circle class="ln" fill="#F3CDAE" cx="182.0" cy="58.0" r="18.0"/><path class="ln" fill="#2B201E" d="M163.1 61.6 Q161.8 36.0 182.0 37.5 Q202.2 36.0 200.9 61.6 Q197.5 50.4 186.0 49.0 Q175.5 54.8 163.1 61.6 Z"/><g class="eyes"><circle class="lf" cx="175.5" cy="60.5" r="2.2"/><circle class="lf" cx="188.5" cy="60.5" r="2.2"/></g><circle fill="#E8897A" opacity=".5" cx="170.8" cy="65.9" r="2.7"/><circle fill="#E8897A" opacity=".5" cx="193.2" cy="65.9" r="2.7"/><ellipse class="mouth smile" fill="#8A2A2A" cx="182.0" cy="67.9" rx="3.6" ry="2.5"/></g><rect class="ln" fill="#A8843F" x="130" y="96" width="104" height="82" rx="6"/><path class="ln" fill="#A8843F" d="M130 100 V91 Q130 87 134 87 H166 L172 96 H130 Z"/><g class="page" style="--dx:-170px;--dy:-40px;--r:-25deg;--d:0.2s"><rect class="ln" fill="#FFFDF9" x="152" y="48" width="48" height="62" rx="2"/><text x="176" y="64" class="pgt">교과목</text><path d="M160 74 H192 M160 82 H192 M160 90 H184" stroke="#C8BEB2" stroke-width="2.4" stroke-linecap="round"/></g><g class="page" style="--dx:170px;--dy:-50px;--r:22deg;--d:0.42s"><rect class="ln" fill="#FFF3DC" x="166" y="52" width="48" height="62" rx="2"/><text x="190" y="68" class="pgt">경력</text><path d="M174 78 H206 M174 86 H206 M174 94 H198" stroke="#C8BEB2" stroke-width="2.4" stroke-linecap="round"/></g><rect class="ln" fill="#C99A4A" x="130" y="104" width="104" height="74" rx="6"/><text x="182" y="146" class="fdt">作品集</text><text x="182" y="164" class="fdk">포트폴리오</text><g transform="translate(161.0 85.0)"><g class=""><path class="lns" stroke-width="14.8" d="M0 0 L-14 12 L-22 20"/><path fill="none" stroke="#2E2A2A" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.8" d="M0 0 L-14 12 L-22 20"/><circle class="ln" fill="#F3CDAE" cx="-22.0" cy="20.0" r="5.8"/></g></g><g transform="translate(203.0 85.0)"><g class=""><path class="lns" stroke-width="14.8" d="M0 0 L14 12 L22 20"/><path fill="none" stroke="#2E2A2A" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.8" d="M0 0 L14 12 L22 20"/><circle class="ln" fill="#F3CDAE" cx="22.0" cy="20.0" r="5.8"/></g></g></g><g class="medal"><circle cx="270" cy="54" r="20" fill="#E2B44A" stroke="#A8843F" stroke-width="3"/><path d="M264.5 47.5 V44.5 Q264.5 42.5 266.5 42.5 H273.5 Q275.5 42.5 275.5 44.5 V47.5" stroke="#FFF6DC" stroke-width="2.4" fill="none"/><rect x="258" y="47.5" width="24" height="16" rx="3" fill="#FFF6DC"/><path d="M258 54.5 H282" stroke="#E2B44A" stroke-width="1.8"/><rect x="267.5" y="52.5" width="5" height="4" rx="1" fill="#A8843F"/></g><g transform="translate(118 82)"><path class="twk" style="--d:1.15s" d="M0 -7 L2.1 -2.1 L7 0 L2.1 2.1 L0 7 L-2.1 2.1 L-7 0 L-2.1 -2.1 Z" fill="#C99A3E"/></g><g transform="translate(246 98)"><path class="twk" style="--d:1.25s" d="M0 -6 L1.8 -1.8 L6 0 L1.8 1.8 L0 6 L-1.8 1.8 L-6 0 L-1.8 -1.8 Z" fill="#C99A3E"/></g><g transform="translate(112 150)"><path class="twk" style="--d:1.35s" d="M0 -5 L1.5 -1.5 L5 0 L1.5 1.5 L0 5 L-1.5 1.5 L-5 0 L-1.5 -1.5 Z" fill="#C99A3E"/></g><g transform="translate(252 160)"><path class="twk" style="--d:1.3s" d="M0 -7 L2.1 -2.1 L7 0 L2.1 2.1 L0 7 L-2.1 2.1 L-7 0 L-2.1 -2.1 Z" fill="#C99A3E"/></g><g transform="translate(214 38)"><path class="twk" style="--d:1.45s" d="M0 -5 L1.5 -1.5 L5 0 L1.5 1.5 L0 5 L-1.5 1.5 L-5 0 L-1.5 -1.5 Z" fill="#C99A3E"/></g></svg>
+      <div class="pz">
+        <p class="why a" style="--d:.7s">수업 결과물과 대외활동 경험을 한 권에 모아, 성장을 돌아보고 다음 목표를 세웁니다.</p>
+        <span class="gh a" style="--d:1.25s">이 대회에서 얻어 가는 것</span>
+        <ul class="gains"><li style="--d:1.5s"><i><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 2.5h9a1.5 1.5 0 0 1 1.5 1.5v12a1.5 1.5 0 0 1-1.5 1.5H5z"/><path d="M5 2.5v15M8 6.5h4.5M8 9.5h4.5"/></svg></i>성장 기록</li><li style="--d:2.0s"><i><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="M12.8 7.2 11 11l-3.8 1.8L9 9z"/></svg></i>진로 설계</li><li style="--d:2.5s"><i><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 2.5h6.5L15 6v11.5H5z"/><path d="M11.5 2.5V6H15M7.5 11.5l2 2 3.5-3.5"/></svg></i>자기소개서·면접 준비</li></ul>
+      </div>
+    </div>
+  </article>
+
+  <article class="scene s6" data-dur="3500" aria-label="강의실에서 세상으로">
+    <div class="bgw" aria-hidden="true"><svg class="globe" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="90"/><ellipse cx="100" cy="40" rx="67.1" ry="3.0"/><ellipse cx="100" cy="70" rx="84.9" ry="6.0"/><ellipse cx="100" cy="100" rx="90.0" ry="9.0"/><ellipse cx="100" cy="130" rx="84.9" ry="6.0"/><ellipse cx="100" cy="160" rx="67.1" ry="3.0"/><ellipse class="mer" cx="100" cy="100" rx="90" ry="90" style="--d:0.0s"/><ellipse class="mer" cx="100" cy="100" rx="90" ry="90" style="--d:-1.5s"/><ellipse class="mer" cx="100" cy="100" rx="90" ry="90" style="--d:-3.0s"/><ellipse class="mer" cx="100" cy="100" rx="90" ry="90" style="--d:-4.5s"/></svg><svg class="cl" style="left:-6%;top:22%;width:34cqw;--d:0s" viewBox="0 0 120 52" aria-hidden="true"><path d="M8 46 Q8 30 24 30 Q28 14 46 16 Q58 4 74 14 Q92 10 96 28 Q112 30 112 46 Z"/><path d="M40 38 Q32 38 32 31 Q32 25 38 25 Q43 25 43 30"/><path d="M76 38 Q84 38 84 31 Q84 25 78 25 Q73 25 73 30"/></svg><svg class="cl" style="right:2%;top:58%;width:26cqw;--d:-3s" viewBox="0 0 120 52" aria-hidden="true"><path d="M8 46 Q8 30 24 30 Q28 14 46 16 Q58 4 74 14 Q92 10 96 28 Q112 30 112 46 Z"/><path d="M40 38 Q32 38 32 31 Q32 25 38 25 Q43 25 43 30"/><path d="M76 38 Q84 38 84 31 Q84 25 78 25 Q73 25 73 30"/></svg><svg class="cl" style="left:30%;top:9%;width:20cqw;--d:-6s" viewBox="0 0 120 52" aria-hidden="true"><path d="M8 46 Q8 30 24 30 Q28 14 46 16 Q58 4 74 14 Q92 10 96 28 Q112 30 112 46 Z"/><path d="M40 38 Q32 38 32 31 Q32 25 38 25 Q43 25 43 30"/><path d="M76 38 Q84 38 84 31 Q84 25 78 25 Q73 25 73 30"/></svg><svg class="skyline" viewBox="0 0 1200 262" preserveAspectRatio="xMaxYMax slice" aria-hidden="true"><rect class="sk1" x="0" y="191" width="54" height="69"/><rect class="sk1" x="64" y="201" width="37" height="59"/><rect class="sk1" x="113" y="164" width="40" height="96"/><rect class="sk1" x="166" y="146" width="37" height="114"/><rect class="sk1" x="210" y="199" width="36" height="61"/><rect class="sk1" x="256" y="202" width="60" height="58"/><rect class="sk1" x="323" y="140" width="39" height="120"/><rect class="sk1" x="372" y="138" width="37" height="122"/><rect class="sk1" x="414" y="130" width="48" height="130"/><rect class="sk1" x="476" y="137" width="37" height="123"/><rect class="sk1" x="526" y="204" width="59" height="56"/><rect class="sk1" x="773" y="139" width="53" height="121"/><rect class="sk1" x="840" y="197" width="45" height="63"/><rect class="sk1" x="898" y="129" width="70" height="131"/><rect class="sk1" x="1044" y="138" width="38" height="122"/><rect class="sk1" x="1086" y="147" width="47" height="113"/><g transform="translate(250 0)"><path class="sk1" d="M350 260 V214 H450 V260 Z M362 214 V196 H438 V214 Z M340 198 Q400 182 460 198 L452 190 Q400 176 348 190 Z M356 182 Q400 170 444 182 L438 176 Q400 165 362 176 Z"/></g><g transform="translate(405 0)"><path class="sk2" d="M574 260 L582 176 H588 L596 260 Z M560 260 L580 182 L584 186 L568 260 Z M606 260 L586 182 L582 186 L598 260 Z"/><circle class="sk2" cx="585" cy="170" r="22"/><rect class="sk2" x="582" y="110" width="6" height="40"/><circle class="sk2" cx="585" cy="104" r="13"/><rect class="sk2" x="583.5" y="44" width="3" height="50"/></g><g transform="translate(370 0)"><path class="sk2" d="M738 260 V236 H802 V260 Z M730 238 Q770 226 810 238 L800 230 H740 Z M744 230 V210 H796 V230 Z M736 212 Q770 200 804 212 L794 204 H746 Z M750 204 V186 H790 V204 Z M742 188 Q770 176 798 188 L788 180 H752 Z M756 180 V164 H784 V180 Z M748 166 Q770 154 792 166 L782 158 H758 Z M768 158 V136 H772 V158 Z"/></g></svg></div>
+    <svg class="route" aria-hidden="true"><path class="draw rp" pathLength="1" d="M0 0" stroke="#B5232B" stroke-width="15" stroke-linecap="round" fill="none" style="--len:1;--t:1.2s;--d:.15s"/><path class="rm" d="M0 0" fill="none" stroke="none"/></svg>
+    <svg class="plane" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12 22 3 15 21 11 13z" fill="#5C1014"/><path d="M11 13 22 3" stroke="#FFF6EE" stroke-width="1.2"/></svg>
+    <div class="stops" aria-hidden="true"><span class="stop" data-t="0.10"><i><svg viewBox="0 0 20 20"><path d="M2 13h16l-2.5 4.5h-11z"/><path d="M5 13V8h4v5M9 13V6h4v7M13 13V9h3v4"/></svg></i>무역</span><span class="stop" data-t="0.21"><i><svg viewBox="0 0 20 20"><path d="M10 2.2c.8 0 1.1 1 1.1 2.2v3.7l6.4 3.6v1.6l-6.4-1.8v3.6l2 1.5v1.3L10 17.2l-3.1.7v-1.3l2-1.5v-3.6l-6.4 1.8V11.7l6.4-3.6V4.4c0-1.2.3-2.2 1.1-2.2z"/></svg></i>항공</span><span class="stop" data-t="0.32"><i><svg viewBox="0 0 20 20"><rect x="3" y="6.5" width="14" height="10.5" rx="2"/><path d="M7.5 6.5V4.5h5v2M7 9.5v5M13 9.5v5"/></svg></i>관광</span><span class="stop" data-t="0.43" data-opt><i><svg viewBox="0 0 20 20"><path d="M3 8.5v3h3l7 4v-11l-7 4z"/><path d="M6 11.5l1.2 4h2"/><path d="M15.5 8a3 3 0 0 1 0 4"/></svg></i>마케팅</span><span class="stop" data-t="0.54" data-opt><i><svg viewBox="0 0 20 20"><ellipse cx="8" cy="6" rx="5" ry="2.2"/><path d="M3 6v3c0 1.2 2.2 2.2 5 2.2s5-1 5-2.2V6"/><path d="M7 12.6v1.6c0 1.2 2.2 2.2 5 2.2s5-1 5-2.2v-3c0-1.1-1.8-2-4.3-2.2"/></svg></i>금융</span><span class="stop" data-t="0.65"><i><svg viewBox="0 0 20 20"><path d="M1.5 8 10 4l8.5 4L10 12z"/><path d="M5 9.8v3.7c3 2 7 2 10 0V9.8"/><path d="M18.5 8v4.5"/></svg></i>교육</span><span class="stop" data-t="0.76"><i><svg viewBox="0 0 20 20"><path d="M2 7.5 10 3.5l8 4z"/><path d="M4 8.5v6.5M8 8.5v6.5M12 8.5v6.5M16 8.5v6.5M2.5 16.5h15"/></svg></i>공공기관</span><span class="stop" data-t="0.87"><i><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.5"/><ellipse cx="10" cy="10" rx="3.2" ry="7.5"/><path d="M2.5 10h15M3.8 6h12.4M3.8 14h12.4"/></svg></i>해외 대학원</span></div>
+    <div class="col">
+      <p class="zh-w a" style="--d:1.15s" aria-hidden="true">走向世界</p>
+      <p class="k-sm a" style="--d:1.3s">한 번의 무대가 다음 문을 엽니다</p>
+      <h2 class="k-h2 a" style="--d:1.4s">강의실에서<br>세상으로</h2>
+    </div>
+  </article>
+
+  <article class="scene s7" data-dur="3500" aria-label="참가 안내">
+    <div class="col">
+      <div class="lockup lg a pop" style="--d:.05s" role="img" aria-label="경기대학교 KYONGGI UNIVERSITY"><svg class="mk"><use href="#kgu"/></svg><span><b>경기대학교</b><span class="en">KYONGGI UNIVERSITY</span></span></div>
+      <p class="brush a" style="--d:.3s">당신의 <em>목소리</em>가,<br>세상을 바꾼다!</p>
+      <dl class="info a" style="--d:.7s">
+        <div><dt>신청</dt><dd>BARUN 시스템</dd></div>
+        <div><dt>대상</dt><dd>중어중문전공 재학생</dd></div>
+        <div><dt>문의</dt><dd>중어중문전공 사무실 031-249-9105</dd></div>
+      </dl>
+      <a class="cta a pop" style="--d:1s" href="#detail">대회 소개 자세히 보기</a>
+    </div>
+  </article>
+
+  <div class="wipe" id="wipe" aria-hidden="true"></div>
+  <p class="hint" id="hint">누르면 다음 장면, 길게 누르면 멈춥니다</p>
+  <button class="snd-pill" id="sndPill" hidden>♪ 음악 켜고 처음부터 보기</button>
+</section>
+</div>
+
+<main class="read" id="detail">
+  <h2>중어중문전공 경진대회</h2>
+  <p>경기대학교 글로벌어문학부 중어중문전공 재학생이 참가하는 대회입니다. 수업에서 익힌 중국어를 직접 써 보고, 그 경험을 나의 경쟁력으로 남기는 것이 목표입니다. 신청은 BARUN 시스템에서 합니다.</p>
+  <section class="card">
+    <h3>중국어 프레젠테이션 및 토론 경진대회</h3>
+    <h4>토론 부문, 3인 1조</h4>
+    <p>중국 사회의 쟁점을 중국어로 깊이 파고들어, 근거를 들어 주장하고 반박해 봅니다.</p>
+    <ul class="gl">
+      <li><b>논리적 사고력</b>근거를 세우고 상대 주장의 빈틈을 찾는 힘을 기릅니다.</li>
+      <li><b>반론 대응력</b>예상하지 못한 질문에도 중국어로 침착하게 답하는 순발력이 생깁니다.</li>
+      <li><b>팀워크</b>세 명이 역할을 나눠 하나의 논리를 완성하는 협업을 경험합니다.</li>
+    </ul>
+    <h4>프레젠테이션 부문, 2인 1조</h4>
+    <p>관심 있는 주제를 직접 골라 자료를 모으고, 중국어로 청중을 설득하는 발표를 완성합니다.</p>
+    <ul class="gl">
+      <li><b>기획·구성력</b>주제를 정하고 자료를 모아 설득력 있는 흐름으로 엮어 봅니다.</li>
+      <li><b>발표 전달력</b>청중의 눈을 보며 핵심을 분명하게 전하는 말하기를 익힙니다.</li>
+      <li><b>무대 자신감</b>사람들 앞에서 중국어로 말해 본 경험이 면접과 실무에서 자신감이 됩니다.</li>
+    </ul>
+  </section>
+  <section class="card g">
+    <h3>학생 포트폴리오 경진대회</h3>
+    <h4>교과목 부문, 경력 부문</h4>
+    <p>수업 결과물과 대외활동 경험을 한 권에 모아, 성장을 돌아보고 다음 목표를 세웁니다.</p>
+    <ul class="gl">
+      <li><b>성장 기록</b>흩어져 있던 과제와 활동이 하나의 이야기로 정리됩니다.</li>
+      <li><b>진로 설계</b>지금까지의 경험을 돌아보며 다음 목표와 방향을 세웁니다.</li>
+      <li><b>자기소개서·면접 준비</b>정리한 포트폴리오가 지원서와 면접에서 바로 쓰는 근거 자료가 됩니다.</li>
+    </ul>
+  </section>
+  <p class="foot">문의: 중어중문전공 사무실 031-249-9105<br>주최: 경기대학교 글로벌어문학부 중어중문전공</p>
+</main>
+
+<script>
+(() => {
+  const stage = document.getElementById('stage');
+  const scenes = [...stage.querySelectorAll('.scene')];
+  const bar = document.getElementById('bar');
+  const wipe = document.getElementById('wipe');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  bar.innerHTML = scenes.map(() => '<i><b></b></i>').join('');
+  const fills = [...bar.querySelectorAll('b')];
+  let cur = -1, t0 = 0, elapsed = 0, paused = false, switching = false, holdTimer = 0, held = false, swapTimer = 0;
+  const N = [[-0.05,1],[0.275,0.964],[0.375,0.818],[0.55,0.745],[0.725,0.673],[0.8,0.582],[0.8625,0.4],[0.9125,0.236],[0.9625,0.127],[1.075,-0.06]];
+
+  function layoutWorld(sc){
+    const w = stage.clientWidth, h = stage.clientHeight, k = w / 390;
+    const sr = stage.getBoundingClientRect(), cr = sc.querySelector('.col').getBoundingClientRect();
+    const y0 = cr.top - sr.top - 26*k, yt = 96*k;
+    const P = N.map(([x,y]) => [x*w, yt + y*(y0-yt)]);
+    const f = p => p[0].toFixed(1)+' '+p[1].toFixed(1);
+    const d = `M ${f(P[0])} C ${f(P[1])} ${f(P[2])} ${f(P[3])} C ${f(P[4])} ${f(P[5])} ${f(P[6])} C ${f(P[7])} ${f(P[8])} ${f(P[9])}`;
+    const svg = sc.querySelector('.route'); svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+    const rp = sc.querySelector('.rp'); rp.setAttribute('d', d); rp.setAttribute('stroke-width', (15*k).toFixed(1));
+    const m = sc.querySelector('.rm'); m.setAttribute('d', d);
+    sc.querySelector('.plane').style.offsetPath = `path('${d}')`;
+    const L = m.getTotalLength(), placed = [];
+    const tight = (y0 - yt) < 430*k;
+    sc.querySelectorAll('.stop').forEach(el => el.hidden = tight && el.hasAttribute('data-opt'));
+    [...sc.querySelectorAll('.stop')].filter(el => !el.hidden).forEach((el, i) => {
+      const t = +el.dataset.t, p = m.getPointAtLength(t*L), q = m.getPointAtLength(Math.min(L, t*L + 2));
+      let tx = q.x - p.x, ty = q.y - p.y; const k = Math.hypot(tx, ty) || 1; tx /= k; ty /= k;
+      const nx = ty, ny = -tx;
+      const bw = el.offsetWidth, bh = el.offsetHeight;
+      const dist = 20*k + (Math.abs(nx)*bw + Math.abs(ny)*bh)/2 + (i % 2 ? 30*k : 0);
+      const place = dd => {
+        let x = p.x + nx*dd, y = p.y + ny*dd;
+        x = Math.max(bw/2 + 10*k, Math.min(w - bw/2 - 10*k, x));
+        y = Math.max(yt + bh/2, Math.min(y0 - bh/2 - 6*k, y));
+        return [x, y];
+      };
+      const hit = ([x, y]) => placed.some(r => Math.abs(r[0]-x) < (r[2]+bw)/2 + 8*k && Math.abs(r[1]-y) < (r[3]+bh)/2 + 6*k);
+      let dd = dist, xy = place(dd), tries = 0;
+      while(hit(xy) && tries < 14){ dd += 12*k; xy = place(dd); tries++; }
+      if(hit(xy)){ dd = dist; for(let s = 1; s < 14 && hit(xy); s++){ xy = place(dd); xy[0] += (i % 2 ? -1 : 1)*s*10*k; xy[1] -= s*6*k; } }
+      const [x, y] = xy; placed.push([x, y, bw, bh]);
+      el.style.left = x.toFixed(1)+'px'; el.style.top = y.toFixed(1)+'px';
+      el.style.setProperty('--d', (0.15 + t*1.2).toFixed(2)+'s');
+    });
+  }
+  function show(i){
+    i = (i + scenes.length) % scenes.length;
+    scenes.forEach(s => { s.classList.remove('on'); s.removeAttribute('aria-current'); });
+    void stage.offsetWidth;
+    cur = i; const sc = scenes[i];
+    if(sc.classList.contains('s6')) layoutWorld(sc);
+    sc.classList.add('on'); sc.setAttribute('aria-current','true');
+    stage.classList.toggle('inv', sc.classList.contains('s7'));
+    stage.classList.toggle('brand', sc.classList.contains('s1') || sc.classList.contains('s7'));
+    fills.forEach((b, j) => b.style.width = j < i ? '100%' : '0');
+    elapsed = 0; t0 = performance.now(); switching = false;
+    accent(sc);
+  }
+  function go(i){
+    if(AU.on) whoosh(AU.ctx.currentTime + .01, .42);
+    if(reduce){ show(i); return; }
+    clearTimeout(swapTimer); switching = true;
+    wipe.style.setProperty('--wc', ((i % scenes.length) + scenes.length) % 2 ? '#A8843F' : '#5C1014');
+    wipe.classList.remove('run'); void wipe.offsetWidth; wipe.classList.add('run');
+    swapTimer = setTimeout(() => show(i), 210);
+  }
+  function tick(now){
+    if(!paused && !switching){
+      elapsed += now - t0;
+      const dur = +scenes[cur].dataset.dur;
+      fills[cur].style.width = Math.min(100, elapsed/dur*100) + '%';
+      if(elapsed >= dur - (reduce ? 0 : 210)) go(cur + 1);
+    }
+    t0 = now; requestAnimationFrame(tick);
+  }
+
+  /*SYNTH-START*/
+  // 배경음악: 브라우저에서 직접 합성하는 자작곡(120BPM, D장조 5음계, 8마디 반복)
+  const AU = { ctx:null, on:false, started:false, step:0, next:0, timer:0 };
+  const NOTE = n => { const m = /^([A-G])(#?)(\d)$/.exec(n); const b = {C:0,D:2,E:4,F:5,G:7,A:9,B:11}[m[1]] + (m[2] ? 1 : 0); return 440*Math.pow(2, (b + (+m[3] + 1)*12 - 69)/12); };
+  const MEL = [
+    [[0,'A4',1],[1,'B4',1],[2,'D5',2],[4,'E5',1],[5,'D5',1],[6,'B4',2]],
+    [[0,'D5',1.5],[1.5,'B4',.5],[2,'A4',2],[4,'F#4',1],[5,'A4',1],[6,'B4',2]],
+    [[0,'D5',1],[1,'E5',1],[2,'F#5',2],[4,'E5',1],[5,'D5',1],[6,'B4',1],[7,'D5',1]],
+    [[0,'E5',2],[2,'D5',1],[3,'E5',1],[4,'A5',3],[7,'F#5',1]],
+    [[0,'A5',1],[1,'F#5',1],[2,'E5',1],[3,'D5',1],[4,'E5',2],[6,'A4',2]],
+    [[0,'B4',1],[1,'D5',1],[2,'F#5',2],[4,'E5',1],[5,'D5',1],[6,'B4',2]],
+    [[0,'D5',1],[1,'B4',1],[2,'D5',1],[3,'E5',1],[4,'D5',2],[6,'E5',2]],
+    [[0,'F#5',1],[1,'E5',1],[2,'A5',2],[4,'E5',2],[6,'A4',1],[7,'E5',1]]
+  ];
+  const PADV = [['A3','D4','F#4'],['B3','D4','F#4'],['B3','D4','G4'],['A3','C#4','E4']];
+  const BASSN = ['D3','B2','G2','A2'];
+  const BASSP = [[0,0,.36],[3,12,.13],[6,0,.2],[8,0,.36],[10,7,.2],[14,12,.13]];
+  function buildGraph(c){
+    AU.ctx = c;
+    const comp = c.createDynamicsCompressor();
+    comp.threshold.value = -18; comp.knee.value = 12; comp.ratio.value = 4; comp.attack.value = .004; comp.release.value = .18;
+    AU.master = c.createGain(); AU.master.gain.value = .0001;
+    AU.master.connect(comp); comp.connect(c.destination);
+    AU.bus = c.createGain(); AU.bus.connect(AU.master);
+    AU.padBus = c.createBiquadFilter(); AU.padBus.type = 'lowpass'; AU.padBus.frequency.value = 1600; AU.padBus.connect(AU.bus);
+    AU.dIn = c.createGain(); AU.dIn.gain.value = .3;
+    const dl = c.createDelay(1); dl.delayTime.value = .375;
+    const fb = c.createGain(); fb.gain.value = .3;
+    const lp = c.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 2400;
+    AU.dIn.connect(dl); dl.connect(lp); lp.connect(fb); fb.connect(dl); lp.connect(AU.bus);
+    const nb = c.createBuffer(1, c.sampleRate, c.sampleRate), d = nb.getChannelData(0);
+    for(let i = 0; i < d.length; i++) d[i] = Math.random()*2 - 1;
+    AU.nb = nb;
+  }
+  function osc(type, f, t, stop, dest, gainPts){
+    const c = AU.ctx, o = c.createOscillator(), g = c.createGain();
+    o.type = type; o.frequency.setValueAtTime(f, t);
+    g.gain.setValueAtTime(.0001, t);
+    gainPts.forEach(([v, dt, lin]) => lin ? g.gain.linearRampToValueAtTime(v, t + dt) : g.gain.exponentialRampToValueAtTime(v, t + dt));
+    o.connect(g); g.connect(dest); o.start(t); o.stop(t + stop);
+    return o;
+  }
+  function noise(t, type, freq, q, peak, decay, dest){
+    const c = AU.ctx, s = c.createBufferSource(), f = c.createBiquadFilter(), g = c.createGain();
+    s.buffer = AU.nb; f.type = type; f.frequency.value = freq; f.Q.value = q;
+    g.gain.setValueAtTime(peak, t); g.gain.exponentialRampToValueAtTime(.0005, t + decay);
+    s.connect(f); f.connect(g); g.connect(dest || AU.bus);
+    s.start(t, Math.random()*.5); s.stop(t + decay + .02);
+  }
+  function kick(t){
+    const o = osc('sine', 150, t, .34, AU.bus, [[.7, .004], [.0001, .32]]);
+    o.frequency.exponentialRampToValueAtTime(44, t + .13);
+    noise(t, 'highpass', 2200, .7, .12, .012);
+  }
+  function snare(t){
+    noise(t, 'bandpass', 1900, .8, .38, .16);
+    const o = osc('triangle', 220, t, .12, AU.bus, [[.2, .003], [.0001, .1]]);
+    o.frequency.exponentialRampToValueAtTime(150, t + .08);
+  }
+  function hat(t, open){ noise(t, 'highpass', 7500, .7, open ? .11 : .085, open ? .13 : .035); }
+  function bass(t, f, dur){
+    const c = AU.ctx, o = c.createOscillator(), lp = c.createBiquadFilter(), g = c.createGain();
+    o.type = 'sawtooth'; o.frequency.value = f;
+    lp.type = 'lowpass'; lp.Q.value = 5; lp.frequency.setValueAtTime(1100, t); lp.frequency.exponentialRampToValueAtTime(260, t + dur);
+    g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(.26, t + .01); g.gain.exponentialRampToValueAtTime(.0001, t + dur);
+    o.connect(lp); lp.connect(g); g.connect(AU.bus); o.start(t); o.stop(t + dur + .05);
+  }
+  function pad(t, freqs, dur){
+    freqs.forEach(f => [-7, 7].forEach(det => {
+      const o = osc('triangle', f, t, dur + .05, AU.padBus, [[.02, .25, 1], [.02, dur - .25, 1], [.0001, dur, 1]]);
+      o.detune.value = det;
+    }));
+  }
+  function pluck(t, f, dur){
+    const c = AU.ctx, g = c.createGain(), lp = c.createBiquadFilter(), g2 = c.createGain();
+    const o1 = c.createOscillator(), o2 = c.createOscillator();
+    o1.type = 'triangle'; o2.type = 'sine';
+    o1.frequency.setValueAtTime(f*.97, t); o1.frequency.exponentialRampToValueAtTime(f, t + .06);
+    o2.frequency.setValueAtTime(f*1.94, t); o2.frequency.exponentialRampToValueAtTime(f*2, t + .06);
+    g2.gain.value = .35;
+    lp.type = 'lowpass'; lp.frequency.setValueAtTime(5200, t); lp.frequency.exponentialRampToValueAtTime(1300, t + .45);
+    const len = Math.max(.5, dur*1.6);
+    g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(.27, t + .004); g.gain.exponentialRampToValueAtTime(.0001, t + len);
+    o1.connect(lp); o2.connect(g2); g2.connect(lp); lp.connect(g); g.connect(AU.bus); g.connect(AU.dIn);
+    o1.start(t); o2.start(t); o1.stop(t + len + .05); o2.stop(t + len + .05);
+  }
+  function gong(t, amp = 1){
+    [[55, .45, 3.2], [151.8, .22, 2.2], [297, .11, 1.4], [489.5, .05, .9]].forEach(([f, a, dc]) => {
+      const o = osc('sine', f*1.02, t, dc + .1, AU.bus, [[a*amp, .02], [.0001, dc]]);
+      o.frequency.exponentialRampToValueAtTime(f, t + .4);
+    });
+    noise(t, 'bandpass', 3000, .6, .1*amp, .6);
+  }
+  function whoosh(t, dur, down){
+    const c = AU.ctx, s = c.createBufferSource(), f = c.createBiquadFilter(), g = c.createGain();
+    s.buffer = AU.nb; s.loop = true; f.type = 'bandpass'; f.Q.value = 1.1;
+    f.frequency.setValueAtTime(down ? 3200 : 380, t); f.frequency.exponentialRampToValueAtTime(down ? 420 : 4200, t + dur);
+    g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(.2, t + dur*.6); g.gain.exponentialRampToValueAtTime(.0001, t + dur);
+    s.connect(f); f.connect(g); g.connect(AU.bus); s.start(t); s.stop(t + dur + .05);
+  }
+  function chime(t, f){
+    [[f, .13], [f*2, .05]].forEach(([fr, a]) => {
+      const c = AU.ctx, o = c.createOscillator(), g = c.createGain();
+      o.type = 'sine'; o.frequency.value = fr;
+      g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(a, t + .006); g.gain.exponentialRampToValueAtTime(.0001, t + .7);
+      o.connect(g); g.connect(AU.bus); g.connect(AU.dIn); o.start(t); o.stop(t + .75);
+    });
+  }
+  function schedStep(step, t){
+    const bar = Math.floor(step/16) % 8, s = step % 16, ch = bar % 4;
+    if(s === 0 || s === 8 || (s === 10 && ch === 3)) kick(t);
+    if(s === 4 || s === 12) snare(t);
+    if(s % 2 === 0) hat(t, s === 14);
+    BASSP.forEach(([st, semi, len]) => { if(st === s) bass(t, NOTE(BASSN[ch])*Math.pow(2, semi/12), len); });
+    if(s === 0) pad(t, PADV[ch].map(NOTE), 2);
+    MEL[bar].forEach(([p, n, l]) => { if(Math.round(p*2) === s) pluck(t, NOTE(n), l*.25); });
+  }
+  function sceneSfx(kind, t){
+    if(kind === 's1') gong(t);
+    if(kind === 's3' || kind === 's4' || kind === 's5') [1174.66, 1318.51, 1479.98].forEach((f, k) => chime(t + 1.5 + k*.5, f));
+    if(kind === 's6') whoosh(t + .1, 1.3);
+    if(kind === 's7') gong(t, .55);
+  }
+  /*SYNTH-END*/
+  function scheduler(){
+    const c = AU.ctx;
+    while(AU.next < c.currentTime + .12){ schedStep(AU.step, AU.next); AU.step++; AU.next += .125; }
+  }
+  function accent(sc){
+    if(!AU.on) return;
+    const kind = [...sc.classList].find(c => /^s\d$/.test(c));
+    sceneSfx(kind, AU.ctx.currentTime + .02);
+  }
+  const sndBtn = document.getElementById('snd'), pill = document.getElementById('sndPill');
+  function updSnd(){
+    sndBtn.setAttribute('aria-pressed', AU.on ? 'true' : 'false');
+    sndBtn.setAttribute('aria-label', AU.on ? '배경음악 끄기' : '배경음악 켜기');
+    if(AU.started){ pill.hidden = true; stage.classList.remove('ask'); }
+  }
+  function soundOn(restart){
+    const C = window.AudioContext || window.webkitAudioContext;
+    if(!C) return;
+    if(!AU.ctx) buildGraph(new C());
+    const c = AU.ctx;
+    c.resume().then(() => {
+      const now = c.currentTime;
+      AU.master.gain.cancelScheduledValues(now);
+      AU.master.gain.setValueAtTime(Math.max(AU.master.gain.value, .0001), now);
+      AU.master.gain.exponentialRampToValueAtTime(.68, now + .3);
+      if(!AU.started || restart || AU.next < now){ AU.step = 0; AU.next = now + .05; }
+      AU.on = true; AU.started = true;
+      clearInterval(AU.timer); AU.timer = setInterval(scheduler, 25); scheduler();
+      if(restart){ setPaused(false); show(0); }
+      updSnd();
+    });
+  }
+  function soundOff(){
+    if(!AU.ctx) return;
+    const c = AU.ctx, now = c.currentTime;
+    AU.on = false; clearInterval(AU.timer);
+    AU.master.gain.cancelScheduledValues(now);
+    AU.master.gain.setValueAtTime(Math.max(AU.master.gain.value, .0001), now);
+    AU.master.gain.exponentialRampToValueAtTime(.0001, now + .25);
+    setTimeout(() => { if(!AU.on) c.suspend(); }, 320);
+    updSnd();
+  }
+
+  const playBtn = document.getElementById('play');
+  function setPaused(v){ paused = v; playBtn.textContent = v ? '▶' : 'II'; playBtn.setAttribute('aria-label', v ? '재생' : '일시정지'); }
+  document.getElementById('prev').onclick = e => { e.stopPropagation(); go(cur - 1); };
+  document.getElementById('next').onclick = e => { e.stopPropagation(); go(cur + 1); };
+  playBtn.onclick = e => { e.stopPropagation(); setPaused(!paused); };
+  stage.addEventListener('pointerdown', e => {
+    if(e.target.closest('button,a')) return;
+    held = false; holdTimer = setTimeout(() => { held = true; setPaused(true); }, 420);
+  });
+  stage.addEventListener('pointerup', e => {
+    if(e.target.closest('button,a')) return;
+    clearTimeout(holdTimer);
+    if(held){ held = false; setPaused(false); return; }
+    const r = stage.getBoundingClientRect();
+    go(e.clientX - r.left < r.width*.33 ? cur - 1 : cur + 1);
+  });
+  stage.addEventListener('pointercancel', () => { clearTimeout(holdTimer); if(held){ held = false; setPaused(false); } });
+  document.addEventListener('keydown', e => {
+    if(e.key === 'ArrowRight') go(cur + 1);
+    else if(e.key === 'ArrowLeft') go(cur - 1);
+    else if(e.key === ' ' && document.activeElement === document.body){ e.preventDefault(); setPaused(!paused); }
+  });
+  sndBtn.onclick = e => { e.stopPropagation(); AU.on ? soundOff() : soundOn(false); };
+  pill.onclick = e => { e.stopPropagation(); soundOn(true); };
+  if(window.AudioContext || window.webkitAudioContext){ pill.hidden = false; stage.classList.add('ask'); }
+  else { sndBtn.hidden = true; }
+  addEventListener('resize', () => { if(scenes[cur].classList.contains('s6')) layoutWorld(scenes[cur]); });
+  document.addEventListener('visibilitychange', () => {
+    t0 = performance.now();
+    if(!AU.ctx || !AU.on) return;
+    if(document.hidden){ clearInterval(AU.timer); AU.ctx.suspend(); }
+    else AU.ctx.resume().then(() => { AU.next = Math.max(AU.next, AU.ctx.currentTime + .05); clearInterval(AU.timer); AU.timer = setInterval(scheduler, 25); });
+  });
+  if(reduce){ setPaused(true); document.getElementById('hint').textContent = '화면을 누르거나 › 단추로 장면을 넘기세요'; }
+  show(0); requestAnimationFrame(tick);
+})();
+</script>
 </body>
 </html>

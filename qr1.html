@@ -1,106 +1,1123 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#B3122E">
-<title>자료 준비 중 | 경기대학교 중어중문전공</title>
+<meta name="theme-color" content="#131b2e">
+<title>중어중문전공 졸업생 취업·진로 현황 2017–2026</title>
+<meta name="description" content="경기대학교 인문대학 중어중문전공 졸업생 취업·진로 현황. 2017년 2월부터 2026년 8월까지 17개 졸업기수가 진출한 10개 분야의 회사와 기관을 소개합니다.">
+<meta property="og:title" content="중어중문전공 졸업생, 어디로 갔을까?">
+<meta property="og:description" content="경기대학교 중어중문전공 2017–2026 졸업생 취업·진로 현황">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;900&amp;display=swap&amp;text=dghijklmnoqrtuy%C3%A0%C3%A1%C3%AC%C3%AD%C3%B3%C3%B9%C4%81%C4%93%C4%AB%C5%8D%C7%90%C7%94%C7%9A%E4%B8%9A%E4%BB%96%E4%BC%81%E5%85%B6%E5%9B%BD%E5%B0%B1%E5%BA%97%E6%8A%80%E6%95%99%E6%97%85%E6%98%93%E6%B8%B8%E7%A7%91%E7%A9%BA%E7%BB%8F%E8%82%B2%E8%88%AA%E8%90%A5%E8%9E%8D%E8%B4%B8%E9%85%92%E9%87%91">
 <style>
-  :root {
-    --crimson: #B3122E;
-    --crimson-deep: #7E0A1F;
-    --gold: #F2C14E;
-    --navy: #14234B;
-    --paper: #FFF8EC;
-  }
-  * { box-sizing: border-box; }
-  html, body { height: 100%; margin: 0; }
-  body {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.75rem;
-    padding: calc(2rem + env(safe-area-inset-top, 0px)) 1.5rem calc(2rem + env(safe-area-inset-bottom, 0px));
-    background:
-      radial-gradient(circle at 50% 38%, rgba(242,193,78,.18) 0 22%, transparent 60%),
-      radial-gradient(rgba(126,10,31,.55) 1.2px, transparent 1.4px) 0 0 / 9px 9px,
-      var(--crimson);
-    color: var(--paper);
-    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-    text-align: center;
-  }
-  .dept {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: .02em;
-    color: var(--gold);
-  }
-  .bubble {
-    position: relative;
-    max-width: 22rem;
-    margin: 0;
-    padding: 1.6rem 1.8rem;
-    background: #fff;
-    color: var(--navy);
-    border: 4px solid var(--navy);
-    border-radius: 2.2rem;
-    box-shadow: 7px 7px 0 var(--navy);
-    font-family: "Black Han Sans", -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-    font-weight: 400;
-    font-size: clamp(1.9rem, 8.5vw, 2.6rem);
-    line-height: 1.25;
-    word-break: keep-all;
-    text-wrap: balance;
-    animation: pop .45s cubic-bezier(.2, 1.4, .4, 1) both;
-  }
-  .bubble::after {
-    content: "";
-    position: absolute;
-    left: 22%;
-    bottom: -26px;
-    width: 34px;
-    height: 34px;
-    background: #fff;
-    border-right: 4px solid var(--navy);
-    border-bottom: 4px solid var(--navy);
-    transform: skewY(28deg) rotate(38deg);
-  }
-  .guide {
-    margin: .6rem 0 0;
-    max-width: 20rem;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    word-break: keep-all;
-    text-wrap: balance;
-  }
-  .code {
-    margin: 0;
-    padding: .25rem .8rem;
-    border: 1.5px solid rgba(242,193,78,.7);
-    border-radius: 999px;
-    font-size: .85rem;
-    font-weight: 700;
-    color: var(--gold);
-  }
-  @keyframes pop {
-    from { transform: scale(.85); opacity: 0; }
-    to   { transform: scale(1);   opacity: 1; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .bubble { animation: none; }
-  }
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f3f5f8;--fg:#131a27;--muted:#5b6476;--line:#d9dfe8;--track:#e2e7ee;
+  --board:#131b2e;--board-fg:#eef2f8;--signal:#ffc933;--on-signal:#141a26;
+  --f-display:"Black Han Sans","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+  --f-body:"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","Noto Sans CJK KR",system-ui,sans-serif;
+  --f-zh:"Noto Serif SC","Noto Serif CJK SC","Songti SC","STSong","SimSun",serif;
+  --e-out:cubic-bezier(.16,1,.3,1);
+  --e-snap:cubic-bezier(.77,0,.18,1);
+  --e-spring:cubic-bezier(.34,1.56,.64,1);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0c111d;--fg:#edf1f7;--muted:#99a3b5;--line:#242d42;--track:#1f283b;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0c111d;--fg:#edf1f7;--muted:#99a3b5;--line:#242d42;--track:#1f283b;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg) linear-gradient(var(--board),var(--board)) top left/100% 50vh no-repeat;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.55;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+a{color:inherit;-webkit-tap-highlight-color:transparent}
+svg{display:block}
+:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+.stage :focus-visible{outline-color:var(--signal)}
+
+/* ───── 자동 재생 무대 ───── */
+.stage{position:relative;overflow:hidden;isolation:isolate;height:calc(100vh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));height:calc(100svh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));min-height:520px;max-height:1200px;background:var(--board);color:var(--board-fg);touch-action:pan-y;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.boot{position:absolute;left:50%;top:50%;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--signal);animation:boot .7s ease-in-out infinite alternate}
+.stage.ready .boot{display:none}
+@keyframes boot{to{transform:scale(1.9);opacity:.35}}
+.scenes{position:absolute;inset:0}
+.prog{position:absolute;z-index:30;top:12px;left:16px;right:16px;display:flex;gap:4px;pointer-events:none}
+.seg{position:relative;flex:1;height:3px;border-radius:2px;overflow:hidden}
+.seg::before{content:"";position:absolute;inset:0;background:currentColor;opacity:.28}
+.seg i{position:absolute;inset:0;background:currentColor;transform:scaleX(0);transform-origin:left center}
+.top{position:absolute;z-index:30;top:26px;left:16px;right:16px;display:flex;align-items:center;justify-content:space-between;gap:12px;pointer-events:none}
+.brand{line-height:1.3}
+.brand b{display:block;font-size:13px;font-weight:800;letter-spacing:-.01em}
+.brand span{display:block;font-size:11.5px;opacity:.8}
+.ibtn{pointer-events:auto;flex:none;width:42px;height:42px;padding:0;border-radius:50%;border:1.5px solid currentColor;background:transparent;display:grid;place-items:center}
+.ibtn svg{width:17px;height:17px}
+.tools{display:flex;align-items:center;gap:8px;flex:none}
+.ibtn[hidden]{display:none}
+.ibtn.snd .lbl{display:none}
+.ibtn.snd.cta{width:auto;padding:0 15px 0 12px;gap:6px;border-radius:999px;display:inline-flex;align-items:center;background:var(--signal);border-color:var(--signal);color:var(--on-signal);font-size:13px;font-weight:800;white-space:nowrap}
+.ibtn.snd.cta .lbl{display:inline}
+@media (max-width:359px){.ibtn.snd.cta{width:42px;padding:0;justify-content:center}.ibtn.snd.cta .lbl{display:none}}
+.foot{position:absolute;z-index:30;left:16px;right:16px;bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:12px;pointer-events:none;font-size:12px}
+.hint{opacity:.82;transition:opacity .6s}
+.hint.off{opacity:0}
+.cue{pointer-events:auto;flex:none;display:inline-flex;align-items:center;gap:6px;padding:7px 12px 7px 15px;border:1.5px solid currentColor;border-radius:999px;font-weight:800;text-decoration:none;white-space:nowrap}
+.cue svg{width:15px;height:15px;animation:bob 1.1s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(3px)}}
+.holdflag{position:absolute;z-index:31;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(8,12,24,.5);color:#fff;display:grid;place-items:center;opacity:0;transform:scale(.7);transition:opacity .15s,transform .2s var(--e-spring);pointer-events:none}
+.holdflag svg{width:26px;height:26px}
+.stage.held .holdflag{opacity:1;transform:none}
+
+.scene{position:absolute;inset:0;overflow:hidden;visibility:hidden;background:var(--sbg,var(--board));color:var(--board-fg)}
+.scene.field{color:#fff}
+.scene.on,.scene.was{visibility:visible}
+.scene.was{z-index:1}
+.scene.on{z-index:2}
+.scene.on.wr{animation:wipeR .52s var(--e-snap) both}
+.scene.on.wl{animation:wipeL .52s var(--e-snap) both}
+@keyframes wipeR{from{clip-path:polygon(115% 0,115% 0,100% 100%,100% 100%)}to{clip-path:polygon(-15% 0,115% 0,100% 100%,-30% 100%)}}
+@keyframes wipeL{from{clip-path:polygon(-15% 0,-15% 0,-30% 100%,-30% 100%)}to{clip-path:polygon(-15% 0,130% 0,115% 100%,-30% 100%)}}
+.fit{position:absolute;top:80px;bottom:66px;left:20px;right:20px;display:flex;flex-direction:column;overflow:hidden;--k:1}
+.fit>:first-child{margin-top:auto}
+.fit>:last-child{margin-bottom:auto}
+
+/* 등장 모션 */
+.a{opacity:0}
+.scene.was .a{opacity:1;transform:none;animation:none}
+.scene.on .a{animation-duration:var(--du,.6s);animation-timing-function:var(--e-out);animation-fill-mode:both;animation-delay:var(--d,0s)}
+.scene.on .sl{animation-name:sl}
+.scene.on .up{animation-name:up}
+.scene.on .drop{animation-name:drop;--du:.5s}
+.scene.on .pop{animation-name:pop;animation-timing-function:var(--e-spring);--du:.5s}
+.scene.on .fd{animation-name:fd}
+.scene.on .rise{animation-name:rise;--du:1.1s}
+.scene.on .flip{animation-name:flip;--du:.5s}
+@keyframes sl{from{opacity:0;transform:translateX(-56px) skewX(10deg)}to{opacity:1;transform:none}}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes drop{from{opacity:0;transform:translateY(-45%)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.3) rotate(-18deg)}to{opacity:1;transform:none}}
+@keyframes fd{from{opacity:0}to{opacity:1}}
+@keyframes rise{from{opacity:0;transform:translateY(12%)}to{opacity:1;transform:none}}
+@keyframes flip{0%{opacity:0;transform:perspective(700px) rotateX(-88deg)}45%{opacity:1}100%{opacity:1;transform:perspective(700px) rotateX(0deg)}}
+
+/* 인트로·마무리 */
+.hook{margin:0;font-family:var(--f-display);font-weight:400;color:var(--signal);line-height:1.04;letter-spacing:-.015em;font-size:calc(min(19vw,13.5vh,160px)*var(--k))}
+.hook>span{display:block}
+.outro .hook{font-size:calc(min(16vw,11.5vh,140px)*var(--k))}
+.lede{margin:calc(18px*var(--k)) 0 0;max-width:23em;font-size:calc(16px*var(--k));line-height:1.65;font-weight:600;color:rgba(238,242,248,.86)}
+.big-zh-w{position:absolute;top:50%;right:-.06em;transform:translateY(-50%);font-family:var(--f-zh);font-weight:900;font-size:min(48vw,36vh);line-height:1;pointer-events:none}
+.big-zh{writing-mode:vertical-rl;color:transparent;-webkit-text-stroke:1.5px rgba(238,242,248,.22)}
+.fly{position:absolute;left:0;top:0;width:0;height:0;z-index:3;pointer-events:none;color:var(--signal)}
+.field .fly{color:#fff}
+.fly .pl{position:absolute;left:-17px;top:-17px;width:34px;height:34px;opacity:0}
+.fly .pl svg{width:100%;height:100%}
+.fly .tr{position:absolute;left:0;top:0;width:var(--len,0px);height:0;border-top:2px dashed currentColor;opacity:.5;transform-origin:0 0;transform:translate(var(--x0,0px),var(--y0,0px)) rotate(var(--ta,0deg));clip-path:inset(-2px 100% -2px 0)}
+.scene.on .fly .pl{animation:fly 2.2s .5s cubic-bezier(.45,0,.25,1) both}
+.scene.on .fly .tr{animation:trail 2.2s .5s cubic-bezier(.45,0,.25,1) both}
+@keyframes fly{0%{opacity:0;transform:translate(var(--x0),var(--y0)) rotate(var(--pa))}10%{opacity:1}88%{opacity:1}100%{opacity:0;transform:translate(var(--x1),var(--y1)) rotate(var(--pa))}}
+@keyframes trail{0%{clip-path:inset(-2px 100% -2px 0);opacity:.5}80%{opacity:.5}100%{clip-path:inset(-2px 0 -2px 0);opacity:0}}
+.omq-w{position:absolute;left:-20%;right:-20%;bottom:9%;transform:rotate(-8deg);pointer-events:none}
+.omq{display:grid;gap:12px;opacity:.08}
+.orow{overflow:hidden}
+.otrk{display:flex;width:max-content;gap:30px;padding-right:30px}
+.scene.on .otrk{animation:mq 36s linear infinite}
+.scene.on .orow.rev .otrk{animation-direction:reverse;animation-duration:42s}
+.otrk span{font-family:var(--f-display);font-size:clamp(30px,9vw,72px);line-height:1.15;white-space:nowrap}
+@keyframes mq{to{transform:translateX(-50%)}}
+.obtns{display:flex;flex-wrap:wrap;gap:10px;margin-top:calc(24px*var(--k))}
+.obtn{display:inline-flex;align-items:center;gap:8px;min-height:calc(48px*var(--k));padding:0 calc(20px*var(--k));border:2px solid rgba(238,242,248,.85);border-radius:999px;background:transparent;color:var(--board-fg);font-weight:800;font-size:calc(15px*var(--k))}
+.obtn svg{width:18px;height:18px}
+.obtn.pri{background:var(--signal);border-color:var(--signal);color:var(--on-signal)}
+
+/* 분포 */
+.d-title{margin:0 0 calc(20px*var(--k));font-family:var(--f-display);font-weight:400;font-size:calc(clamp(34px,10.5vw,80px)*var(--k));line-height:1.05}
+.dbars{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:calc(10px*var(--k)) 12px;align-items:center}
+.dl{font-weight:700;font-size:calc(14px*var(--k));white-space:nowrap}
+.db{display:block;height:calc(16px*var(--k));border-radius:3px;background:rgba(255,255,255,.08);overflow:hidden}
+.db em{display:block;height:100%;width:var(--w);border-radius:3px;background:var(--c);transform-origin:left center}
+.scene.on .db em{animation:grow .9s var(--e-out) both;animation-delay:calc(.3s + var(--i)*.07s)}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* 분야 장면 */
+.gate-w{position:absolute;top:50%;right:-.04em;transform:translateY(-50%);font-family:var(--f-zh);font-weight:900;font-size:min(44vw,32vh);line-height:1;pointer-events:none}
+.gate{writing-mode:vertical-rl;letter-spacing:-.02em;color:rgba(255,255,255,.16)}
+.picto{display:grid;place-items:center;width:calc(46px*var(--k));height:calc(46px*var(--k));border-radius:calc(9px*var(--k));background:#fff;color:var(--sbg)}
+.picto svg{width:60%;height:60%}
+.f-py{display:block;margin-top:calc(14px*var(--k));font-family:var(--f-zh);font-weight:500;font-size:calc(16px*var(--k));letter-spacing:.02em;opacity:.9}
+.f-name{margin:calc(2px*var(--k)) 0 0;font-family:var(--f-display);font-weight:400;line-height:1.02;letter-spacing:-.01em;font-size:calc(min(27vw,86vw / var(--len),150px)*var(--k));word-break:keep-all;overflow-wrap:anywhere}
+.f-sub{margin-top:calc(6px*var(--k));font-weight:800;font-size:calc(18px*var(--k));opacity:.92}
+.board{list-style:none;margin:calc(18px*var(--k)) 0 0;padding:0;display:grid;gap:calc(5px*var(--k))}
+.row{position:relative;isolation:isolate;display:flex;flex-wrap:wrap;align-items:baseline;column-gap:12px;padding:calc(9px*var(--k)) calc(12px*var(--k));border-radius:calc(5px*var(--k));background:rgba(6,10,22,.26);transform-origin:50% 0}
+.row::after{content:"";position:absolute;z-index:-1;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.2);pointer-events:none}
+.row b{min-width:0;font-weight:800;font-size:calc(16px*var(--k));line-height:1.3;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:anywhere}
+.row span{margin-left:auto;font-size:calc(13px*var(--k));line-height:1.35;opacity:.86;text-align:right;word-break:keep-all;overflow-wrap:anywhere}
+.board.sm .row{padding:calc(13px*var(--k)) calc(16px*var(--k))}
+.board.sm .row b{font-size:calc(21px*var(--k))}
+.board.sm .row span{font-size:calc(14px*var(--k))}
+@media (max-height:600px){
+  .board.lg{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .board.lg .row{display:block}
+  .board.lg .row b,.board.lg .row span{display:block}
+  .board.lg .row span{margin:2px 0 0;text-align:left}
+}
+
+@media (min-width:900px){
+  .prog{top:16px;left:32px;right:32px}
+  .top{top:32px;left:32px;right:32px}
+  .foot{left:32px;right:32px;bottom:24px;font-size:13px}
+  .fit{top:104px;bottom:88px;left:7vw;right:7vw}
+  .field .fit,.dist .fit{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);column-gap:5vw;align-items:center;align-content:center}
+  .field .fit>:first-child,.field .fit>:last-child,.dist .fit>:first-child,.dist .fit>:last-child{margin:0}
+  .f-name{font-size:calc(min(10vw,34vw / var(--len),180px)*var(--k))}
+  .board{margin:0}
+  .gate-w{font-size:min(30vw,40vh)}
+  .hook{font-size:calc(min(12vw,15vh,170px)*var(--k))}
+  .outro .hook{font-size:calc(min(10vw,12vh,150px)*var(--k))}
+  .lede{font-size:calc(18px*var(--k))}
+  .d-title{margin:0}
+}
+
+/* ───── 전체 목록 ───── */
+.all{padding:64px 0 16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.all-h{margin:0;font-family:var(--f-display);font-weight:400;font-size:clamp(36px,9vw,60px);line-height:1.1;letter-spacing:-.01em}
+.all-p{margin:14px 0 0;max-width:38em;color:var(--muted);font-size:15px;line-height:1.75}
+.blk{margin-top:56px}
+.blk-h{margin:0 0 20px;font-family:var(--f-display);font-weight:400;font-size:clamp(24px,5.4vw,32px);line-height:1.2}
+.lbars{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 14px;align-items:center}
+.ll{padding:7px 0;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap}
+.ll:hover{text-decoration:underline;text-underline-offset:3px}
+.lb{display:block;height:20px;border-radius:4px;background:var(--track);overflow:hidden}
+.lb em{display:block;height:100%;width:var(--w);border-radius:4px;background:var(--c);transform-origin:left center;transition:transform 1s var(--e-out);transition-delay:calc(var(--i)*60ms)}
+.js .lbars:not(.in) em{transform:scaleX(0)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lb em{background:var(--ct)}}
+:root[data-theme="dark"] .lb em{background:var(--ct)}
+.dir{border-top:2px solid var(--fg)}
+.fld{display:grid;grid-template-columns:60px minmax(0,1fr);column-gap:18px;padding:22px 0;border-bottom:1px solid var(--line);scroll-margin-top:12px}
+.fld-gate{grid-row:1 / span 3;display:flex;flex-direction:column;align-items:center;gap:10px;padding:12px 0 14px;border-radius:8px;background:var(--c);color:#fff;min-height:132px}
+.picto-s{display:grid;place-items:center;width:34px;height:34px;border-radius:7px;background:#fff;color:var(--c)}
+.picto-s svg{width:60%;height:60%}
+.fld-gate .zh{font-family:var(--f-zh);font-weight:900;font-size:30px;line-height:1.05;writing-mode:vertical-rl}
+.fld-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px}
+.fld-h h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:clamp(24px,6vw,30px);line-height:1.15}
+.fld-py{font-family:var(--f-zh);font-weight:500;font-size:15px;color:var(--muted)}
+.fld-list{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));column-gap:28px}
+.fld-list li{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 10px;padding:9px 0;border-top:1px dashed var(--line)}
+.fld-list b{font-size:16px;font-weight:700}
+.fld-list span{font-size:14px;color:var(--muted)}
+.fld-play{justify-self:start;margin-top:16px;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:0;border-radius:999px;background:var(--c);color:#fff;font-size:14px;font-weight:700}
+.fld-play svg{width:12px;height:12px}
+.site-foot{margin-top:48px;padding:26px 20px 40px;border-top:1px solid var(--line);text-align:center;font-size:12px;line-height:1.75;color:var(--muted)}
+.fabw{position:fixed;right:0;bottom:0;z-index:60;padding:0 16px calc(16px + env(safe-area-inset-bottom,0px)) 0;pointer-events:none}
+.fab{display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 18px;border:0;border-radius:999px;background:var(--board);color:var(--board-fg);font-size:14px;font-weight:800;box-shadow:0 8px 22px rgba(19,27,46,.3);opacity:0;transform:translateY(14px);transition:opacity .25s,transform .3s var(--e-out);pointer-events:none}
+.fab svg{width:16px;height:16px}
+.fab.show{opacity:1;transform:none;pointer-events:auto}
+
+@media (prefers-reduced-motion:reduce){
+  .scene.on.wr,.scene.on.wl,.scene.on .db em,.scene.on .otrk,.cue svg,.boot{animation:none}
+  .scene.on .a{animation-duration:1ms!important;animation-delay:0s!important}
+  .fly{display:none}
+  .lb em{transition:none}
+}
 </style>
 </head>
 <body>
-  <p class="dept">경기대학교 중어중문전공</p>
-  <h1 class="bubble">자료를 준비하고 있습니다</h1>
-  <p class="guide">궁금한 점은 중어중문전공 부스에서 바로 물어보세요.</p>
-  <p class="code">QR 1</p>
+<main>
+<section class="stage" id="stage" aria-roledescription="carousel" aria-label="분야별 진출 기업 자동 소개">
+  <div class="boot" aria-hidden="true"></div>
+  <div class="scenes" id="scenes"></div>
+  <div class="prog" id="prog" aria-hidden="true"></div>
+  <div class="top">
+    <div class="brand"><b>경기대학교 중어중문전공</b><span>졸업생 취업·진로 2017–2026</span></div>
+    <div class="tools">
+      <button type="button" class="ibtn snd cta" id="btnSnd" hidden></button>
+      <button type="button" class="ibtn" id="btnPause" aria-label="일시정지"></button>
+    </div>
+  </div>
+  <div class="holdflag" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4.5" width="4" height="15" rx="1"/><rect x="14" y="4.5" width="4" height="15" rx="1"/></svg></div>
+  <div class="foot">
+    <span class="hint" id="hint"></span>
+    <a class="cue" id="cue" href="#all">전체 목록<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+  </div>
+</section>
+
+<section class="all" id="all" aria-labelledby="allH">
+  <div class="wrap">
+    <h2 class="all-h" id="allH">졸업생 취업·진로 현황</h2>
+    <p class="all-p">경기대학교 인문대학 중어중문전공의 2017년 2월 졸업기수부터 2026년 8월 졸업기수까지, 총 17개 기수를 전수 분석했습니다. 회사명·부서명·취업구분 텍스트를 기준으로 분류했으며, 미기재·미확인 건은 제외했습니다.</p>
+    <section class="blk" aria-labelledby="hDist">
+      <h3 class="blk-h" id="hDist">취업 분야별 분포</h3>
+      <div class="lbars" id="lbars"></div>
+    </section>
+    <section class="blk" aria-labelledby="hDir">
+      <h3 class="blk-h" id="hDir">분야별 직업·직장 상세</h3>
+      <div class="dir" id="dir"></div>
+    </section>
+  </div>
+</section>
+</main>
+<footer class="site-foot">경기대학교 중어중문학과 졸업생 취업·진로 현황 종합 분석<br>2017–2026년 17개 졸업기수 전수 분석, 회사명·부서명·취업구분 텍스트 기반 분류</footer>
+<div class="fabw"><button type="button" class="fab" id="fab"></button></div>
+<noscript><p style="padding:20px">자바스크립트를 켜면 분야별 소개 애니메이션과 전체 목록이 표시됩니다.</p></noscript>
+
+<script>
+document.documentElement.classList.add('js');
+(() => {
+'use strict';
+
+/* ▼ 분야·회사 데이터 — 이 목록만 고치면 애니메이션과 아래 전체 목록에 함께 반영됩니다.
+   items: [회사·기관명, 부서·직무(없으면 '')]  /  w: 분포 막대 길이(%) */
+const FIELDS = [
+  {key:'air', name:'항공·승무', main:'항공·승무', sub:'', zh:'航空', py:'hángkōng', color:'#1f5bd6', icon:'plane', w:100, items:[
+    ['아시아나항공','객실승무원'],['케세이퍼시픽','객실승무원'],['티웨이항공','객실승무원'],['파라타항공','객실승무원'],['에어아시아엑스','객실승무원'],
+    ['제주항공','지상직'],['동방항공','지상직'],['남방항공','지상직'],['스위스포트코리아','지상직']]},
+  {key:'trade', name:'무역(유통·리테일)', main:'무역', sub:'유통·리테일', zh:'贸易', py:'màoyì', color:'#0c776c', icon:'box', w:90, items:[
+    ['DB하이텍','해외영업팀'],['대모엔지니어링(주)','해외영업팀'],['STI CO.,LTD','해외영업기획팀'],['이랜드','구매팀 (해외소싱)'],['GS리테일','영업관리'],['BGF리테일 (CU)','영업개발부문']]},
+  {key:'biz', name:'경영·마케팅', main:'경영·마케팅', sub:'', zh:'经营', py:'jīngyíng', color:'#c03c14', icon:'chart', w:80, items:[
+    ['모나미','회계팀'],['태신(주)','회계팀'],['CS이앤이이(주)','관리팀'],['파우컴퍼니','광고기획운영팀'],['함샤우트 글로벌','디지털 마케팅 AE'],['이트너스','복리후생팀'],['한솔홈데코','Operation(HR&GA) 인사팀']]},
+  {key:'fin', name:'금융', main:'금융', sub:'', zh:'金融', py:'jīnróng', color:'#3a43b8', icon:'coin', w:70, items:[
+    ['하나은행',''],['국민은행',''],['중국은행','']]},
+  {key:'tour', name:'관광·컨벤션', main:'관광·컨벤션', sub:'', zh:'旅游', py:'lǚyóu', color:'#c02675', icon:'pin', w:60, items:[
+    ['트립닷컴코리아',''],['스피언스','국제회의기획사 PCO'],['마이스플래너','컨벤션팀']]},
+  {key:'hotel', name:'호텔·리조트', main:'호텔·리조트', sub:'', zh:'酒店', py:'jiǔdiàn', color:'#237a46', icon:'bell', w:50, items:[
+    ['홀리데이인호텔',''],['용평리조트 HJ매그놀리아','객실사업팀'],['파라다이스세가사미','오퍼레이션'],['인터컨티넨탈서울코엑스','서비스']]},
+  {key:'edu', name:'교육', main:'교육', sub:'', zh:'教育', py:'jiàoyù', color:'#6b3bb0', icon:'cap', w:40, items:[
+    ['캐롯글로벌',''],['아주대학교','인문대 교학팀 직원'],['연세대학교','대학원 국제관계학과 진학'],['성균관대학교','동아시아학술원 진학'],['북경사범대학','중국 현지 대학원 진학']]},
+  {key:'pub', name:'공기업', main:'공기업', sub:'', zh:'国企', py:'guóqǐ', color:'#b01e33', icon:'columns', w:30, items:[
+    ['예금보험공사',''],['근로복지공단',''],['한전KDN','']]},
+  {key:'it', name:'IT·소프트웨어', main:'IT·소프트웨어', sub:'', zh:'科技', py:'kējì', color:'#0f6e96', icon:'code', w:20, items:[
+    ['컴투스홀딩스','고객서비스팀'],['드림씨아이에스','CAT·CT분석팀'],['넥스트리','SW개발']]},
+  {key:'etc', name:'기타', main:'기타', sub:'', zh:'其他', py:'qítā', color:'#96550f', icon:'star', w:50, items:[
+    ['SM엔터테인먼트',''],['WEBZEN','마케팅서비스본부 글로벌포털팀'],['공무원','(경찰·소방·교육행정·지방직)'],['CJ프레시웨이','프리젠터'],['푸른기술','철도교통사업팀'],
+    ['테크젠','(현대기아차 계열사) 노무'],['파이브닷츠','(미디어·영상제작)'],['Aegis Expedia Malaysia','EAN팀 (해외취업)'],['창업·프리랜서','']]}
+];
+
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+const tint = (hex, p) => { const n = parseInt(hex.slice(1), 16), m = v => Math.round(v + (255 - v) * p); return `rgb(${m(n >> 16)},${m((n >> 8) & 255)},${m(n & 255)})`; };
+const vlen = s => { let n = 0; for (const ch of s) n += /[·()\s.,]/.test(ch) ? .42 : /[A-Za-z0-9]/.test(ch) ? .6 : 1; return Math.max(2.3, Math.round(n * 100) / 100); };
+const SV = (d, fill) => `<svg viewBox="0 0 24 24" ${fill ? 'fill="currentColor"' : 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"'} aria-hidden="true">${d}</svg>`;
+const ICON = {
+  plane: SV('<path d="M12 2c.9 0 1.5.8 1.5 1.8V9l7.5 4.6v2L13.5 13v5l2.5 1.9V22L12 20.8 8 22v-2.1l2.5-1.9v-5L3 15.6v-2L10.5 9V3.8C10.5 2.8 11.1 2 12 2z"/>', 1),
+  box: SV('<path d="M12 2.5 21 7v10l-9 4.5L3 17V7z"/><path d="M3 7l9 4.5L21 7"/><path d="M12 11.5v10"/>'),
+  chart: SV('<path d="M3 17l5.5-5.5 4 4L21 7"/><path d="M14.5 7H21v6.5"/>'),
+  coin: SV('<circle cx="12" cy="12" r="9"/><path d="M7.6 8.6l1.7 6.8 2.7-6.8 2.7 6.8 1.7-6.8"/><path d="M6.8 11.4h10.4"/>'),
+  pin: SV('<path d="M12 21.5s-6.5-6.2-6.5-11.5a6.5 6.5 0 0 1 13 0c0 5.3-6.5 11.5-6.5 11.5z"/><circle cx="12" cy="10" r="2.4"/>'),
+  bell: SV('<path d="M4 17.5a8 8 0 0 1 16 0z"/><path d="M2.5 20.5h19"/><path d="M12 9.5v-2M10 7.5h4"/>'),
+  cap: SV('<path d="M2 9.5 12 4.5l10 5-10 5z"/><path d="M6.5 11.8v4.6c1.5 1.6 3.5 2.4 5.5 2.4s4-.8 5.5-2.4v-4.6"/><path d="M22 9.5V15"/>'),
+  columns: SV('<path d="M3 9.5h18L12 4z"/><path d="M5.5 9.5v8M10 9.5v8M14 9.5v8M18.5 9.5v8"/><path d="M3 20h18"/>'),
+  code: SV('<path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/><path d="M13.5 4.5l-3 15"/>'),
+  star: SV('<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>'),
+  pause: SV('<rect x="6" y="4.5" width="4" height="15" rx="1"/><rect x="14" y="4.5" width="4" height="15" rx="1"/>', 1),
+  play: SV('<path d="M8 5.2v13.6a.8.8 0 0 0 1.2.7l10.6-6.8a.8.8 0 0 0 0-1.4L9.2 4.5a.8.8 0 0 0-1.2.7z"/>', 1),
+  replay: SV('<path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1"/><path d="M3.5 4v4.6h4.6"/>'),
+  up: SV('<path d="M6 15l6-6 6 6"/>'),
+  sndOn: SV('<path d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z"/><path d="M15.5 9.2a4 4 0 0 1 0 5.6"/><path d="M18.2 6.5a7.6 7.6 0 0 1 0 11"/>'),
+  sndOff: SV('<path d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/>')
+};
+
+/* 출발 안내판처럼 글자가 넘어가는 효과에 쓸 글자 풀(페이지에 실제로 쓰인 글자만 사용) */
+const HG = /[\uAC00-\uD7A3]/;
+const POOL = [...new Set((FIELDS.map(f => f.name + f.items.map(i => i[0] + i[1]).join('')).join('') + '졸업생어디로갔을까다음출발은여러분차례입니다').split('').filter(c => HG.test(c)))];
+const LAT = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const rnd = c => HG.test(c) ? POOL[Math.random() * POOL.length | 0] : /[A-Z]/.test(c) ? LAT[Math.random() * 26 | 0] : /[a-z]/.test(c) ? LAT[Math.random() * 26 | 0].toLowerCase() : /\d/.test(c) ? String(Math.random() * 10 | 0) : c;
+const FA = (t, dl, du = 460) => `class="fl" data-t="${esc(t)}" data-dl="${dl}" data-du="${du}"`;
+
+/* ── 장면 만들기 ── */
+const stage = $('#stage'), scenesEl = $('#scenes'), progEl = $('#prog');
+const S = [], parts = [];
+const fly = p => `<div class="fly" data-p="${p}" aria-hidden="true"><span class="tr"></span><span class="pl">${ICON.plane}</span></div>`;
+
+parts.push(`<article class="scene intro" aria-hidden="true">
+<div class="big-zh-w"><div class="big-zh a rise" style="--d:.05s">就业</div></div>
+${fly('-0.14,0.9,1.14,0.1')}
+<div class="fit">
+<h1 class="hook" aria-label="졸업생, 어디로 갔을까?">
+<span class="a drop" style="--d:.12s"><span ${FA('졸업생,', 120, 520)}>졸업생,</span></span>
+<span class="a drop" style="--d:.34s"><span ${FA('어디로', 340, 520)}>어디로</span></span>
+<span class="a drop" style="--d:.56s"><span ${FA('갔을까?', 560, 560)}>갔을까?</span></span>
+</h1>
+<p class="lede a up" style="--d:.95s">2017년 2월부터 2026년 8월까지, 17개 졸업기수의 취업·진로를 분야별로 소개합니다.</p>
+</div>
+</article>`);
+S.push({dur: 4300});
+
+parts.push(`<article class="scene dist" aria-hidden="true">
+<div class="fit">
+<div class="d-head"><h2 class="d-title a sl" style="--d:.1s">취업 분야별 분포</h2></div>
+<div class="dbars">${FIELDS.map((f, i) => {
+  const dl = 260 + i * 70;
+  return `<span class="dl a fd" style="--d:${dl / 1000}s"><span ${FA(f.name, dl, 420)}>${esc(f.name)}</span></span><span class="db" style="--i:${i}"><em style="--w:${f.w}%;--c:${tint(f.color, .28)}"></em></span>`;
+}).join('')}</div>
+</div>
+</article>`);
+S.push({dur: 4000});
+
+FIELDS.forEach(f => {
+  const n = f.items.length, size = n >= 7 ? 'lg' : n >= 5 ? 'md' : 'sm';
+  const rows = f.items.map((it, j) => {
+    const dl = 420 + j * 70;
+    return `<li class="row a flip" style="--d:${dl / 1000}s"><b ${FA(it[0], dl, 440)}>${esc(it[0])}</b>${it[1] ? `<span ${FA(it[1], dl + 60, 440)}>${esc(it[1])}</span>` : ''}</li>`;
+  }).join('');
+  parts.push(`<article class="scene field" style="--sbg:${f.color}" aria-hidden="true" aria-label="${esc(f.name)}">
+<div class="gate-w"><div class="gate a rise" style="--d:.04s">${f.zh}</div></div>
+${f.key === 'air' ? fly('-0.14,0.32,1.14,0.04') : ''}
+<div class="fit">
+<header class="f-head">
+<span class="picto a pop" style="--d:.2s">${ICON[f.icon]}</span>
+<span class="f-py a fd" style="--d:.3s" lang="zh-Latn-pinyin">${f.py}</span>
+<h2 class="f-name a sl" style="--d:.12s;--len:${vlen(f.main)}">${esc(f.main)}</h2>
+${f.sub ? `<div class="f-sub a sl" style="--d:.2s">(${esc(f.sub)})</div>` : ''}
+</header>
+<ul class="board ${size}">${rows}</ul>
+</div>
+</article>`);
+  S.push({dur: 2400 + 350 * n});
+});
+
+const names = FIELDS.flatMap(f => f.items.map(it => it[0]));
+const half = Math.ceil(names.length / 2);
+const orow = (arr, rev) => { const s = arr.map(x => `<span>${esc(x)}</span>`).join(''); return `<div class="orow${rev ? ' rev' : ''}"><div class="otrk">${s}${s}</div></div>`; };
+parts.push(`<article class="scene outro" aria-hidden="true">
+<div class="omq-w"><div class="a fd" style="--d:.15s;--du:1.2s"><div class="omq">${orow(names.slice(0, half))}${orow(names.slice(half), true)}</div></div></div>
+<div class="fit">
+<h2 class="hook" aria-label="다음 출발은, 여러분 차례입니다.">
+<span class="a drop" style="--d:.12s"><span ${FA('다음 출발은,', 120, 520)}>다음 출발은,</span></span>
+<span class="a drop" style="--d:.32s"><span ${FA('여러분', 320, 480)}>여러분</span></span>
+<span class="a drop" style="--d:.5s"><span ${FA('차례입니다.', 500, 560)}>차례입니다.</span></span>
+</h2>
+<p class="lede a up" style="--d:.85s">선배들이 진출한 회사와 기관은 아래 전체 목록에서 다시 볼 수 있습니다.</p>
+<div class="obtns a up" style="--d:1s"><button type="button" class="obtn pri" data-act="replay">${ICON.replay}처음부터 다시 보기</button><button type="button" class="obtn" data-act="list">전체 목록 보기</button></div>
+</div>
+</article>`);
+S.push({dur: Infinity});
+
+scenesEl.innerHTML = parts.join('');
+[...scenesEl.children].forEach((el, k) => { S[k].el = el; });
+progEl.innerHTML = S.map(() => '<span class="seg"><i></i></span>').join('');
+const fills = [...progEl.querySelectorAll('i')];
+
+/* ── 전체 목록 ── */
+$('#lbars').innerHTML = FIELDS.map((f, i) => `<a class="ll" href="#f-${f.key}">${esc(f.name)}</a><span class="lb" style="--i:${i}"><em style="--w:${f.w}%;--c:${f.color};--ct:${tint(f.color, .3)}"></em></span>`).join('');
+$('#dir').innerHTML = FIELDS.map((f, i) => `<section class="fld" id="f-${f.key}" style="--c:${f.color}" aria-labelledby="h-${f.key}">
+<div class="fld-gate" aria-hidden="true"><span class="picto-s">${ICON[f.icon]}</span><span class="zh">${f.zh}</span></div>
+<div class="fld-h"><h4 id="h-${f.key}">${esc(f.name)}</h4><span class="fld-py" lang="zh-Latn-pinyin">${f.py}</span></div>
+<ul class="fld-list">${f.items.map(it => `<li><b>${esc(it[0])}</b>${it[1] ? `<span>${esc(it[1])}</span>` : ''}</li>`).join('')}</ul>
+<button type="button" class="fld-play" data-goto="${2 + i}">${ICON.play}이 분야 애니메이션 보기</button>
+</section>`).join('');
+
+/* ── 사운드: 배경음악과 효과음 ──
+   모든 소리는 Web Audio로 그 자리에서 합성합니다. 음원 파일이 없어 인터넷 없이도 재생되고 저작권 문제가 없습니다.
+   브라우저 정책상 소리는 오른쪽 위 '소리 켜기'를 누른 뒤부터 납니다(키보드 M으로도 켜고 끕니다).
+   배경음악: C장조 114BPM, IV–V–iii–vi 진행 위에 고쟁 느낌의 5음 음계(도·레·미·솔·라) 아르페지오.
+   인트로·분포 장면은 잔잔하게, 첫 분야 장면부터 드럼이 들어오고, 마지막 장면에서 마무리 화음으로 끝납니다.
+   음량은 바로 아래 VOL 값으로 조절합니다(master 전체, bgm 배경음악, sfx 효과음, flap 글자 넘김 소리,
+   out 최종 출력 배율 — 2면 원래의 2배이며, 맨 끝의 리미터가 소리가 깨지지 않게 최고 음량을 눌러 줍니다). */
+function makeSound(o) {
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if (!AC && !o.ctx) return null;
+  const VOL = {master: 1.12, bgm: .33, sfx: .9, flap: .9, out: 2};
+  const BPM = 114, ST = 60 / BPM / 4, BAR = ST * 16, LOOK = .15;
+  const PEN = [0, 2, 4, 7, 9];
+  const CH = {
+    F:  {b: 41, pad: [53, 57, 60, 64], arp: [69, 72, 76, 79, 81]},
+    G:  {b: 43, pad: [55, 59, 62, 64], arp: [67, 74, 76, 79, 81]},
+    Em: {b: 40, pad: [52, 55, 59, 62], arp: [64, 67, 69, 74, 76]},
+    Am: {b: 45, pad: [52, 57, 60, 64], arp: [69, 72, 74, 76, 79]},
+    C:  {b: 36, pad: [55, 60, 62, 64], arp: [67, 72, 74, 76, 79]}
+  };
+  const PROG = ['F', 'G', 'Em', 'Am', 'F', 'G', 'C', 'C'];
+  const ARP = [
+    [0, -1, -1, -1, 2, -1, -1, -1, 4, -1, -1, -1, 3, -1, -1, -1],
+    [0, -1, 2, -1, 4, -1, 3, -1, 1, -1, 3, -1, 4, -1, 2, -1],
+    [0, 2, 4, 1, 3, -1, 2, 4, 0, 2, 4, 1, 3, -1, 3, 1],
+    [4, 2, 0, 3, 1, -1, 2, 0, 4, 2, 0, 3, 1, -1, 1, 3]
+  ];
+  const ACC = [1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0];
+  const BASS = [null, [[0, 0, 7], [8, 0, 7]], [[0, 0, 2.5], [3, 0, 1.5], [6, 12, 1], [8, 0, 2.5], [11, 0, 1.5], [14, 7, 1.2]]];
+  const mtof = m => 440 * Math.pow(2, (m - 69) / 12);
+  const R = (a, b) => a + Math.random() * (b - a);
+  const last = o.kinds.length - 1;
+  const lvOf = i => i >= last ? 3 : i >= 2 ? 2 : Math.max(0, i);
+  let ctx = null, on = false, timer = 0, offT = 0, sess = null, nextFlap = 0, bag = null;
+  let master, sfxB, sfxRv, flapB, flapP, bgmIn, bgmTone, bgmDuck, bgmLvl, bgmRv, noise;
+  const ksC = new Map(), clicks = [];
+
+  /* 한 번 울리고 끝나는 소리는 쓰인 노드를 모아 두었다가, 소리가 끝나면 연결을 끊어 정리합니다(오래 틀어 두어도 느려지지 않게). */
+  const T = n => { if (bag) bag.push(n); return n; };
+  const voice = fn => (...a) => {
+    const prev = bag, b = bag = [];
+    try { fn(...a); } finally {
+      bag = prev;
+      const src = b.filter(n => 'onended' in n);
+      let left = src.length;
+      const end = () => { if (--left === 0) for (const n of b) try { n.disconnect(); } catch (e) {} };
+      for (const s of src) s.addEventListener('ended', end);
+    }
+  };
+  const G = (v = 0) => { const n = T(ctx.createGain()); n.gain.value = v; return n; };
+  const F = (type, f, q) => { const n = T(ctx.createBiquadFilter()); n.type = type; n.frequency.value = f; if (q != null) n.Q.value = q; return n; };
+  const OSC = (type, f, t, d) => { const n = T(ctx.createOscillator()); n.type = type; n.frequency.value = f; n.start(t); n.stop(t + d); return n; };
+  const P = v => { const n = T(ctx.createStereoPanner ? ctx.createStereoPanner() : ctx.createGain()); if (n.pan) n.pan.value = v; return n; };
+  const BUF = (b, rate = 1) => { const s = T(ctx.createBufferSource()); s.buffer = b; s.playbackRate.value = rate; return s; };
+  const NZ = (t, d) => { const s = BUF(noise); s.loop = true; s.start(t, R(0, 1.6)); s.stop(t + d); return s; };
+  const W = (...a) => { for (let i = 1; i < a.length; i++) a[i - 1].connect(a[i]); return a[a.length - 1]; };
+  const hit = (p, t, v, a, tau) => { p.setValueAtTime(0, t); p.linearRampToValueAtTime(v, t + a); p.setTargetAtTime(0, t + a, tau); };
+  const ping = (t, f, v, tau, dst, type = 'sine') => { const g = G(); hit(g.gain, t, v, .002, tau); W(OSC(type, f, t, tau * 8 + .05), g, dst); };
+  const bus = (wet = .2, pn = 0) => { const g = G(1), p = P(pn); W(g, p, sfxB); if (wet) W(p, G(wet), sfxRv); return g; };
+  const duck = (t, a, h) => { const p = bgmDuck.gain; p.cancelScheduledValues(t); p.setTargetAtTime(a, t, .03); p.setTargetAtTime(1, t + h, .35); };
+
+  /* 잔향(합성 임펄스 응답) */
+  function ir(sec, dec) {
+    const sr = ctx.sampleRate, n = sr * sec | 0, b = ctx.createBuffer(2, n, sr), pre = sr * .015 | 0;
+    for (let c = 0; c < 2; c++) {
+      const d = b.getChannelData(c); let y = 0;
+      for (let i = 0; i < n; i++) {
+        const u = i / n; y += (.92 - .82 * u) * (Math.random() * 2 - 1 - y);
+        d[i] = i < pre ? 0 : y * Math.pow(1 - u, dec);
+      }
+    }
+    return b;
+  }
+  /* 출발 안내판 플랩이 넘어가는 '착' 소리 */
+  function click() {
+    const sr = ctx.sampleRate, n = sr * .035 | 0, b = ctx.createBuffer(1, n, sr), d = b.getChannelData(0);
+    const f1 = R(1900, 3300), f2 = R(520, 950), bo = R(.004, .0075);
+    let pk = 0;
+    for (let i = 0; i < n; i++) {
+      const t = i / sr, z = Math.random() * 2 - 1;
+      let v = .8 * z * Math.exp(-t / .0014) + .5 * Math.sin(6.2832 * f1 * t) * Math.exp(-t / .0035) + .35 * Math.sin(6.2832 * f2 * t) * Math.exp(-t / .006);
+      if (t > bo) { const u = t - bo; v += .3 * z * Math.exp(-u / .001) + .18 * Math.sin(6.2832 * f1 * 1.13 * u) * Math.exp(-u / .0025); }
+      d[i] = v; if (Math.abs(v) > pk) pk = Math.abs(v);
+    }
+    for (let i = 0; i < n; i++) d[i] *= .9 / pk;
+    return b;
+  }
+  /* 고쟁처럼 뜯는 현 소리(Karplus–Strong) — 음마다 한 번만 만들어 둡니다 */
+  function ks(m) {
+    let k = ksC.get(m); if (k) return k;
+    const sr = ctx.sampleRate, f = mtof(m), N = Math.max(4, Math.floor(sr / f + .5)), len = sr * 1.7 | 0;
+    const buf = ctx.createBuffer(1, len, sr), d = buf.getChannelData(0), line = new Float32Array(N);
+    let y = 0, mean = 0;
+    for (let i = 0; i < N; i++) { y += .7 * (Math.random() * 2 - 1 - y); line[i] = y; mean += y; }
+    mean /= N;
+    const pick = Math.max(1, Math.round(N * .13)), ex = Float32Array.from(line, v => v - mean);
+    for (let i = 0; i < N; i++) line[i] = ex[i] - .85 * ex[(i - pick + N) % N];
+    const T60 = Math.min(2.4, Math.max(.75, 2.4 - .85 * Math.log2(f / 220))), rho = Math.pow(.001, 1 / (f * T60));
+    let j = 0, pk = 0;
+    for (let i = 0; i < len; i++) {
+      const a = line[j], j2 = j + 1 === N ? 0 : j + 1;
+      d[i] = a; line[j] = rho * .5 * (a + line[j2]); j = j2;
+      if (Math.abs(a) > pk) pk = Math.abs(a);
+    }
+    const fade = sr * .1 | 0, g = pk ? .9 / pk : 1;
+    for (let i = 0; i < len; i++) d[i] *= g * (i > len - fade ? (len - i) / fade : 1);
+    k = {buf, rate: f * (N - .5) / sr};  /* 이 루프의 실제 주기는 N−0.5샘플 → 재생 속도로 정확한 음정에 맞춤 */
+    ksC.set(m, k);
+    return k;
+  }
+
+  function build() {
+    ctx = o.ctx || (() => { try { return new AC({latencyHint: 'interactive'}); } catch (e) { return new AC(); } })();
+    const sr = ctx.sampleRate;
+    noise = ctx.createBuffer(1, sr * 2, sr);
+    const nd = noise.getChannelData(0); for (let i = 0; i < nd.length; i++) nd[i] = Math.random() * 2 - 1;
+    const comp = ctx.createDynamicsCompressor();
+    comp.threshold.value = -10; comp.knee.value = 6; comp.ratio.value = 4; comp.attack.value = .003; comp.release.value = .2;
+    /* 최종 출력: 압축기 → 출력 배율 → 리미터 → 안전 클리퍼 → 스피커
+       리미터(DynamicsCompressor)가 더하는 자체 보정 이득과 큰 소리에서 눌리는 만큼을 감안해, 평균 음량이 VOL.out 배가 되게 맞췄습니다. */
+    const post = G(VOL.out / 1.18);
+    const lim = ctx.createDynamicsCompressor();
+    lim.threshold.value = -4; lim.knee.value = 0; lim.ratio.value = 20; lim.attack.value = .001; lim.release.value = .06;
+    const pre = G(.5), clip = ctx.createWaveShaper(), post2 = G(1);
+    clip.curve = (() => { const n = 4097, c = new Float32Array(n); for (let i = 0; i < n; i++) { const x = (i / (n - 1) * 2 - 1) * 2, a = Math.abs(x); c[i] = Math.sign(x) * (a <= .85 ? a : .85 + .13 * Math.tanh((a - .85) / .13)); } return c; })();
+    clip.oversample = '4x';
+    master = G(); W(master, comp, post, lim, pre, clip, post2, ctx.destination);
+    sfxB = G(VOL.sfx); sfxB.connect(master);
+    sfxRv = ctx.createConvolver(); sfxRv.buffer = ir(1.8, 3.4); W(sfxRv, G(.5), master);
+    bgmIn = G(1); bgmTone = F('lowpass', 18000, .5); bgmDuck = G(1); bgmLvl = G(VOL.bgm);
+    W(bgmIn, bgmTone, bgmDuck, bgmLvl, master);
+    bgmRv = ctx.createConvolver(); bgmRv.buffer = ir(2, 3); W(bgmRv, G(.5), bgmIn);
+    flapB = G(VOL.flap); W(flapB, F('highpass', 380, .5), F('lowpass', 7500, .5), master);
+    flapP = [-.45, 0, .45].map(v => { const p = P(v); p.connect(flapB); return p; });
+    for (let k = 0; k < 6; k++) clicks.push(click());
+    for (let m = 64; m <= 96; m++) if (PEN.includes(m % 12)) ks(m);
+  }
+
+  /* ── 배경음악 ── */
+  function newSess(t, intro) {
+    if (sess) dropSess(t);
+    const s = sess = {pos: 0, k: 0, next: t, lvl: -1, ch: CH.F, ph2: false, end: null, done: false, hold: !!o.flags().paused, intro};
+    s.out = G(1); s.out.connect(bgmIn);
+    s.rv = G(1); s.rv.connect(bgmRv);
+    s.dr = G(1); s.dr.connect(s.out); W(s.dr, G(.07), s.rv);
+    s.bs = G(1); s.bs.connect(s.out);
+    s.pump = G(1); s.pd = G(1); W(s.pd, s.pump, s.out); W(s.pump, G(.55), s.rv);
+    const lp = F('lowpass', 6500, .3); s.pk = G(1); W(s.pk, lp, s.out); W(lp, G(.45), s.rv);
+    return s;
+  }
+  function dropSess(t) {
+    const s = sess; sess = null; if (!s) return;
+    s.done = true; s.out.gain.setTargetAtTime(0, t, .06); s.rv.gain.setTargetAtTime(0, t, .06);
+  }
+  function run(h) {
+    const s = sess; if (!ctx || !s || s.done || s.hold) return;
+    if (h == null) { const now = ctx.currentTime; if (s.next < now - .2) s.next = now + .03; h = now + LOOK; }
+    while (s.next < h && !s.done) { step(s, s.k++, s.next); s.next += ST; }
+  }
+  function bar(s, b, t) {
+    const ms = Math.max(0, (t - ctx.currentTime) * 1000);
+    const lv = lvOf(o.sceneAt(ms + 150));
+    if (lv === 3) { if (!s.end) s.end = {b}; } else s.end = null;
+    let name, L = lv;
+    if (s.end) {
+      const ph = b - s.end.b;
+      if (ph >= 2) { final(s, t); return; }
+      name = ph ? 'G' : 'F'; L = 2; s.ph2 = false;
+      if (ph) riser(s, t + BAR * .5, BAR * .5, .7);
+    } else { const bi = s.pos++; name = PROG[bi % PROG.length]; s.ph2 = ((bi >> 2) & 1) === 0; }
+    if (s.lvl < 0 && !s.intro) gliss(s, t, 67, 91, .5, .55);
+    if (L === 2 && s.lvl < 2) crash(s, t, s.lvl < 0 ? .6 : 1);
+    s.lvl = L; s.ch = CH[name];
+    pad(s, t, s.ch.pad, BAR + .04, L);
+    if (L < 2 && lvOf(o.sceneAt(ms + BAR * 1000 + 150)) >= 2) {
+      riser(s, t + BAR * .4, BAR * .6, 1);
+      gliss(s, t + BAR - .44, 67, 93, .4, .5);
+    }
+  }
+  function step(s, k, t) {
+    const st = k & 15, b = k >> 4;
+    if (!st) { bar(s, b, t); if (s.done) return; }
+    const L = s.lvl, ch = s.ch, ph = s.end ? b - s.end.b : -1;
+    if (L === 2) {
+      if (st === 0 || st === 8) kick(s, t, st ? .9 : 1);
+      else if (st === 10) kick(s, t, .45);
+      else if (st === 14 && (b & 3) === 3) kick(s, t, .5);
+      if (st === 4 || st === 12) clap(s, t, .75);
+      else if (ph === 1 && st > 12) clap(s, t, .3 + (st - 13) * .14);
+      if ((st & 3) === 2) hat(s, t, .8, st === 14 && (b & 1) === 1);
+      shaker(s, t, st & 1 ? .3 : (st & 3) === 2 ? .8 : .5);
+    } else if (L === 1) {
+      if (st === 0) kick(s, t, .55); else if (st === 8) kick(s, t, .4);
+      if (!(st & 1)) shaker(s, t, (st & 3) === 2 ? .6 : .32);
+    }
+    const bp = BASS[L];
+    if (bp) for (const n of bp) if (n[0] === st) bass(s, t, ch.b + n[1], n[2] * ST, L === 2 ? 1 : .7);
+    const ai = (L === 2 && s.ph2 ? ARP[3] : ARP[L])[st];
+    if (ai >= 0) pluck(s.pk, t, ch.arp[ai], L === 2 ? (ACC[st] ? .9 : .5) : L ? .62 : .95, (ai - 2) * .2 + R(-.15, .15));
+  }
+  function final(s, t) {
+    s.done = true;
+    kick(s, t, 1.1); crash(s, t, 1.1);
+    bass(s, t, 36, 1.2, 1.1, .7);
+    pad(s, t, CH.C.pad, .7, 2, 1.1);
+    gliss(s, t, 67, 96, .7, .6);
+  }
+  const kick = voice((s, t, v) => {
+    const g = G(), os = OSC('sine', 160, t, .5);
+    os.frequency.setValueAtTime(160, t); os.frequency.exponentialRampToValueAtTime(55, t + .09); os.frequency.exponentialRampToValueAtTime(42, t + .35);
+    hit(g.gain, t, .95 * v, .003, .085); W(os, g, s.dr);
+    const gc = G(); hit(gc.gain, t, .18 * v, .001, .006); W(NZ(t, .03), F('highpass', 2000, .7), gc, s.dr);
+    const p = s.pump.gain; p.setTargetAtTime(.5, t, .006); p.setTargetAtTime(1, t + .04, .1);
+  });
+  const clap = voice((s, t, v) => {
+    const g = G(), p = g.gain;
+    p.setValueAtTime(0, t);
+    for (const d of [0, .012, .024]) { p.setValueAtTime(.55 * v, t + d); p.setTargetAtTime(.0001, t + d + .0005, .0035); }
+    p.setValueAtTime(.5 * v, t + .036); p.setTargetAtTime(0, t + .037, .055);
+    W(NZ(t, .4), F('bandpass', 1400, .8), F('highpass', 500, .5), g, s.dr); W(g, G(.35 * v), s.rv);
+    const g2 = G(), os = OSC('triangle', 230, t, .2);
+    os.frequency.setValueAtTime(230, t); os.frequency.exponentialRampToValueAtTime(160, t + .07);
+    hit(g2.gain, t, .22 * v, .002, .03); W(os, g2, s.dr);
+  });
+  const hat = voice((s, t, v, open) => {
+    t += R(-.003, .003);
+    const g = G(); hit(g.gain, t, .16 * v, .001, open ? .07 : .012);
+    W(NZ(t, open ? .4 : .08), F('highpass', 7000, .6), F('bandpass', 10500, .8), g, P(.22), s.dr);
+  });
+  const shaker = voice((s, t, v) => {
+    t += R(-.004, .004);
+    const g = G(), p = g.gain;
+    p.setValueAtTime(0, t); p.linearRampToValueAtTime(.07 * v * R(.85, 1.1), t + .012); p.setTargetAtTime(0, t + .014, .018);
+    W(NZ(t, .1), F('bandpass', 6200, 1.1), g, P(-.25), s.dr);
+  });
+  const bass = voice((s, t, m, d, v, rel = .035) => {
+    const f = mtof(m), lp = F('lowpass', 1100, 2), g = G(), p = g.gain;
+    lp.frequency.setValueAtTime(1100, t); lp.frequency.setTargetAtTime(380, t + .01, .09);
+    p.setValueAtTime(0, t); p.linearRampToValueAtTime(.42 * v, t + .006); p.setTargetAtTime(.3 * v, t + .02, .12); p.setTargetAtTime(0, t + d, rel);
+    OSC('triangle', f, t, d + Math.max(.3, rel * 7)).connect(lp);
+    const sw = OSC('sawtooth', f, t, d + Math.max(.3, rel * 7)); sw.detune.value = 5; W(sw, G(.22), lp);
+    W(lp, g, s.bs);
+  });
+  const pad = voice((s, t, ns, d, L, rel = .26) => {
+    const g = G(), lp = F('lowpass', [1150, 1300, 1700][L], .35), v = L ? .028 : .034;
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(v, t + .3); g.gain.setTargetAtTime(0, t + d, rel);
+    W(lp, g, s.pd);
+    for (const m of ns) for (const c of [-8, 8]) { const n = OSC('sawtooth', mtof(m), t, d + rel * 7); n.detune.value = c + R(-3, 3); n.connect(lp); }
+  });
+  const pluck = voice((dst, t, m, v, pn) => {
+    const k = ks(m), s = BUF(k.buf, k.rate), g = G();
+    g.gain.setValueAtTime(.3 * v, t); g.gain.setTargetAtTime(0, t + .6, .25);
+    W(s, g, P(Math.max(-.9, Math.min(.9, pn))), dst); s.start(t); s.stop(t + 1.6);
+  });
+  function gliss(s, t, lo, hi, dur, v) {
+    const ns = []; for (let m = lo; m <= hi; m++) if (PEN.includes(m % 12)) ns.push(m);
+    ns.forEach((m, i) => { const u = ns.length > 1 ? i / (ns.length - 1) : 1; pluck(s.pk, t + u * dur, m, v * (.5 + .6 * u), -.7 + 1.4 * u); });
+  }
+  const crash = voice((s, t, v) => {
+    const g = G(); hit(g.gain, t, .1 * v, .002, .55);
+    W(NZ(t, 3), F('highpass', 4500, .6), g, s.dr); W(g, G(.5), s.rv);
+  });
+  const riser = voice((s, t, d, v) => {
+    const bp = F('bandpass', 350, 1.8), g = G(), p = g.gain;
+    bp.frequency.setValueAtTime(350, t); bp.frequency.exponentialRampToValueAtTime(6500, t + d);
+    p.setValueAtTime(0, t); p.linearRampToValueAtTime(.11 * v, t + d * .95); p.linearRampToValueAtTime(0, t + d + .02);
+    W(NZ(t, d + .05), bp, g, s.dr); W(g, G(.5), s.rv);
+  });
+
+  /* ── 효과음: 장면·아이콘별 ── */
+  const vib = (t, f, v, dec, d) => { ping(t, f, v, dec / 5, d); ping(t, f * 4, v * .2, .045, d); ping(t, f * 10, v * .04, .012, d); };
+  const RAW = {
+    /* 인트로·마무리: 공항 안내 방송 차임 '딩동댕동' */
+    chime(t) { const d = bus(.4); [72, 76, 79, 84].forEach((m, i) => vib(t + i * .28, mtof(m), .26, 2, d)); duck(t, .45, 1.4); },
+    /* 장면 전환: 사선으로 닦아 내는 화면에 맞춘 '쉭' */
+    swish(t, dir) {
+      const p = P(0), bp = F('bandpass', 1500, 1.1), g = G();
+      if (p.pan) { p.pan.setValueAtTime(dir > 0 ? .5 : -.5, t); p.pan.linearRampToValueAtTime(dir > 0 ? -.5 : .5, t + .3); }
+      bp.frequency.setValueAtTime(1500, t); bp.frequency.exponentialRampToValueAtTime(5200, t + .26);
+      g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.1, t + .11); g.gain.linearRampToValueAtTime(0, t + .3);
+      W(NZ(t, .32), bp, g, p, sfxB);
+    },
+    /* 분포: 막대가 자랄 때마다 마림바가 한 음씩 올라감 */
+    dist(t) {
+      const d = bus(.25);
+      for (let i = 0, m = 67; i < o.nFields; m++) {
+        if (!PEN.includes(m % 12)) continue;
+        const tt = t + .3 + i * .07, f = mtof(m), p = P(-.55 + 1.1 * i / Math.max(1, o.nFields - 1));
+        W(p, d); ping(tt, f, .25, .075, p); ping(tt, f * 4, .04, .012, p);
+        i++;
+      }
+      duck(t + .3, .7, .9);
+    },
+    /* 항공: 비행기가 왼쪽에서 오른쪽으로 지나가는 제트음 */
+    plane(t, d = 2.2) {
+      const p = P(-.85);
+      W(p, sfxB); W(p, G(.12), sfxRv);
+      if (p.pan) { p.pan.setValueAtTime(-.85, t); p.pan.linearRampToValueAtTime(.85, t + d); }
+      const env = (g, pts) => { g.gain.setValueAtTime(0, t); for (const [u, v] of pts) g.gain.linearRampToValueAtTime(v, t + d * u); };
+      const bp = F('bandpass', 450, .8), g1 = G();
+      bp.frequency.setValueAtTime(450, t); bp.frequency.exponentialRampToValueAtTime(2600, t + d * .5); bp.frequency.exponentialRampToValueAtTime(650, t + d);
+      env(g1, [[.25, .14], [.5, .85], [.78, .2], [1, 0]]); W(NZ(t, d + .05), bp, g1, p);
+      const g2 = G(); env(g2, [[.3, .27], [.5, .7], [.8, .21], [1, 0]]); W(NZ(t, d + .05), F('lowpass', 260, .7), g2, p);
+      const wn = OSC('triangle', 2250, t, d + .05), g3 = G();
+      wn.frequency.setValueAtTime(2250, t + d * .42); wn.frequency.exponentialRampToValueAtTime(1650, t + d * .62);
+      env(g3, [[.45, .055], [.7, .025], [1, 0]]); W(wn, g3, p);
+      duck(t + d * .25, .6, d * .5);
+    },
+    /* 무역·유통: 상자가 놓이는 '툭' + 바코드 스캐너 '삑' */
+    box(t) {
+      const d = bus(.12), g = G(), os = OSC('sine', 175, t, .4);
+      os.frequency.setValueAtTime(175, t); os.frequency.exponentialRampToValueAtTime(68, t + .1);
+      hit(g.gain, t, .7, .003, .055); W(os, g, d);
+      const g2 = G(); hit(g2.gain, t, .42, .002, .028); W(NZ(t, .15), F('lowpass', 1200, .9), g2, d);
+      const tb = t + .2, g3 = G(), p = g3.gain;
+      p.setValueAtTime(0, tb); p.linearRampToValueAtTime(.19, tb + .006); p.setValueAtTime(.19, tb + .1); p.linearRampToValueAtTime(0, tb + .115);
+      W(OSC('triangle', 2350, tb, .14), g3, d);
+      duck(t, .6, .45);
+    },
+    /* 경영·마케팅: 그래프처럼 올라가는 '도미솔도' */
+    chart(t) {
+      const d = bus(.3, .1), lp = F('lowpass', 3200, .9); W(lp, d);
+      [72, 76, 79, 84].forEach((m, i) => {
+        const tt = t + i * .075, end = i === 3, os = OSC('square', mtof(m), tt, end ? 1.2 : .35), g = G();
+        if (end) {
+          os.frequency.setValueAtTime(mtof(83), tt); os.frequency.exponentialRampToValueAtTime(mtof(84), tt + .05);
+          const lg = G(); lg.gain.setValueAtTime(0, tt); lg.gain.linearRampToValueAtTime(22, tt + .35); W(OSC('sine', 6.5, tt, 1.2), lg, os.detune);
+        }
+        hit(g.gain, tt, .3, .003, end ? .17 : .045); W(os, g, lp);
+      });
+      duck(t, .6, .6);
+    },
+    /* 금융: 동전이 부딪히는 '찰캉' */
+    coin(t) {
+      const d = bus(.3, .15), g = G(); hit(g.gain, t, .2, .001, .008); W(NZ(t, .05), F('highpass', 3500, .7), g, d);
+      const fm = (tt, f, v, dec) => {
+        const c = OSC('sine', f, tt, dec * 1.6 + .1), mg = G(), gg = G();
+        mg.gain.setValueAtTime(f * 2.2, tt); mg.gain.setTargetAtTime(f * .05, tt, dec * .25);
+        W(OSC('sine', f * 3.5, tt, dec * 1.6 + .1), mg, c.frequency); hit(gg.gain, tt, v, .0015, dec / 4.5); W(c, gg, d);
+      };
+      fm(t + .012, 1568, .2, .5); fm(t + .09, 2093, .24, 1.2);
+      duck(t, .6, .7);
+    },
+    /* 관광·컨벤션: 지도 핀이 '휘익—똑' 꽂히는 소리 */
+    pin(t) {
+      const d = bus(.2, -.1), g = G(), w = OSC('sine', 1650, t, .22), p = g.gain;
+      w.frequency.setValueAtTime(1650, t); w.frequency.exponentialRampToValueAtTime(500, t + .2);
+      p.setValueAtTime(0, t); p.linearRampToValueAtTime(.21, t + .015); p.linearRampToValueAtTime(.16, t + .17); p.linearRampToValueAtTime(0, t + .205);
+      W(w, g, d);
+      const drop = (tt, v) => { const gg = G(), os = OSC('sine', 640, tt, .25); os.frequency.setValueAtTime(640, tt); os.frequency.exponentialRampToValueAtTime(190, tt + .07); hit(gg.gain, tt, v, .002, .035); W(os, gg, d); };
+      drop(t + .2, .7); drop(t + .33, .28);
+      const g3 = G(); hit(g3.gain, t + .2, .18, .001, .006); W(NZ(t + .2, .03), F('bandpass', 2600, 3), g3, d);
+      duck(t, .65, .5);
+    },
+    /* 호텔·리조트: 프런트 데스크 호출벨 '띵' */
+    bell(t) {
+      const d = bus(.35, .15), f = 1760;
+      [[1, 1, 1.9], [1.0023, .55, 1.9], [2.756, .38, .8], [5.404, .2, .4], [8.933, .1, .22]].forEach(([r, a, dec]) => ping(t, f * r, .24 * a, dec / 5, d));
+      const g = G(); hit(g.gain, t, .3, .0005, .003); W(NZ(t, .02), F('highpass', 5000, .7), g, d);
+      duck(t, .5, 1.1);
+    },
+    /* 교육: 학사모를 던지는 '휙' + 축하 박수 */
+    cap(t) {
+      const d = bus(.3), bp = F('bandpass', 500, 1.3), g = G(), p = g.gain;
+      bp.frequency.setValueAtTime(500, t); bp.frequency.exponentialRampToValueAtTime(3600, t + .34);
+      p.setValueAtTime(0, t); p.linearRampToValueAtTime(.35, t + .24); p.linearRampToValueAtTime(0, t + .4);
+      W(NZ(t, .45), bp, g, d);
+      const t0 = t + .3;
+      for (let i = 0; i < 90; i++) {
+        const tt = t0 + Math.pow(Math.random(), 1.35) * 1.6, e = Math.min(1, (tt - t0) / .14) * Math.exp(-(tt - t0) / .75), gg = G();
+        hit(gg.gain, tt, 2.2 * e * R(.55, 1), .0006, .008);
+        W(NZ(tt, .05), F('bandpass', R(900, 2300), 1.4), gg, P(R(-.75, .75)), d);
+      }
+      duck(t, .6, 1.6);
+    },
+    /* 공기업: 공문서에 도장을 '쾅' */
+    columns(t) {
+      const d = bus(.25), g0 = G(); hit(g0.gain, t - .07, .07, .001, .008); W(NZ(t - .07, .03), F('bandpass', 1800, 2), g0, d);
+      const g = G(), os = OSC('sine', 125, t, .5);
+      os.frequency.setValueAtTime(125, t); os.frequency.exponentialRampToValueAtTime(46, t + .15);
+      hit(g.gain, t, .75, .002, .075); W(os, g, d);
+      const g2 = G(); hit(g2.gain, t, .5, .001, .02); W(NZ(t, .2), F('lowpass', 1500, 1), g2, d);
+      const g3 = G(); hit(g3.gain, t + .004, .2, .0005, .007); W(NZ(t + .004, .05), F('bandpass', 2800, .8), g3, d);
+      duck(t, .55, .5);
+    },
+    /* IT·소프트웨어: 키보드 타이핑 + 실행 성공 '띠링' */
+    code(t) {
+      const d = bus(.12);
+      const key = (tt, v, big) => {
+        const p = P(R(-.3, .3)), g = G(), g2 = G(); W(p, d);
+        hit(g.gain, tt, v, .0008, big ? .012 : .006); W(NZ(tt, .05), F('bandpass', big ? 2000 : R(3000, 4200), 2.2), g, p);
+        hit(g2.gain, tt, v * .7, .001, big ? .018 : .01); W(OSC('sine', big ? 150 : 230, tt, .1), g2, p);
+      };
+      [0, .065, .12, .19, .235, .3].forEach(x => key(t + x, R(.55, .8)));
+      key(t + .42, .9, true);
+      const lp = F('lowpass', 3800, .7); W(lp, d);
+      [[1319, .06], [1760, .2]].forEach(([f, l], i) => { const tt = t + .54 + i * .07, g = G(); hit(g.gain, tt, .2, .002, l / 3); W(OSC('square', f, tt, l + .25), g, lp); });
+      duck(t, .65, .8);
+    },
+    /* 기타: 별처럼 반짝이는 소리 */
+    star(t) {
+      const d = bus(.55);
+      [93, 88, 91, 86, 84, 88, 81, 91].forEach((m, i) => {
+        const tt = t + i * .055 + R(0, .012), f = mtof(m), p = P(R(-.65, .65)), v = .21 * (1 - i * .05);
+        W(p, d); ping(tt, f, v, .12, p); ping(tt, f * 2.756, v * .3, .03, p);
+      });
+      const g = G(), p = g.gain; p.setValueAtTime(0, t); p.linearRampToValueAtTime(.1, t + .08); p.linearRampToValueAtTime(0, t + .7);
+      W(NZ(t, .75), F('highpass', 7500, .5), g, d);
+      duck(t, .65, .9);
+    },
+    /* 새 아이콘을 추가했는데 전용 효과음이 없을 때 쓰는 기본음 */
+    pop(t) {
+      const d = bus(.2), g = G(), os = OSC('sine', 380, t, .25);
+      os.frequency.setValueAtTime(380, t); os.frequency.exponentialRampToValueAtTime(900, t + .06);
+      hit(g.gain, t, .25, .002, .04); W(os, g, d);
+    }
+  };
+  const SFX = {};
+  for (const k in RAW) SFX[k] = voice(RAW[k]);
+  const clack = voice((t, v) => {
+    const s = BUF(clicks[Math.random() * clicks.length | 0], R(.88, 1.15));
+    W(s, G(v), flapP[Math.random() * 3 | 0]); s.start(t);
+  });
+
+  /* ── 화면 쪽에서 부르는 함수 ── */
+  function scene(i, prev, dir, at) {
+    if (!on || !ctx) return;
+    const t = (at != null ? at : ctx.currentTime) + .02, kind = o.kinds[i];
+    if (i === 0 && (prev === last || !sess || sess.done)) newSess(t, true);
+    else if ((!sess || sess.done) && i !== last) newSess(t, false);
+    if (prev >= 0 && prev !== i) SFX.swish(t, dir);
+    const fly = !o.reduce && o.hasFly(i);
+    if (fly) SFX.plane(t + .5, 2.2);
+    if (kind === 'intro' || kind === 'outro') SFX.chime(t + .03);
+    else if (kind === 'dist') SFX.dist(t);
+    else if (!(fly && kind === 'plane')) (SFX[kind] || SFX.pop)(t + .2);
+    run();
+  }
+  /* 글자 플랩이 넘어간 수만큼 '촤라락' 소리를 촘촘하게 */
+  function flaps(n) {
+    if (!on || !ctx || ctx.state !== 'running' || !n) return;
+    const now = ctx.currentTime;
+    if (now < nextFlap) return;
+    const v = Math.min(.55, .2 + .07 * Math.sqrt(n));
+    for (let i = 0, k = Math.min(2, n); i < k; i++) clack(now + .006 + i * R(.004, .009), v * R(.65, 1));
+    nextFlap = now + R(.012, .02);
+  }
+  /* 일시정지·길게 누르기·화면 밖으로 스크롤 상태를 음악에 반영 */
+  function sync() {
+    if (!ctx) return;
+    const f = o.flags(), t = ctx.currentTime, k = f.paused ? 0 : !f.view ? .45 : f.held ? .55 : 1;
+    bgmLvl.gain.setTargetAtTime(VOL.bgm * k, t, f.paused ? .15 : .1);
+    bgmTone.frequency.setTargetAtTime(!f.view || f.held ? 850 : 18000, t, .1);
+    const s = sess;
+    if (s && !s.done) {
+      if (f.paused) s.hold = true;
+      else if (s.hold) { s.hold = false; s.next = t + .1; run(); }
+    }
+  }
+  function start() {
+    if (!ctx) build();
+    on = true; clearTimeout(offT);
+    if (ctx.state !== 'running' && ctx.resume) ctx.resume();
+    const z = ctx.createBufferSource(); z.buffer = ctx.createBuffer(1, 1, ctx.sampleRate); z.connect(ctx.destination); z.start(0);
+    const t = ctx.currentTime;
+    master.gain.cancelScheduledValues(t); master.gain.setTargetAtTime(VOL.master, t, .1);
+    if (!sess || sess.done) newSess(t + .08, false);
+    sync();
+    if (!timer) timer = setInterval(run, 25);
+    run();
+  }
+  function stop() {
+    on = false;
+    if (!ctx) return;
+    const t = ctx.currentTime;
+    master.gain.cancelScheduledValues(t); master.gain.setTargetAtTime(0, t, .05);
+    clearTimeout(offT);
+    offT = setTimeout(() => { if (!on && ctx.state === 'running') ctx.suspend(); }, 350);
+  }
+  document.addEventListener('visibilitychange', () => {
+    if (!ctx || o.ctx) return;
+    if (document.hidden) ctx.suspend(); else if (on) ctx.resume();
+  });
+  return {toggle() { on ? stop() : start(); return on; }, scene, flaps, sync, get on() { return on; }};
+}
+
+/* ── 재생 제어 ── */
+const btn = $('#btnPause'), hint = $('#hint'), fab = $('#fab');
+fab.innerHTML = ICON.up + '맨 위로';
+let cur = -1, elapsed = 0, last = 0, started = false, userPaused = false, inView = true, held = false, pending = null, wasT = 0;
+
+/* 소리 연결 — 장면 순서대로 효과음 종류를 정합니다(분야 장면은 FIELDS의 icon 값을 따릅니다). */
+const snd = makeSound({
+  kinds: ['intro', 'dist', ...FIELDS.map(f => f.icon), 'outro'],
+  nFields: FIELDS.length,
+  reduce,
+  hasFly: i => !!(S[i] && S[i].el.querySelector('.fly')),
+  flags: () => ({paused: userPaused, held, view: inView}),
+  sceneAt: ms => {
+    if (cur < 0) return 0;
+    if (!started || userPaused || !inView || held || document.hidden) return cur;
+    let i = cur, rem = S[i].dur - elapsed;
+    while (ms > rem && i < S.length - 1) { ms -= rem; rem = S[++i].dur; }
+    return i;
+  }
+});
+
+const flaps = new Set();
+const SCR = /[\uAC00-\uD7A3A-Za-z0-9]/;
+function startFlaps(scene) {
+  scene.querySelectorAll('.fl').forEach(el => {
+    const t = el.dataset.t;
+    if (reduce) { el.textContent = t; return; }
+    const ch = [...t], n = ch.length, du = +el.dataset.du || 460, t0 = performance.now() + (+el.dataset.dl || 0);
+    flaps.add({el, ch, t0, scene, last: 0, set: ch.map((c, k) => t0 + du * .35 + du * .65 * (n > 1 ? k / (n - 1) : 1))});
+  });
+}
+function stopFlaps(scene) {
+  for (const j of flaps) if (j.scene === scene) { j.el.textContent = j.el.dataset.t; flaps.delete(j); }
+}
+function runFlaps(t) {
+  let n = 0;
+  for (const j of flaps) {
+    if (t < j.t0 || t - j.last < 42) continue;
+    j.last = t; n++;
+    let out = '', done = true;
+    for (let k = 0; k < j.ch.length; k++) {
+      const c = j.ch[k];
+      if (t >= j.set[k] || !SCR.test(c)) out += c; else { out += rnd(c); done = false; }
+    }
+    j.el.textContent = out;
+    if (done) flaps.delete(j);
+  }
+  if (n && snd) snd.flaps(n);
+}
+
+function syncBtn() {
+  const end = cur === S.length - 1;
+  btn.innerHTML = end ? ICON.replay : userPaused ? ICON.play : ICON.pause;
+  btn.setAttribute('aria-label', end ? '처음부터 다시 보기' : userPaused ? '재생' : '일시정지');
+}
+function setPaused(v) { userPaused = v; stage.classList.toggle('paused', v); syncBtn(); if (snd) snd.sync(); }
+
+function show(i, dir) {
+  const prev = cur;
+  S.forEach((s, k) => { if (k !== prev && k !== i) s.el.classList.remove('on', 'was', 'wr', 'wl'); });
+  if (prev >= 0 && prev !== i) {
+    const p = S[prev].el;
+    stopFlaps(p);
+    p.classList.remove('on', 'wr', 'wl');
+    p.classList.add('was');
+    p.setAttribute('aria-hidden', 'true');
+  }
+  const el = S[i].el;
+  stopFlaps(el);
+  el.classList.remove('on', 'was', 'wr', 'wl');
+  void el.offsetWidth;
+  el.classList.add('on', dir < 0 ? 'wl' : 'wr');
+  el.setAttribute('aria-hidden', 'false');
+  cur = i; elapsed = 0;
+  if (snd) snd.scene(i, prev, dir < 0 ? -1 : 1);
+  startFlaps(el);
+  clearTimeout(wasT);
+  wasT = setTimeout(() => S.forEach((s, k) => { if (k !== cur) s.el.classList.remove('was'); }), 650);
+  fills.forEach((f, k) => { f.style.transform = `scaleX(${k < cur ? 1 : 0})`; });
+  syncBtn();
+}
+const go = (i, dir) => { if (i >= 0 && i < S.length) show(i, dir == null ? (i >= cur ? 1 : -1) : dir); };
+const next = () => { if (cur < S.length - 1) go(cur + 1, 1); };
+const prevScene = () => go(Math.max(0, cur - 1), -1);
+
+function tick(t) {
+  const dt = last ? Math.min(80, t - last) : 0;
+  last = t;
+  runFlaps(t);
+  const s = S[cur];
+  if (s) {
+    if (s.dur === Infinity) fills[cur].style.transform = 'scaleX(1)';
+    else {
+      if (started && !userPaused && inView && !held && !document.hidden) elapsed += dt;
+      fills[cur].style.transform = `scaleX(${Math.min(1, elapsed / s.dur).toFixed(4)})`;
+      if (elapsed >= s.dur) next();
+    }
+  }
+  requestAnimationFrame(tick);
+}
+
+/* 탭: 오른쪽 다음·왼쪽 이전 / 스와이프 / 길게 눌러 멈춤 */
+let down = null, holdT = 0, hintOff = false;
+const killHint = () => { if (!hintOff) { hintOff = true; hint.classList.add('off'); } };
+const release = () => { clearTimeout(holdT); if (held) { held = false; stage.classList.remove('held'); if (snd) snd.sync(); } down = null; };
+stage.addEventListener('pointerdown', e => {
+  if ((e.pointerType === 'mouse' && e.button !== 0) || e.target.closest('button, a')) return;
+  down = {x: e.clientX, y: e.clientY};
+  clearTimeout(holdT);
+  holdT = setTimeout(() => { if (down) { held = true; stage.classList.add('held'); if (snd) snd.sync(); } }, 240);
+});
+stage.addEventListener('pointermove', e => {
+  if (down && !held && Math.hypot(e.clientX - down.x, e.clientY - down.y) > 10) clearTimeout(holdT);
+});
+stage.addEventListener('pointerup', e => {
+  if (!down) return;
+  const dx = e.clientX - down.x, dy = e.clientY - down.y, wasHeld = held;
+  release(); killHint();
+  if (Math.abs(dx) > 44 && Math.abs(dx) > Math.abs(dy) * 1.2) { if (dx < 0) next(); else prevScene(); return; }
+  if (wasHeld || Math.hypot(dx, dy) > 10) return;
+  const r = stage.getBoundingClientRect();
+  if (e.clientX - r.left < r.width * .3) prevScene(); else next();
+});
+stage.addEventListener('pointercancel', release);
+stage.addEventListener('contextmenu', e => e.preventDefault());
+
+btn.addEventListener('click', () => { killHint(); if (cur === S.length - 1) { setPaused(false); go(0, 1); } else setPaused(!userPaused); });
+/* 소리 켜기·끄기 — 처음에는 눈에 띄는 노란 버튼, 한 번 누른 뒤에는 아이콘 버튼 */
+const sbtn = $('#btnSnd');
+let sndTried = false;
+function syncSnd() {
+  const v = !!(snd && snd.on), lab = v ? '소리 끄기' : '소리 켜기';
+  sbtn.classList.toggle('cta', !v && !sndTried);
+  sbtn.innerHTML = (v ? ICON.sndOn : ICON.sndOff) + '<span class="lbl">소리 켜기</span>';
+  sbtn.setAttribute('aria-label', lab);
+  sbtn.title = lab + ' (M)';
+}
+if (snd) {
+  sbtn.hidden = false;
+  syncSnd();
+  sbtn.addEventListener('click', () => { killHint(); sndTried = true; snd.toggle(); syncSnd(); });
+}
+const toList = () => $('#all').scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'start'});
+const toTop = () => window.scrollTo({top: 0, behavior: reduce ? 'auto' : 'smooth'});
+stage.addEventListener('click', e => {
+  const b = e.target.closest('[data-act]');
+  if (!b) return;
+  if (b.dataset.act === 'replay') { setPaused(false); go(0, 1); } else toList();
+});
+$('#cue').addEventListener('click', e => { e.preventDefault(); toList(); });
+fab.addEventListener('click', toTop);
+$('#dir').addEventListener('click', e => {
+  const b = e.target.closest('[data-goto]');
+  if (!b) return;
+  setPaused(false);
+  pending = +b.dataset.goto;
+  toTop();
+  if (inView) { const p = pending; pending = null; go(p, 1); }
+});
+document.addEventListener('keydown', e => {
+  if (e.code === 'KeyM' && snd && !e.repeat && !(e.altKey || e.ctrlKey || e.metaKey)) { e.preventDefault(); sbtn.click(); return; }
+  if (!inView || e.altKey || e.ctrlKey || e.metaKey) return;
+  const tgt = e.target instanceof Element ? e.target : null;
+  if (e.key === 'ArrowRight') { e.preventDefault(); killHint(); next(); }
+  else if (e.key === 'ArrowLeft') { e.preventDefault(); killHint(); prevScene(); }
+  else if (e.key === ' ' && !(tgt && tgt.closest('button, a, input, textarea'))) { e.preventDefault(); btn.click(); }
+});
+
+new IntersectionObserver(([en]) => {
+  inView = en.intersectionRatio >= .5;
+  if (snd) snd.sync();
+  fab.classList.toggle('show', en.intersectionRatio < .15);
+  if (inView && pending != null) { const p = pending; pending = null; go(p, 1); }
+}, {threshold: [0, .15, .5, .75, 1]}).observe(stage);
+const lb = $('#lbars');
+new IntersectionObserver((ens, ob) => { if (ens.some(en => en.isIntersecting)) { lb.classList.add('in'); ob.disconnect(); } }, {threshold: .25}).observe(lb);
+
+/* 비행기 경로·글자 크기 맞춤 */
+function layoutFly() {
+  const W = stage.clientWidth, H = stage.clientHeight;
+  stage.querySelectorAll('.fly').forEach(el => {
+    const [a, b, c, d] = el.dataset.p.split(',').map(Number);
+    const x0 = a * W, y0 = b * H, x1 = c * W, y1 = d * H, ang = Math.atan2(y1 - y0, x1 - x0) * 180 / Math.PI;
+    const set = (k, v) => el.style.setProperty(k, v);
+    set('--x0', x0 + 'px'); set('--y0', y0 + 'px'); set('--x1', x1 + 'px'); set('--y1', y1 + 'px');
+    set('--ta', ang + 'deg'); set('--pa', (ang + 90) + 'deg'); set('--len', Math.hypot(x1 - x0, y1 - y0) + 'px');
+  });
+}
+function fitAll() {
+  S.forEach(s => {
+    const f = s.el.querySelector('.fit');
+    if (!f) return;
+    let k = 1;
+    f.style.setProperty('--k', 1);
+    for (let n = 0; n < 10 && f.scrollHeight > f.clientHeight + 1; n++) { k -= .06; f.style.setProperty('--k', k.toFixed(2)); }
+  });
+}
+
+hint.textContent = fine ? '클릭하거나 ← → 키로 넘깁니다' : '탭하면 다음, 길게 누르면 멈춤';
+setTimeout(killHint, 8000);
+const wait = ms => new Promise(r => setTimeout(r, ms));
+const fontsP = document.fonts && document.fonts.load
+  ? Promise.all([document.fonts.load('64px "Black Han Sans"', '졸업생어디로갔을까'), document.fonts.load('900 64px "Noto Serif SC"', '就业')]).catch(() => {})
+  : Promise.resolve();
+function start() {
+  if (started) return;
+  started = true;
+  stage.classList.add('ready');
+  layoutFly(); fitAll();
+  go(0, 1);
+}
+Promise.race([fontsP, wait(1200)]).then(start);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { if (started) fitAll(); });
+let rz = 0;
+addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { layoutFly(); fitAll(); }, 120); });
+syncBtn();
+requestAnimationFrame(tick);
+window.__show = {go: i => go(i, 1), pause: v => setPaused(v !== false)};
+})();
+</script>
 </body>
 </html>
